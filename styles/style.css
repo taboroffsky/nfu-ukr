@@ -12,11 +12,7 @@
 }
 
 body {
-<<<<<<< Updated upstream
   background: #1d093f;
-=======
-  background: #001E6C;
->>>>>>> Stashed changes
   font-family: "Montserrat", sans-serif;
 }
 
@@ -44,11 +40,7 @@ a {
 }
 
 .container h1 {
-<<<<<<< Updated upstream
   margin: 32px 0;
-=======
-  margin-top: 32px;
->>>>>>> Stashed changes
 }
 
 hr {
@@ -65,7 +57,6 @@ hr {
   height: 100vh;
 }
 
-<<<<<<< Updated upstream
 .flowers_corner_left {
   width: 78%;
   position: absolute;
@@ -90,12 +81,6 @@ hr {
   opacity: 0.4;
   top: -650px;
   right: -700px;
-=======
-.flower_corner {
-  position: absolute;
-  top: 0px;
-  left: -90px;
->>>>>>> Stashed changes
 }
 
 .header h1 {
@@ -106,13 +91,6 @@ hr {
   font-size: 23px;
   font-weight: 300;
   letter-spacing: 2px;
-<<<<<<< Updated upstream
-=======
-}
-
-.gallery {
-  background: #25316D;
->>>>>>> Stashed changes
 }
 
 .products {
@@ -125,11 +103,7 @@ hr {
 .product-card {
   z-index: 1;
   box-shadow: 0 2px 18px 2px #FEF5AC;
-<<<<<<< Updated upstream
   background: #680a54;
-=======
-  background: #001E6C;
->>>>>>> Stashed changes
   position: relative;
   width: 300px;
   height: 400px;
@@ -169,11 +143,7 @@ hr {
 
 .product-card .price {
   z-index: 2;
-<<<<<<< Updated upstream
   background: #680a54;
-=======
-  background: #001E6C;
->>>>>>> Stashed changes
   color: #FEF5AC;
   position: absolute;
   width: 55%;
@@ -236,11 +206,7 @@ hr {
 
 .popup-card .product-img {
   z-index: 2;
-<<<<<<< Updated upstream
   background: #680a54;
-=======
-  background: #001E6C;
->>>>>>> Stashed changes
   position: relative;
   display: flex;
   justify-content: center;
@@ -262,11 +228,7 @@ hr {
 
 .popup-card .info {
   z-index: 2;
-<<<<<<< Updated upstream
   background: #1d093f;
-=======
-  background: #25316D;
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   width: 55%;
@@ -277,11 +239,7 @@ hr {
 }
 
 .popup-card .close-btn {
-<<<<<<< Updated upstream
   color: #FFD600;
-=======
-  color: #FEF5AC;
->>>>>>> Stashed changes
   z-index: 3;
   position: absolute;
   right: 0;
@@ -332,13 +290,8 @@ hr {
 }
 
 .about {
-<<<<<<< Updated upstream
   background: #680a54;
   padding: 38px 0;
-=======
-  background: #001E6C;
-  padding-bottom: 38px;
->>>>>>> Stashed changes
 }
 
 .about p {
@@ -352,22 +305,12 @@ hr {
 }
 
 .contacts {
-<<<<<<< Updated upstream
   padding-top: 38px;
-=======
-  padding-top: 6px;
-  background: #25316D;
->>>>>>> Stashed changes
 }
 
 address {
   font-size: 25px;
   font-weight: 400;
-  padding-bottom: 32px;
-}
-
-address a {
-  color: #FEF5AC;
 }
 
 address a {
@@ -379,23 +322,14 @@ address a:hover {
 }
 
 .team {
-<<<<<<< Updated upstream
   background: #680a54;
   width: 80%;
   padding: 38px 0;
-=======
-  background: #001E6C;
-  width: 80%;
->>>>>>> Stashed changes
   margin: 0 auto;
 }
 
 .team-card {
-<<<<<<< Updated upstream
   background: #1d093f;
-=======
-  background: #25316D;
->>>>>>> Stashed changes
   box-shadow: 0 2px 18px 2px #FEF5AC;
   width: 14%;
   display: inline-block;
@@ -425,11 +359,7 @@ address a:hover {
 }
 
 .footer {
-<<<<<<< Updated upstream
   background: #1d093f;
-=======
-  background: #25316D;
->>>>>>> Stashed changes
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -583,11 +513,7 @@ address a:hover {
   }
   .popup-card .product-img {
     z-index: 2;
-<<<<<<< Updated upstream
     background: #680a54;
-=======
-    background: #001E6C;
->>>>>>> Stashed changes
     position: relative;
     display: flex;
     justify-content: center;
@@ -607,11 +533,7 @@ address a:hover {
   }
   .popup-card .info {
     z-index: 2;
-<<<<<<< Updated upstream
     background: #1d093f;
-=======
-    background: #25316D;
->>>>>>> Stashed changes
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -621,11 +543,7 @@ address a:hover {
     border-radius: 10px 10px 10px 0;
   }
   .popup-card .close-btn {
-<<<<<<< Updated upstream
     color: #FFD600;
-=======
-    color: #FEF5AC;
->>>>>>> Stashed changes
     z-index: 3;
     position: absolute;
     top: 8px;
@@ -669,7 +587,6 @@ address a:hover {
     width: 100%;
   }
 }
-<<<<<<< Updated upstream
 @media screen and (max-width: 425px) {
   .flowers_corner_left {
     width: 130%;
@@ -689,9 +606,6 @@ address a:hover {
     top: -150px;
     right: -300px;
   }
-=======
-@media screen and (max-width: 412px) {
->>>>>>> Stashed changes
   .header h1 {
     width: 85%;
     margin: 0 auto;
@@ -699,42 +613,20 @@ address a:hover {
   }
   .products {
     width: 80%;
-<<<<<<< Updated upstream
     margin: 0 auto;
-=======
->>>>>>> Stashed changes
     display: block;
   }
   .product-card {
     width: 310px;
     height: 600px;
-<<<<<<< Updated upstream
     margin-bottom: 72px;
   }
   .popup-view {
     top: -470px;
     left: -55px;
-=======
-  }
-  .popup-view {
-    z-index: 2;
-    background: rgba(254, 244, 172, 0.6235294118);
-    position: fixed;
-    top: -390px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: first baseline;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
->>>>>>> Stashed changes
   }
   .popup-card {
     display: block;
-<<<<<<< Updated upstream
     width: 77%;
     height: 69vh;
     margin: 0 auto;
@@ -743,21 +635,6 @@ address a:hover {
     background: #1d093f;
     width: auto;
     height: 70%;
-=======
-    width: 100%;
-    height: 66vh;
-  }
-  .popup-card .product-img {
-    z-index: 2;
-    background: #25316D;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 70%;
-    transform: translateY(25px);
->>>>>>> Stashed changes
     border-radius: 10px 10px 0 0;
   }
   .popup-card .product-img img {
@@ -766,7 +643,6 @@ address a:hover {
     border-radius: 0;
   }
   .popup-card .info {
-<<<<<<< Updated upstream
     background: #680a54;
     width: 100%;
     height: 84%;
@@ -776,49 +652,19 @@ address a:hover {
     font-size: 14px;
     top: 49px;
     right: 8px;
-=======
-    z-index: 2;
-    background: #001E6C;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 84%;
-    box-sizing: border-box;
-    border-radius: 0 0 10px 10px;
-  }
-  .popup-card .close-btn {
-    color: #FEF5AC;
-    z-index: 3;
-    position: absolute;
-    font-size: 18px;
-    top: 38px;
-    right: 0;
->>>>>>> Stashed changes
     cursor: pointer;
   }
   .popup-card .info h2 {
-<<<<<<< Updated upstream
-=======
-    color: #FEF5AC;
->>>>>>> Stashed changes
     font-size: 30px;
     line-height: 20px;
     margin-top: 20px;
   }
   .popup-card .info h2 span {
-<<<<<<< Updated upstream
-=======
-    color: #FEF5AC;
->>>>>>> Stashed changes
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   .popup-card .info p {
-<<<<<<< Updated upstream
-=======
-    color: #FEF5AC;
->>>>>>> Stashed changes
     font-size: 15px;
     text-align: justify;
   }
@@ -830,11 +676,7 @@ address a:hover {
   }
   .popup-card .info .add-cart-btn {
     color: #25316D;
-<<<<<<< Updated upstream
     background: #FFD600;
-=======
-    background: #FEF5AC;
->>>>>>> Stashed changes
     font-size: 16px;
     font-weight: 600;
     text-align: center;
@@ -849,13 +691,8 @@ address a:hover {
   }
   .team-card {
     display: inline-block;
-<<<<<<< Updated upstream
     width: 65%;
     margin: 18px 0;
-=======
-    width: 39%;
-    margin: 8px 5px;
->>>>>>> Stashed changes
   }
   .team-card h4 {
     padding: 8px;
