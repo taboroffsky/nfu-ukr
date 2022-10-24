@@ -1,0 +1,932 @@
+// --- COLORS --- 
+
+$mainColor: #EFFFFD;
+$secondaryColor: #25316D;
+$tertiaryColor: #FEF5AC;
+
+<<<<<<< Updated upstream
+$btnColor1: #FFD600;
+$btnColor2: #252629;
+
+$backgroundColor1: #680a54;
+$backgroundColor2: #1d093f;
+=======
+$btnColor1: #FEF5AC;
+$btnColor2: #252629;
+
+$backgroundColor1: #001E6C;
+$backgroundColor2: #25316D;
+>>>>>>> Stashed changes
+$backgroundColor3: #FEF5AC;
+
+$borderColor1: #D800A6;
+$borderColor2: #FEF5AC;
+
+$boxShadow1: 0 2px 18px 2px #FEF5AC;
+$boxShadowHR: 0 5px 5px -5px #97D2EC,
+  0 15px 15px -15px #FEF5AC;
+
+$gradient: linear-gradient(#25316D, #5F6F94);
+
+// --- Fonts ---
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
+  outline: none;
+}
+
+body {
+  background: $backgroundColor2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1,
+h3,
+p {
+  padding: 15px 0;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  padding: 18px 15px;
+  color: $mainColor;
+}
+
+.container {
+  padding: 38px 0;
+  text-align: center;
+  color: $tertiaryColor;
+}
+
+.container h1 {
+<<<<<<< Updated upstream
+  margin: 32px 0;
+=======
+  margin-top: 32px;
+>>>>>>> Stashed changes
+}
+
+hr {
+  width: 75%;
+  height: 35px;
+  box-shadow: $boxShadowHR;
+  margin: 28px auto;
+}
+
+// Header
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+<<<<<<< Updated upstream
+.flowers_corner_left {
+  width: 78%;
+  position: absolute;
+  top: -130px;
+  left: -140px;
+  opacity: 0.4;
+}
+
+.flower_corner_right {
+  width: 78%;
+  position: absolute;
+  top: -130px;
+  right: -140px;
+  transform: scaleX(-1);
+  opacity: 0.4;
+}
+
+.flower_alone {
+  position: absolute;
+  z-index: 2;
+  width: 170%;
+  opacity: 0.4;
+  top: -650px;
+  right: -700px;
+=======
+.flower_corner {
+  position: absolute;
+  top: -0px;
+  left: -90px;
+>>>>>>> Stashed changes
+}
+
+.header h1 {
+  color: $tertiaryColor;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0;
+  font-size: 23px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+// Gallery
+
+<<<<<<< Updated upstream
+=======
+.gallery {
+  background: $backgroundColor2;
+}
+
+>>>>>>> Stashed changes
+.products {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.product-card {
+  z-index: 1;
+  box-shadow: $boxShadow1;
+  background: $backgroundColor1;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+.product-card h2 {
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+
+// .product-card:before {
+//   content: "";
+//   background: $backgroundColor2;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 60%;
+//   height: 100%;
+//   border-top-left-radius: 10px;
+//   border-bottom-left-radius: 10px;
+// }
+
+.product-card .product-img {
+  z-index: 1;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: inherit;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.product-card .name {
+  z-index: 2;
+  color: $tertiaryColor;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 130px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.product-card .price {
+  z-index: 2;
+  background: $backgroundColor1;
+  color: $tertiaryColor;
+  position: absolute;
+  width: 55%;
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid $borderColor2;
+  bottom: 85px;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.product-card .popup-btn {
+  z-index: 2;
+  box-shadow: $boxShadow1;
+  color: $secondaryColor;
+  background: $backgroundColor3;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*Styles for popup view*/
+
+.popup-view {
+  z-index: 2;
+  background: #fef4ac9f;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.popup-view.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-card {
+  position: relative;
+  display: flex;
+  width: 70%;
+  height: 500px;
+}
+
+.popup-card .product-img {
+  z-index: 2;
+  background: $backgroundColor1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  transform: translateY(25px);
+  border-radius: 10px 0 10px 10px;
+}
+
+.popup-card .product-img img {
+  z-index: 2;
+  position: relative;
+  width: 80%;
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.popup-card .info {
+  z-index: 2;
+  background: $backgroundColor2;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.popup-card .close-btn {
+  color: $btnColor1;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.popup-card .info h2 {
+  color: $tertiaryColor;
+  font-size: 40px;
+  line-height: 20px;
+  margin: 10px;
+}
+
+.popup-card .info span {
+  color: $tertiaryColor;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+.popup-card .info p {
+  color: $tertiaryColor;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.popup-card .info .price {
+  color: $tertiaryColor;
+  font-size: 30px;
+  font-weight: 200;
+  margin: 10px;
+}
+
+.popup-card .info .add-cart-btn {
+  color: $secondaryColor;
+  background: $backgroundColor3;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 10px auto;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+// About container
+
+.about {
+  background: $backgroundColor1;
+<<<<<<< Updated upstream
+  padding: 38px 0;
+=======
+  padding-bottom: 38px;
+>>>>>>> Stashed changes
+}
+
+.about p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about img {
+  width: 100px;
+  margin: 25px 0;
+}
+
+// Contacts container
+
+.contacts {
+<<<<<<< Updated upstream
+  padding-top: 38px;
+=======
+  padding-top: 6px;
+  background: $backgroundColor2;
+>>>>>>> Stashed changes
+}
+
+address {
+  font-size: 25px;
+  font-weight: 400;
+<<<<<<< Updated upstream
+=======
+  padding-bottom: 32px;
+>>>>>>> Stashed changes
+}
+
+address a {
+  color: $tertiaryColor;
+}
+
+address a:hover {
+  color: $mainColor;
+}
+
+// Team container
+
+.team {
+  background: $backgroundColor1;
+  width: 80%;
+<<<<<<< Updated upstream
+  padding: 38px 0;
+=======
+>>>>>>> Stashed changes
+  margin: 0 auto;
+}
+
+.team-card {
+  background: $backgroundColor2;
+  box-shadow: $boxShadow1;
+  width: 14%;
+  display: inline-block;
+  margin: 25px;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.team-card h4 {
+  font-weight: 400;
+  padding-top: 12px;
+}
+
+.team-card p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.team-card:hover {
+  transform: scale(1.1);
+  color: $mainColor;
+}
+
+// Footer
+
+.footer {
+  background: $backgroundColor2;
+  height: max-content;
+  text-align: center;
+}
+
+.nav_menu {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.nav_menu a {
+  color: $tertiaryColor;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.nav_menu a:hover {
+  color: $mainColor;
+  text-shadow: 0 0 6px rgba(202, 5, 176, 0.2), 0 0 12px rgba(163, 162, 207, 0.459);
+  transform: scale(1.2);
+}
+
+.icon-img {
+  width: 30px;
+  transition: all .3s;
+}
+
+.icon-img:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  box-shadow: 0 8px 12px -12px rgba(202, 5, 176, 0.2), 0 2px 12px -12px rgba(163, 162, 207, 0.459);
+}
+
+.footer_media a {
+  padding: 12px 15px;
+  margin-top: 24px;
+}
+
+.translator {
+  display: inline-flex;
+  margin-top: 74px;
+}
+
+.translator p {
+  padding: 3px 15px;
+}
+
+.copyright {
+  margin: 14px 0;
+  padding-bottom: 35px;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+// Cookies
+
+.cookie-banner {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  z-index: 2;
+  width: 30%;
+  bottom: 0;
+  background-color: $backgroundColor3;
+  color: $secondaryColor;
+  padding: 20px;
+}
+
+.js-cookie-dismiss {
+  width: max-content;
+  height: 40px;
+  background: $backgroundColor3;
+  border: 1px solid $borderColor1;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+// Media queries
+
+@media screen and (max-width: 1024px) {
+
+  .toplogo img {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  .header h1 {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0;
+    font-size: 23px;
+  }
+
+  .gallery {
+    padding-bottom: 40px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .product-card {
+    width: 260px;
+    margin: 20px auto;
+  }
+
+  .product-card .product-img {
+    width: inherit;
+  }
+
+  .product-card .price {
+    width: 55%;
+  }
+
+  .team {
+    padding-bottom: 48px;
+  }
+
+  .team-card {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+  }
+
+  .team-card {
+    width: 29%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .toplogo img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  .header h1 {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0;
+    font-size: 23px;
+  }
+
+  .gallery h1 {
+    padding-top: 50px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  /*Styles for popup view*/
+
+  .popup-card {
+    position: relative;
+    display: flex;
+    width: 95%;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .popup-card .product-img {
+    z-index: 2;
+    background: $backgroundColor1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transform: translateY(25px);
+    border-radius: 10px 0 10px 10px;
+  }
+
+  .popup-card .product-img img {
+    z-index: 2;
+    position: relative;
+    width: 90%;
+    border-radius: 10px;
+    object-fit: fill;
+  }
+
+  .popup-card .info {
+    z-index: 2;
+    background: $backgroundColor2;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 10px 10px 10px 0;
+  }
+
+  .popup-card .close-btn {
+    color: $btnColor1;
+    z-index: 3;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 14px;
+    padding: 12px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .popup-card .info h2 {
+    color: $tertiaryColor;
+    font-size: 25px;
+    line-height: 20px;
+    padding-top: 24px;
+    margin: 0;
+  }
+
+  .popup-card .info span {
+    color: $tertiaryColor;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+  }
+
+  .popup-card .info .price {
+    color: $tertiaryColor;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  .team-card {
+    display: inline-block;
+    position: relative;
+    width: 28%;
+    margin: 10px 8px;
+  }
+
+  .translator {
+    display: block;
+    font-size: 16px;
+  }
+
+  .cookie-banner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .flowers_corner_left {
+    width: 130%;
+    top: -32px;
+    left: -32px;
+
+<<<<<<< Updated upstream
+  }
+
+  .flower_corner_right {
+    width: 130%;
+    top: -32px;
+    right: -32px;
+  }
+
+  .flower_alone {
+    position: absolute;
+    z-index: 2;
+    width: 240%;
+    opacity: 0.4;
+    top: -150px;
+    right: -300px;
+  }
+
+=======
+>>>>>>> Stashed changes
+  .header h1 {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+
+  .products {
+    width: 80%;
+<<<<<<< Updated upstream
+    margin: 0 auto;
+=======
+>>>>>>> Stashed changes
+    display: block;
+  }
+
+  .product-card {
+    width: 310px;
+    height: 600px;
+<<<<<<< Updated upstream
+    margin-bottom: 72px;
+  }
+
+  .popup-view {
+    top: -470px;
+    left: -55px;
+=======
+  }
+
+  .popup-view {
+    z-index: 2;
+    background: #fef4ac9f;
+    position: fixed;
+    top: -390px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+>>>>>>> Stashed changes
+  }
+
+  .popup-card {
+    display: block;
+<<<<<<< Updated upstream
+    width: 77%;
+    height: 69vh;
+    margin: 0 auto;
+=======
+    width: 100%;
+    height: 66vh;
+>>>>>>> Stashed changes
+  }
+
+  .popup-card .product-img {
+    background: $backgroundColor2;
+    width: auto;
+    height: 70%;
+<<<<<<< Updated upstream
+=======
+    transform: translateY(25px);
+>>>>>>> Stashed changes
+    border-radius: 10px 10px 0 0;
+  }
+
+  .popup-card .product-img img {
+    height: 100%;
+    width: auto;
+    border-radius: 0;
+  }
+
+  .popup-card .info {
+    background: $backgroundColor1;
+    width: 100%;
+    height: 84%;
+<<<<<<< Updated upstream
+=======
+    box-sizing: border-box;
+>>>>>>> Stashed changes
+    border-radius: 0 0 10px 10px;
+  }
+
+  .popup-card .close-btn {
+<<<<<<< Updated upstream
+    font-size: 14px;
+    top: 49px;
+    right: 8px;
+    cursor: pointer;
+  }
+
+  .popup-card .info h2 {
+=======
+    color: $tertiaryColor;
+    z-index: 3;
+    position: absolute;
+    font-size: 18px;
+    top: 38px;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .popup-card .info h2 {
+    color: $tertiaryColor;
+>>>>>>> Stashed changes
+    font-size: 30px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+
+  .popup-card .info h2 span {
+<<<<<<< Updated upstream
+=======
+    color: $tertiaryColor;
+>>>>>>> Stashed changes
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .popup-card .info p {
+<<<<<<< Updated upstream
+=======
+    color: $tertiaryColor;
+>>>>>>> Stashed changes
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .popup-card .info .price {
+    color: $mainColor;
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  .popup-card .info .add-cart-btn {
+    color: $secondaryColor;
+    background: $btnColor1;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 6px auto;
+    padding: 10px 50px;
+    border-radius: 10px;
+  }
+
+  .team>p {
+    padding: 20px;
+  }
+
+  .team-card {
+    display: inline-block;
+<<<<<<< Updated upstream
+    width: 65%;
+    margin: 18px 0;
+=======
+    width: 39%;
+    margin: 8px 5px;
+>>>>>>> Stashed changes
+  }
+
+  .team-card h4 {
+    padding: 8px;
+    font-weight: 200;
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-weight: 100;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .nav_menu a {
+    display: block;
+  }
+
+  .translator {
+    font-size: 15px;
+    margin: 24px auto;
+    display: block;
+  }
+
+  .copyright {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+
+  .cookie-banner {
+    width: 100%;
+  }
+}
