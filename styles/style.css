@@ -47,7 +47,7 @@ hr {
   width: 75%;
   height: 35px;
   box-shadow: 0 5px 5px -5px #97D2EC, 0 15px 15px -15px #FEF5AC;
-  margin: 28px auto;
+  margin: 0 auto;
 }
 
 .header {
@@ -160,7 +160,7 @@ hr {
   z-index: 2;
   box-shadow: 0 2px 18px 2px #FEF5AC;
   color: #25316D;
-  background: #FEF5AC;
+  background: #FFD600;
   position: absolute;
   bottom: 25px;
   left: 50%;
@@ -278,7 +278,7 @@ hr {
 
 .popup-card .info .add-cart-btn {
   color: #25316D;
-  background: #FEF5AC;
+  background: #FFD600;
   font-size: 16px;
   font-weight: 600;
   text-align: center;
@@ -322,7 +322,6 @@ address a:hover {
 }
 
 .team {
-  background: #680a54;
   width: 80%;
   padding: 38px 0;
   margin: 0 auto;
@@ -359,28 +358,26 @@ address a:hover {
 }
 
 .footer {
-  background: #1d093f;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   text-align: center;
 }
 
 .nav_menu {
   display: inline-block;
-  margin-top: 40px;
+  padding: 12px 0;
+  margin: 12px 0;
 }
 
 .nav_menu a {
-  color: #FEF5AC;
   font-size: 20px;
   transition: 0.3s;
 }
 
 .nav_menu a:hover {
-  color: #EFFFFD;
-  text-shadow: 0 0 6px rgba(202, 5, 176, 0.2), 0 0 12px rgba(163, 162, 207, 0.459);
   transform: scale(1.2);
+}
+
+.footer_media {
+  padding: 32px 0;
 }
 
 .icon-img {
@@ -391,15 +388,10 @@ address a:hover {
 .icon-img:hover {
   opacity: 1;
   transform: scale(1.2);
-  box-shadow: 0 8px 12px -12px rgba(202, 5, 176, 0.2), 0 2px 12px -12px rgba(163, 162, 207, 0.459);
-}
-
-.footer_media a {
-  padding: 12px 15px;
-  margin-top: 24px;
 }
 
 .translator {
+  color: #FEF5AC;
   display: inline-flex;
   margin-top: 74px;
 }
@@ -409,6 +401,7 @@ address a:hover {
 }
 
 .copyright {
+  color: #FEF5AC;
   margin: 14px 0;
   padding-bottom: 35px;
   font-weight: 200;
