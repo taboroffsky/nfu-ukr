@@ -458,6 +458,99 @@ address a:hover {
     top: -500px;
     right: -530px;
   }
+  .popup-view {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -450px;
+  }
+  .popup-view.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup-card {
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 550px;
+  }
+  .popup-card .product-img {
+    z-index: 2;
+    background: #680a54;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    transform: translateY(25px);
+    border-radius: 10px 0 10px 10px;
+  }
+  .popup-card .product-img img {
+    z-index: 2;
+    position: relative;
+    width: 80%;
+    border-radius: 10px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .popup-card .info {
+    z-index: 2;
+    background: #1d093f;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px 10px 10px 0;
+  }
+  .popup-card .close-btn {
+    color: #FFD600;
+    z-index: 3;
+    position: absolute;
+    top: -10px;
+    right: 111px;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  .popup-card .info h2 {
+    color: #FEF5AC;
+    font-size: 40px;
+    line-height: 20px;
+    margin: 10px;
+  }
+  .popup-card .info span {
+    color: #FEF5AC;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+  }
+  .popup-card .info p {
+    color: #FEF5AC;
+    font-size: 15px;
+    margin: 10px;
+  }
+  .popup-card .info .price {
+    color: #FEF5AC;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 10px;
+  }
+  .popup-card .info .add-cart-btn {
+    color: #25316D;
+    background: #FFD600;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px auto;
+    padding: 10px 50px;
+    border-radius: 10px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .toplogo img {
