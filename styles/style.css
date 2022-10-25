@@ -413,25 +413,24 @@ address a:hover {
   /* Safari */
   position: sticky;
   z-index: 2;
-  width: 30%;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
   bottom: 0;
   background-color: #FEF5AC;
   color: #25316D;
   padding: 20px;
+  border-radius: 10px 10px 0 0;
 }
 
 .js-cookie-dismiss {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: 40px;
-  background: #FEF5AC;
+  background: #FFD600;
   border: 1px solid #D800A6;
   border-radius: 5px;
-  padding: 10px 15px;
-  margin: auto;
+  padding: 12px 15px;
+  margin: 12px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1440px) {
