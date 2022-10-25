@@ -476,7 +476,7 @@ address a:hover {
 
 @media screen and (max-width: 1440px) {
   .flowers_corner_left {
-    width: 78%;
+    width: 73%;
     position: absolute;
     top: -100px;
     left: -110px;
@@ -484,10 +484,10 @@ address a:hover {
   }
 
   .flower_corner_right {
-    width: 78%;
+    width: 73%;
     position: absolute;
     top: -100px;
-    right: -110px;
+    right: -45px;
     transform: scaleX(-1);
     opacity: 0.4;
   }
@@ -635,10 +635,8 @@ address a:hover {
   }
 
   .toplogo img {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    width: 60%;
+    margin: 30px auto;
   }
 
   .header h1 {
@@ -688,7 +686,7 @@ address a:hover {
 @media screen and (max-width: 768px) {
 
   .toplogo img {
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
