@@ -414,7 +414,7 @@ address a:hover {
   position: sticky;
   z-index: 2;
   text-align: center;
-  width: 300px;
+  width: 50em;
   margin: 0 auto;
   bottom: 0;
   background-color: #FEF5AC;
@@ -552,6 +552,29 @@ address a:hover {
   }
 }
 @media screen and (max-width: 1024px) {
+  .flowers_corner_left {
+    width: 110%;
+    position: absolute;
+    top: -80px;
+    left: -85px;
+    opacity: 0.4;
+  }
+  .flower_corner_right {
+    width: 110%;
+    position: absolute;
+    top: -80px;
+    right: -85px;
+    transform: scaleX(-1);
+    opacity: 0.4;
+  }
+  .flower_alone {
+    position: absolute;
+    z-index: 2;
+    width: 220%;
+    opacity: 0.4;
+    top: -350px;
+    right: -480px;
+  }
   .toplogo img {
     width: 40%;
     margin-left: auto;
@@ -613,7 +636,6 @@ address a:hover {
     display: grid;
     grid-template-columns: auto auto;
   }
-  /*Styles for popup view*/
   .popup-card {
     position: relative;
     display: flex;
@@ -686,15 +708,15 @@ address a:hover {
   .team-card {
     display: inline-block;
     position: relative;
-    width: 28%;
-    margin: 10px 8px;
+    width: 33%;
+    margin: 18px 38px;
   }
   .translator {
     display: block;
     font-size: 16px;
   }
   .cookie-banner {
-    width: 100%;
+    width: 35em;
   }
 }
 @media screen and (max-width: 425px) {
