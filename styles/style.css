@@ -45,6 +45,8 @@ hr {
 }
 
 .header {
+  width: 80%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +76,7 @@ hr {
 }
 
 .toplogo_section {
-  width: 50%;
+  width: 100%;
 }
 
 .header h1 {
@@ -367,6 +369,7 @@ address a:hover {
 }
 
 .nav_menu a:hover {
+  color: #FEF5AC;
   transform: scale(1.2);
 }
 
@@ -430,26 +433,18 @@ address a:hover {
 @media screen and (max-width: 1440px) {
   .flowers_corner_left {
     width: 73%;
-    position: absolute;
     top: -100px;
     left: -110px;
-    opacity: 0.4;
   }
-  .flower_corner_right {
+  .flowers_corner_right {
     width: 73%;
-    position: absolute;
     top: -100px;
-    right: -45px;
-    transform: scaleX(-1);
-    opacity: 0.4;
+    right: -100px;
   }
   .flower_alone {
-    position: absolute;
-    z-index: 2;
-    width: 170%;
-    opacity: 0.4;
-    top: -500px;
-    right: -530px;
+    width: 100%;
+    top: 0;
+    right: -10%;
   }
   .popup-view {
     top: 0;
@@ -548,24 +543,16 @@ address a:hover {
 @media screen and (max-width: 1024px) {
   .flowers_corner_left {
     width: 110%;
-    position: absolute;
     top: -80px;
     left: -85px;
-    opacity: 0.4;
   }
   .flower_corner_right {
     width: 110%;
-    position: absolute;
     top: -80px;
     right: -85px;
-    transform: scaleX(-1);
-    opacity: 0.4;
   }
   .flower_alone {
-    position: absolute;
-    z-index: 2;
     width: 220%;
-    opacity: 0.4;
     top: -350px;
     right: -480px;
   }
@@ -725,9 +712,11 @@ address a:hover {
   .flower_alone {
     z-index: 2;
     width: 240%;
-    opacity: 0.4;
     top: -150px;
     right: -300px;
+  }
+  .toplogo_section {
+    width: 50%;
   }
   .header h1 {
     width: 85%;
