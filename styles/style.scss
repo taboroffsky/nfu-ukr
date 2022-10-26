@@ -45,12 +45,6 @@ ul li {
   list-style-type: none;
 }
 
-h1,
-h3,
-p {
-  padding: 15px 0;
-}
-
 a {
   text-decoration: none;
   text-align: center;
@@ -89,32 +83,32 @@ hr {
   position: absolute;
   top: -130px;
   left: -140px;
-  opacity: 0.4;
 }
 
-.flower_corner_right {
+.flowers_corner_right {
   width: 78%;
   position: absolute;
   top: -130px;
   right: -140px;
-  transform: scaleX(-1);
-  opacity: 0.4;
 }
 
 .flower_alone {
   position: absolute;
   z-index: 2;
-  width: 170%;
-  opacity: 0.4;
-  top: -650px;
-  right: -700px;
+  width: 80%;
+  top: 90px;
+  right: 13px;
+}
+
+.toplogo_section {
+  width: 50%;
 }
 
 .header h1 {
+  text-align: center;
   color: $tertiaryColor;
   width: 100%;
   margin: 0 auto;
-  margin-top: 0;
   font-size: 23px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -804,20 +798,18 @@ address a:hover {
 @media screen and (max-width: 425px) {
 
   .flowers_corner_left {
-    width: 130%;
+    width: 135%;
     top: -32px;
-    left: -32px;
-
+    left: -2px;
   }
 
-  .flower_corner_right {
-    width: 130%;
+  .flowers_corner_right {
+    width: 135%;
     top: -32px;
-    right: -32px;
+    right: -45px;
   }
 
   .flower_alone {
-    position: absolute;
     z-index: 2;
     width: 240%;
     opacity: 0.4;
