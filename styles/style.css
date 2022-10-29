@@ -45,45 +45,41 @@ hr {
 }
 
 .header {
-  width: 80%;
-  margin: auto;
+  width: 97%;
+  height: 100vh;
+  margin: 25px auto;
+}
+
+.icons_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emblem {
+  width: 270px;
+}
+
+.right {
+  transform: scaleX(-1);
+}
+
+.logo_header {
+  position: relative;
+  margin: 32px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.flowers_corner_left {
-  width: 78%;
-  position: absolute;
-  top: -130px;
-  left: -140px;
+.logo_header img {
+  width: 600px;
 }
 
-.flowers_corner_right {
-  width: 78%;
-  position: absolute;
-  top: -130px;
-  right: -140px;
-}
-
-.flower_alone {
-  position: absolute;
-  z-index: 2;
-  width: 80%;
-  top: 90px;
-  right: 13px;
-}
-
-.toplogo_section {
-  width: 100%;
-}
-
-.header h1 {
+.description {
   text-align: center;
   color: #FEF5AC;
-  width: 100%;
-  margin: 0 auto;
+  padding: 12px;
+  margin: 32px auto;
   font-size: 23px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -116,6 +112,8 @@ hr {
   z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0 10%;
+     object-position: 0 10%;
   position: absolute;
   border-radius: 10px;
   max-width: 300px;
@@ -286,6 +284,8 @@ hr {
 }
 
 .about {
+  display: grid;
+  grid-template-columns: auto auto;
   background: #680a54;
   padding: 38px 0;
 }
@@ -296,6 +296,7 @@ hr {
 }
 
 .about img {
+  position: inherit;
   width: 100px;
   margin: 25px 0;
 }
