@@ -291,12 +291,12 @@ hr {
 }
 
 .about p {
-  width: 80%;
+  width: 40%;
   margin: 0 auto;
 }
 
 .about img {
-  position: inherit;
+  position: absolute;
   width: 100px;
   margin: 25px 0;
 }
