@@ -315,7 +315,6 @@ hr {
 .about {
   width: 80%;
   margin: auto;
-  height: 100vh;
 }
 
 .cards_container {
@@ -417,7 +416,7 @@ address a:hover {
 }
 
 .nav_menu a {
-  font-size: 20px;
+  font-size: 18px;
   transition: 0.3s;
 }
 
@@ -548,11 +547,11 @@ address a:hover {
 @media screen and (max-width: 768px) {
 
   .emblem {
-    width: 30%;
+    width: 25%;
   }
 
   .logo_header {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
   }
 
@@ -589,35 +588,11 @@ address a:hover {
     border-radius: 10px 0 10px 10px;
   }
 
-  .popup-card .product-img img {
-    z-index: 2;
-    position: relative;
-    width: 90%;
-    border-radius: 10px;
-    object-fit: fill;
-  }
-
-  .popup-card .info {
-    z-index: 2;
-    background: $backgroundColor2;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-    border-radius: 10px 10px 10px 0;
-  }
-
   .popup-card .close-btn {
-    color: $btnColor1;
-    z-index: 3;
-    position: absolute;
-    top: 8px;
+    top: 0px;
     right: 8px;
     font-size: 14px;
     padding: 12px;
-    margin: 0;
     cursor: pointer;
   }
 
@@ -651,6 +626,11 @@ address a:hover {
     margin: 18px 38px;
   }
 
+  .nav_menu a {
+    font-size: 16px;
+    
+  }
+
   .translator {
     display: block;
     font-size: 16px;
@@ -662,33 +642,16 @@ address a:hover {
 }
 
 @media screen and (max-width: 425px) {
-
-  .flowers_corner_left {
-    width: 135%;
-    top: -32px;
-    left: -2px;
+  
+  .emblem {
+    width: 30%;
   }
 
-  .flowers_corner_right {
-    width: 135%;
-    top: -32px;
-    right: -45px;
+  .logo_header {
+    width: 35%;
   }
-
-  .flower_alone {
-    z-index: 2;
-    width: 240%;
-    top: -150px;
-    right: -300px;
-  }
-
-  .toplogo_section {
-    width: 50%;
-  }
-
+ 
   .header h1 {
-    width: 85%;
-    margin: 0 auto;
     font-size: 18px;
   }
 
@@ -704,22 +667,19 @@ address a:hover {
     margin-bottom: 72px;
   }
 
-  .popup-view {
-    top: -470px;
-    left: -55px;
-  }
+  
 
   .popup-card {
     display: block;
-    width: 77%;
-    height: 69vh;
-    margin: 0 auto;
+    width: 90%;
+    top: -110px;
+    left: 0;
   }
 
   .popup-card .product-img {
     background: $backgroundColor2;
     width: auto;
-    height: 70%;
+    height: 50%;
     border-radius: 10px 10px 0 0;
   }
 
@@ -731,33 +691,34 @@ address a:hover {
 
   .popup-card .info {
     background: $backgroundColor1;
-    width: 100%;
-    height: 84%;
+    height: 80%;
+    width: auto;
     border-radius: 0 0 10px 10px;
   }
 
   .popup-card .close-btn {
     font-size: 14px;
-    top: 49px;
-    right: 8px;
+    top: 29px;
+    right: -10px;
     cursor: pointer;
   }
 
   .popup-card .info h2 {
-    font-size: 30px;
-    line-height: 20px;
-    margin-top: 20px;
+    font-size: 20px;
+    line-height: 18px;
   }
 
   .popup-card .info h2 span {
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
   .popup-card .info p {
-    font-size: 15px;
+    font-size: 16px;
     text-align: justify;
+    letter-spacing: 1px;
+    overflow: scroll;
   }
 
   .popup-card .info .price {
@@ -771,12 +732,12 @@ address a:hover {
     color: $secondaryColor;
     background: $btnColor1;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     margin: 6px auto;
-    padding: 10px 50px;
+    padding: 8px 50px;
     border-radius: 10px;
   }
 
