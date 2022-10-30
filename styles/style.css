@@ -55,13 +55,12 @@ hr {
 }
 
 .icons_header {
-  z-index: -1;
   display: flex;
   justify-content: space-between;
 }
 
 .emblem {
-  width: 270px;
+  width: 240px;
 }
 
 .right {
@@ -76,7 +75,7 @@ hr {
 }
 
 .logo_header img {
-  width: 600px;
+  width: 400px;
 }
 
 .description {
@@ -287,16 +286,12 @@ hr {
   border-radius: 10px;
 }
 
-.about {
-  width: 80%;
-  margin: auto;
-}
-
 .cards_container {
-  -moz-column-width: 350px;
-       column-width: 350px;
-  -moz-column-gap: 54px;
-       column-gap: 54px;
+  width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 60px;
 }
 
 .card {

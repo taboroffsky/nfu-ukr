@@ -78,18 +78,16 @@ hr {
 
 .header {
   width: 97%;
-  // min-height: 100vh;
   margin: 25px auto;
 }
 
 .icons_header {
-  z-index: -1;
   display: flex;
   justify-content: space-between;
 }
 
 .emblem {
-  width: 270px;
+  width: 240px;
 }
 
 .right {
@@ -104,7 +102,7 @@ hr {
 }
 
 .logo_header img {
-  width: 600px;
+  width: 400px;
 }
 
 .description {
@@ -118,10 +116,6 @@ hr {
 }
 
 // Gallery
-
-.gallery {
-  
-}
 
 .products {
   width: 80%;
@@ -321,14 +315,12 @@ hr {
 
 // About container
 
-.about {
-  width: 80%;
-  margin: auto;
-}
-
 .cards_container {
-  column-width: 350px;
-  column-gap: 54px;
+  width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 60px;
 }
 
 .card {
