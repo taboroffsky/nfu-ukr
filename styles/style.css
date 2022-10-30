@@ -485,6 +485,11 @@ address a:hover {
   .popup-card .close-btn {
     right: 70px;
   }
+  .cards_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+  }
   .team {
     padding-bottom: 48px;
   }
@@ -555,6 +560,9 @@ address a:hover {
     font-size: 30px;
     font-weight: 200;
     margin: 0;
+  }
+  .cards_container {
+    display: block;
   }
   .team-card {
     display: inline-block;
