@@ -36,6 +36,11 @@ $gradient: linear-gradient(#25316D, #5F6F94);
   outline: none;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: $backgroundColor2;
   font-family: 'Montserrat', sans-serif;
@@ -73,7 +78,7 @@ hr {
 
 .header {
   width: 97%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 25px auto;
 }
 
