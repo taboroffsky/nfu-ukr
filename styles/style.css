@@ -51,6 +51,7 @@ hr {
 }
 
 .icons_header {
+  z-index: -1;
   display: flex;
   justify-content: space-between;
 }
@@ -64,7 +65,6 @@ hr {
 }
 
 .logo_header {
-  position: relative;
   margin: 32px 0;
   display: flex;
   justify-content: center;
@@ -284,44 +284,46 @@ hr {
 }
 
 .about {
-  display: grid;
-  grid-template-columns: auto auto;
-  background: #680a54;
-  padding: 38px 0;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+}
+
+.cards_container {
+  -moz-column-width: 350px;
+       column-width: 350px;
+  -moz-column-gap: 54px;
+       column-gap: 54px;
+}
+
+.card {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+  padding: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.about h3 {
+  line-height: 20px;
+  padding: 28px 0;
 }
 
 .about p {
-  width: 40%;
-  margin: 0 auto;
-}
-
-.about img {
-  position: absolute;
-  width: 100px;
-  margin: 25px 0;
-}
-
-.contacts {
-  padding-top: 38px;
-}
-
-address {
-  font-size: 25px;
-  font-weight: 400;
-}
-
-address a {
-  color: #FEF5AC;
-}
-
-address a:hover {
-  color: #EFFFFD;
+  padding: 12px 0;
 }
 
 .team {
   width: 80%;
   padding: 38px 0;
   margin: 0 auto;
+}
+
+.team > p {
+  padding: 32px 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .team-card {
@@ -345,12 +347,30 @@ address a:hover {
 }
 
 .team-card p {
+  padding: 12px 6px;
   font-weight: 300;
   font-size: 14px;
 }
 
 .team-card:hover {
   transform: scale(1.1);
+  color: #EFFFFD;
+}
+
+.contacts {
+  padding-top: 38px;
+}
+
+address {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+address a {
+  color: #FEF5AC;
+}
+
+address a:hover {
   color: #EFFFFD;
 }
 
@@ -432,135 +452,22 @@ address a:hover {
 }
 
 @media screen and (max-width: 1440px) {
-  .flowers_corner_left {
-    width: 73%;
-    top: -100px;
-    left: -110px;
-  }
-  .flowers_corner_right {
-    width: 73%;
-    top: -100px;
-    right: -100px;
-  }
-  .flower_alone {
-    width: 100%;
-    top: 0;
-    right: -10%;
-  }
-  .popup-view {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: -450px;
-  }
-  .popup-view.active {
-    opacity: 1;
-    visibility: visible;
-  }
   .popup-card {
     position: relative;
     display: flex;
-    width: 60%;
+    width: 100%;
     height: 550px;
-  }
-  .popup-card .product-img {
-    z-index: 2;
-    background: #680a54;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    height: 100%;
-    transform: translateY(25px);
-    border-radius: 10px 0 10px 10px;
-  }
-  .popup-card .product-img img {
-    z-index: 2;
-    position: relative;
-    width: 80%;
-    border-radius: 10px;
-    -o-object-fit: fill;
-       object-fit: fill;
+    left: 30px;
   }
   .popup-card .info {
-    z-index: 2;
-    background: #1d093f;
-    display: flex;
-    flex-direction: column;
     width: 45%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 40px;
-    border-radius: 10px 10px 10px 0;
   }
   .popup-card .close-btn {
-    color: #FFD600;
-    z-index: 3;
-    position: absolute;
     top: -10px;
     right: 111px;
-    font-size: 20px;
-    margin: 20px;
-    cursor: pointer;
-  }
-  .popup-card .info h2 {
-    color: #FEF5AC;
-    font-size: 40px;
-    line-height: 20px;
-    margin: 10px;
-  }
-  .popup-card .info span {
-    color: #FEF5AC;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 10px;
-  }
-  .popup-card .info p {
-    color: #FEF5AC;
-    font-size: 15px;
-    margin: 10px;
-  }
-  .popup-card .info .price {
-    color: #FEF5AC;
-    font-size: 30px;
-    font-weight: 200;
-    margin: 10px;
-  }
-  .popup-card .info .add-cart-btn {
-    color: #25316D;
-    background: #FFD600;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 10px auto;
-    padding: 10px 50px;
-    border-radius: 10px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .flowers_corner_left {
-    width: 110%;
-    top: -80px;
-    left: -85px;
-  }
-  .flower_corner_right {
-    width: 110%;
-    top: -80px;
-    right: -85px;
-  }
-  .flower_alone {
-    width: 220%;
-    top: -350px;
-    right: -480px;
-  }
-  .toplogo img {
-    width: 60%;
-    margin: 30px auto;
-  }
   .header h1 {
     width: 85%;
     margin: 0 auto;
@@ -574,39 +481,32 @@ address a:hover {
     display: grid;
     grid-template-columns: auto auto;
   }
-  .product-card {
-    width: 260px;
-    margin: 20px auto;
-  }
-  .product-card .product-img {
-    width: inherit;
-  }
   .product-card .price {
     width: 55%;
+  }
+  .popup-card .close-btn {
+    right: 70px;
   }
   .team {
     padding-bottom: 48px;
   }
   .team-card {
     display: inline-block;
-    position: relative;
-    width: 150px;
-  }
-  .team-card {
-    width: 29%;
+    width: 30%;
+    margin: 25px 52px;
   }
 }
 @media screen and (max-width: 768px) {
-  .toplogo img {
+  .emblem {
+    width: 30%;
+  }
+  .logo_header {
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    margin: 0 auto;
   }
   .header h1 {
     width: 85%;
-    margin: 0 auto;
-    margin-top: 0;
+    margin: 35px auto;
     font-size: 23px;
   }
   .gallery h1 {
@@ -615,24 +515,20 @@ address a:hover {
   .products {
     display: grid;
     grid-template-columns: auto auto;
+    gap: 35px;
+  }
+  .product-card {
+    margin: 14px auto;
   }
   .popup-card {
     position: relative;
     display: flex;
-    width: 95%;
-    height: 500px;
-    margin: 0 auto;
+    left: -15px;
+    top: -25px;
   }
   .popup-card .product-img {
-    z-index: 2;
-    background: #680a54;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 50%;
     height: 100%;
-    transform: translateY(25px);
     border-radius: 10px 0 10px 10px;
   }
   .popup-card .product-img img {

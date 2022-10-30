@@ -73,12 +73,12 @@ hr {
 
 .header {
   width: 97%;
-
   height: 100vh;
   margin: 25px auto;
 }
 
 .icons_header {
+  z-index: -1;
   display: flex;
   justify-content: space-between;
 }
@@ -92,7 +92,6 @@ hr {
 }
 
 .logo_header {
-  position: relative;
   margin: 32px 0;
   display: flex;
   justify-content: center;
@@ -314,40 +313,31 @@ hr {
 // About container
 
 .about {
-  display: grid;
-  grid-template-columns: auto auto;
-  background: $backgroundColor1;
-  padding: 38px 0;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+}
+
+.cards_container {
+  column-width: 350px;
+  column-gap: 54px;
+}
+
+.card {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  padding: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.about h3 {
+  line-height: 20px;
+  padding: 28px 0;
 }
 
 .about p {
-  width: 40%;
-  margin: 0 auto;
-}
-
-.about img {
-  position: absolute;
-  width: 100px;
-  margin: 25px 0;
-}
-
-// Contacts container
-
-.contacts {
-  padding-top: 38px;
-}
-
-address {
-  font-size: 25px;
-  font-weight: 400;
-}
-
-address a {
-  color: $tertiaryColor;
-}
-
-address a:hover {
-  color: $mainColor;
+  padding: 12px 0;
 }
 
 // Team container
@@ -356,6 +346,12 @@ address a:hover {
   width: 80%;
   padding: 38px 0;
   margin: 0 auto;
+}
+
+.team > p {
+  padding: 32px 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .team-card {
@@ -379,12 +375,32 @@ address a:hover {
 }
 
 .team-card p {
+  padding: 12px 6px;
   font-weight: 300;
   font-size: 14px;
 }
 
 .team-card:hover {
   transform: scale(1.1);
+  color: $mainColor;
+}
+
+// Contacts container
+
+.contacts {
+  padding-top: 38px;
+}
+
+address {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+address a {
+  color: $tertiaryColor;
+}
+
+address a:hover {
   color: $mainColor;
 }
 
@@ -473,153 +489,26 @@ address a:hover {
 // Media queries
 
 @media screen and (max-width: 1440px) {
-  .flowers_corner_left {
-    width: 73%;
-    top: -100px;
-    left: -110px;
-  }
-
-  .flowers_corner_right {
-    width: 73%;
-    top: -100px;
-    right: -100px;
-  }
-
-  .flower_alone {
-    width: 100%;
-    top: 0;
-    right: -10%;
-  }
-
-  .popup-view {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: -450px;
-  }
-
-  .popup-view.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
+  
   .popup-card {
     position: relative;
     display: flex;
-    width: 60%;
+    width: 100%;
     height: 550px;
-  }
-
-  .popup-card .product-img {
-    z-index: 2;
-    background: $backgroundColor1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    height: 100%;
-    transform: translateY(25px);
-    border-radius: 10px 0 10px 10px;
-  }
-
-  .popup-card .product-img img {
-    z-index: 2;
-    position: relative;
-    width: 80%;
-    border-radius: 10px;
-    object-fit: fill;
+    left: 30px;
   }
 
   .popup-card .info {
-    z-index: 2;
-    background: $backgroundColor2;
-    display: flex;
-    flex-direction: column;
     width: 45%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 40px;
-    border-radius: 10px 10px 10px 0;
   }
 
   .popup-card .close-btn {
-    color: $btnColor1;
-    z-index: 3;
-    position: absolute;
     top: -10px;
     right: 111px;
-    font-size: 20px;
-    margin: 20px;
-    cursor: pointer;
-  }
-
-  .popup-card .info h2 {
-    color: $tertiaryColor;
-    font-size: 40px;
-    line-height: 20px;
-    margin: 10px;
-  }
-
-  .popup-card .info span {
-    color: $tertiaryColor;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 10px;
-  }
-
-  .popup-card .info p {
-    color: $tertiaryColor;
-    font-size: 15px;
-    margin: 10px;
-  }
-
-  .popup-card .info .price {
-    color: $tertiaryColor;
-    font-size: 30px;
-    font-weight: 200;
-    margin: 10px;
-  }
-
-  .popup-card .info .add-cart-btn {
-    color: $secondaryColor;
-    background: $btnColor1;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 10px auto;
-    padding: 10px 50px;
-    border-radius: 10px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-
-  .flowers_corner_left {
-    width: 110%;
-    top: -80px;
-    left: -85px;
-  }
-
-  .flower_corner_right {
-    width: 110%;
-    top: -80px;
-    right: -85px;
-  }
-
-  .flower_alone {
-    width: 220%;
-    top: -350px;
-    right: -480px;
-  }
-
-  .toplogo img {
-    width: 60%;
-    margin: 30px auto;
-  }
 
   .header h1 {
     width: 85%;
@@ -637,17 +526,12 @@ address a:hover {
     grid-template-columns: auto auto;
   }
 
-  .product-card {
-    width: 260px;
-    margin: 20px auto;
-  }
-
-  .product-card .product-img {
-    width: inherit;
-  }
-
   .product-card .price {
     width: 55%;
+  }
+
+  .popup-card .close-btn {
+    right: 70px;
   }
 
   .team {
@@ -656,28 +540,25 @@ address a:hover {
 
   .team-card {
     display: inline-block;
-    position: relative;
-    width: 150px;
-  }
-
-  .team-card {
-    width: 29%;
+    width: 30%;
+    margin: 25px 52px;
   }
 }
 
 @media screen and (max-width: 768px) {
 
-  .toplogo img {
+  .emblem {
+    width: 30%;
+  }
+
+  .logo_header {
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    margin: 0 auto;
   }
 
   .header h1 {
     width: 85%;
-    margin: 0 auto;
-    margin-top: 0;
+    margin: 35px auto;
     font-size: 23px;
   }
 
@@ -688,26 +569,23 @@ address a:hover {
   .products {
     display: grid;
     grid-template-columns: auto auto;
+    gap: 35px;
+  }
+
+  .product-card {
+    margin: 14px auto;
   }
 
   .popup-card {
     position: relative;
     display: flex;
-    width: 95%;
-    height: 500px;
-    margin: 0 auto;
+    left: -15px;
+    top: -25px;
   }
 
   .popup-card .product-img {
-    z-index: 2;
-    background: $backgroundColor1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 50%;
     height: 100%;
-    transform: translateY(25px);
     border-radius: 10px 0 10px 10px;
   }
 
