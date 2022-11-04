@@ -166,14 +166,9 @@ hr {
 }
 
 .product-card .popup-btn {
-  z-index: 2;
   box-shadow: 0 2px 18px 2px #FEF5AC;
   color: #25316D;
   background: #FFD600;
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
@@ -182,6 +177,11 @@ hr {
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*Styles for popup view*/
@@ -286,16 +286,21 @@ hr {
 }
 
 .popup-card .info .add-cart-btn {
+  box-shadow: 0 2px 18px 2px #FEF5AC;
   color: #25316D;
   background: #FFD600;
   font-size: 16px;
   font-weight: 600;
-  text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
-  margin: 10px auto;
-  padding: 10px 50px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 10px 15px;
   border-radius: 10px;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 15px auto;
 }
 
 .cards_container {

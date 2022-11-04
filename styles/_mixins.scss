@@ -1,0 +1,13 @@
+@mixin myButton {
+  box-shadow: $boxShadow1;
+  color: $secondaryColor;
+  background: $btnColor1;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
