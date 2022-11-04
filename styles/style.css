@@ -457,13 +457,18 @@ address a:hover {
 }
 
 .js-cookie-dismiss {
+  box-shadow: 0 2px 18px 2px #FEF5AC;
+  color: #25316D;
   background: #FFD600;
-  border: 1px solid #D800A6;
-  border-radius: 5px;
-  padding: 12px 15px;
-  margin: 12px;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 12px;
 }
 
 @media screen and (max-width: 1440px) {
