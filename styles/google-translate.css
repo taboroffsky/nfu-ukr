@@ -12,7 +12,7 @@
 .language {
     position: fixed;
     margin-top: 18px;
-    left: 10px;
+    left: 5px;
     top: 50px;
     transform: translateY(-50%);
     z-index: 999;
