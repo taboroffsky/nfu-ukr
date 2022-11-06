@@ -1,11 +1,7 @@
 
-/* Прячем панель гугла */
-
 .skiptranslate {
     display: none !important;
 }
-
-/* Убираем подсветку ссылок */
 
 .goog-text-highlight {
     background-color: inherit;
@@ -13,10 +9,9 @@
     box-sizing: inherit;
 }
 
-/* language */
-
 .language {
     position: fixed;
+    margin-top: 18px;
     left: 10px;
     top: 50px;
     transform: translateY(-50%);
@@ -27,7 +22,7 @@
 
 .language__img {
     width: 30px;
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
     opacity: .5;
 }

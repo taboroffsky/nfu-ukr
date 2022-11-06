@@ -60,19 +60,19 @@ hr {
 }
 
 .emblem {
-  width: 240px;
+  width: 235px;
 }
 
 .left {
   position: absolute;
   top: 8px;
-  left: 16px;
+  left: 50px;
 }
 
 .right {
   position: absolute;
   top: 8px;
-  right: 16px;
+  right: 50px;
   transform: scaleX(-1);
 }
 
@@ -85,19 +85,6 @@ hr {
 
 .logo_header img {
   width: 400px;
-}
-
-.description {
-  position: absolute;
-  top: 60%;
-  left: 38%;
-  text-align: center;
-  color: #FEF5AC;
-  padding: 12px;
-  margin: 32px auto;
-  font-size: 23px;
-  font-weight: 300;
-  letter-spacing: 2px;
 }
 
 .products {
@@ -421,24 +408,6 @@ address a:hover {
 .icon-img:hover {
   opacity: 1;
   transform: scale(1.2);
-}
-
-.translator {
-  color: #FEF5AC;
-  display: inline-flex;
-  margin-top: 74px;
-}
-
-.translator p {
-  padding-top: 12px;
-}
-
-#\:0\.targetLanguage > select {
-  padding: 8px;
-  text-align: center;
-  border-radius: 10px;
-  background: #FEF5AC;
-  font-family: "Montserrat", sans-serif;
 }
 
 .copyright {
