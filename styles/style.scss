@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@include myLinks;
 
 * {
   box-sizing: border-box;
@@ -22,13 +23,6 @@ body {
 
 ul li {
   list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  text-align: center;
-  padding: 18px 15px;
-  color: $mainColor;
 }
 
 .container {
@@ -417,7 +411,15 @@ address a:hover {
 }
 
 .translator p {
-  padding: 3px 15px;
+  padding-top: 12px;
+}
+
+#\:0\.targetLanguage > select {
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+  background: $backgroundColor3;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .copyright {

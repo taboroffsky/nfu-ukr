@@ -11,3 +11,12 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+@mixin myLinks {
+  a {
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 15px;
+    color: $mainColor;
+  }  
+}
