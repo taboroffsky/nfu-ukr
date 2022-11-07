@@ -50,18 +50,17 @@ hr {
   margin: 25px auto;
 }
 
-.icons_header {
-  position: relative;
-}
-
 .emblem {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
   width: 235px;
 }
 
 .left {
-  position: absolute;
+  position: relative;
   top: 8px;
-  left: 50px;
+  left: 45px;
 }
 
 .right {
@@ -71,11 +70,22 @@ hr {
   transform: scaleX(-1);
 }
 
+.logo-slogan {
+  display: flex-box;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo_header {
-  position: absolute;
-  margin: 32px 0;
-  top: 35%;
-  left:40%;
+  text-align: center;
+}
+
+.logo_header::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  top: 50%;
 }
 
 .logo_header img {
@@ -83,16 +93,21 @@ hr {
 }
 
 .description {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.description::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .description-item {
+  display: inline-block;
+  vertical-align: middle;
   color: $tertiaryColor;
-  padding: 12px;
+  padding: 50px 0;
   font-size: 23px;
   font-weight: 300;
   letter-spacing: 2px;
