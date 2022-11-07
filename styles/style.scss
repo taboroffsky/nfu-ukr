@@ -82,17 +82,21 @@ hr {
   width: 400px;
 }
 
-// .description {
-//   position: absolute;
-//   top: 60%;
-//   text-align: center;
-//   color: $tertiaryColor;
-//   padding: 12px;
-//   margin: 32px auto;
-//   font-size: 23px;
-//   font-weight: 300;
-//   letter-spacing: 2px;
-// }
+.description {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.description-item {
+  color: $tertiaryColor;
+  padding: 12px;
+  font-size: 23px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
 
 // Gallery
 

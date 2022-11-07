@@ -10,8 +10,7 @@
 }
 
 .language {
-    position: fixed;
-    margin-top: 18px;
+    position: absolute;
     left: 5px;
     top: 50px;
     transform: translateY(-50%);
@@ -21,8 +20,9 @@
 }
 
 .language__img {
-    width: 30px;
-    margin: 10px;
+    width: 35px;
+    padding: 12px 0;
+    margin: 0 10px;
     cursor: pointer;
     opacity: .5;
 }
