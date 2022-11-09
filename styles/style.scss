@@ -11,8 +11,7 @@
   outline: none;
 }
 
-html,
-body {
+html {
   height: 100%;
 }
 
@@ -42,6 +41,32 @@ hr {
   margin: 0 auto;
 }
 
+.skiptranslate {
+  display: none !important;
+}
+
+.language {
+  position: absolute;
+  top: -30px;
+  right: 18px;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+}
+
+.language__img {
+  width: 35px;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+.language__img:hover,
+.language__img_active {
+  opacity: 1;
+}
+
 // Header
 
 .header {
@@ -59,41 +84,24 @@ hr {
 
 .left {
   position: relative;
-  top: 8px;
+  top: 24px;
   left: 45px;
 }
 
 .right {
   position: absolute;
-  top: 8px;
+  top: 24px;
   right: 50px;
   transform: scaleX(-1);
 }
 
-.logo-slogan {
-  display: flex-box;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo_header {
+.logo_header, .description {
   text-align: center;
-}
-
-.logo_header::before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  top: 50%;
 }
 
 .logo_header img {
+  vertical-align: middle;
   width: 400px;
-}
-
-.description {
-  text-align: center;
 }
 
 .description::before {
@@ -289,9 +297,9 @@ hr {
 }
 
 .popup-card .info .add-cart-btn {
- @include myButton;
- width: fit-content;
- margin: 15px auto;
+  @include myButton;
+  width: fit-content;
+  margin: 15px auto;
 }
 
 // About container
@@ -300,7 +308,7 @@ hr {
   width: 80%;
   margin: 10px auto;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
 }
 
@@ -329,7 +337,7 @@ hr {
   margin: 0 auto;
 }
 
-.team > p {
+.team>p {
   padding: 32px 12px;
   font-size: 18px;
   letter-spacing: 1px;
@@ -450,12 +458,47 @@ address a:hover {
 .js-cookie-dismiss {
   @include myButton;
   margin: 12px;
- }
+}
 
 // Media queries
 
 @media screen and (max-width: 1440px) {
-  
+
+  .language__img {
+    width: 28px;
+  }
+
+  .language__img:hover,
+  .language__img_active {
+    opacity: 1;
+  }
+
+  .emblem {
+    width: 160px;
+  }
+
+  .left {
+    position: absolute;
+    top: 8px;
+    left: 46px;
+  }
+
+  .right {
+    position: absolute;
+    top: 8px;
+    right: 46px;
+    transform: scaleX(-1);
+  }
+
+  .logo_header img {
+    padding-top: 12em;
+    width: 320px;
+  }
+
+  .description-item {
+    font-size: 20px;
+  }
+
   .popup-card {
     position: relative;
     display: flex;
@@ -472,41 +515,80 @@ address a:hover {
     top: -10px;
     right: 111px;
   }
+
+  .cards_container {
+    width: 80%;
+    margin: 8px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+  }
+
+  .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .about h3 {
+    line-height: 18px;
+    padding: 22px 0;
+  }
+
+  .about p {
+    padding: 8px 0;
+  }
+
+  .cookie-banner {
+    width: 40em;
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  .js-cookie-dismiss {
+    @include myButton;
+    margin: 12px;
+  }
+
 }
 
 @media screen and (max-width: 1024px) {
 
-  .emblem {
-    width: 200px;
+  .language__img {
+    width: 28px;
   }
-  
+
+  .language__img:hover,
+  .language__img_active {
+    opacity: 1;
+  }
+
+  .emblem {
+    width: 160px;
+  }
+
   .left {
     position: absolute;
     top: 8px;
-    left: 16px;
+    left: 46px;
   }
-  
+
   .right {
     position: absolute;
     top: 8px;
-    right: 16px;
+    right: 46px;
     transform: scaleX(-1);
   }
-  
-  .logo_header {
-    position: absolute;
-    margin: 12px 0;
-    top: 35%;
-    left: 33%;
-  }
-  
+
   .logo_header img {
-    width: 400px;
+    padding-top: 12em;
+    width: 320px;
   }
-  
-  .description {
-    top: 63%;
-    left: 30%;
+
+  .description-item {
+    font-size: 20px;
   }
 
   .gallery {
@@ -545,20 +627,39 @@ address a:hover {
 
 @media screen and (max-width: 768px) {
 
+  .language__img {
+    width: 28px;
+  }
+
+  .language__img:hover,
+  .language__img_active {
+    opacity: 1;
+  }
+
   .emblem {
-    width: 170px;
+    width: 160px;
   }
 
-  .logo_header {
-    top: 35%;
-    left: 25%;
-    width: 250px;
-    margin: 0 auto;
+  .left {
+    position: absolute;
+    top: 8px;
+    left: 46px;
   }
 
-  .description {
-    top: 57%;
-    left: 22%;
+  .right {
+    position: absolute;
+    top: 8px;
+    right: 46px;
+    transform: scaleX(-1);
+  }
+
+  .logo_header img {
+    padding-top: 12em;
+    width: 320px;
+  }
+
+  .description-item {
+    font-size: 20px;
   }
 
   .gallery h1 {
@@ -632,7 +733,7 @@ address a:hover {
 
   .nav_menu a {
     font-size: 16px;
-    
+
   }
 
   .translator {
@@ -646,27 +747,40 @@ address a:hover {
 }
 
 @media screen and (max-width: 425px) {
-  
+
+  .language__img {
+    width: 24px;
+  }
+
+  .language__img:hover,
+  .language__img_active {
+    opacity: 1;
+  }
+
   .emblem {
-    width: 130px;
+    width: 120px;
   }
 
   .left {
-    left: 60px;
+    position: absolute;
+    top: 8px;
+    left: 36px;
   }
 
   .right {
-    right: 60px;
+    position: absolute;
+    top: 8px;
+    right: 36px;
+    transform: scaleX(-1);
   }
 
-  .logo_header_image {
-    max-width: 220px;
+  .logo_header img {
+    padding-top: 14em;
+    width: 220px;
   }
- 
-  .description {
-    top: 50%;
-    left: 11%;
-    font-size: 16px;
+
+  .description-item {
+    font-size: 18px;
   }
 
   .products {
@@ -680,8 +794,6 @@ address a:hover {
     height: 600px;
     margin-bottom: 72px;
   }
-
-  
 
   .popup-card {
     display: block;

@@ -6,10 +6,7 @@ const googleTranslateConfig = {
 	lang: "uk",
 
 	/* The language we translate into on the first visit*/
-	/* langFirstVisit: 'en', */
-
-	/* If the script does not work or does not work correctly, uncomment and specify the main domain in the domain property */
-	/* domain: "Get-Web.Site" */
+	langFirstVisit: 'en', 
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
