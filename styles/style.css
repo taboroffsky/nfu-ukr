@@ -20,10 +20,10 @@ a {
 
 html {
   height: 100%;
+  background: #1d093f;
 }
 
 body {
-  background: #1d093f;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -56,15 +56,14 @@ hr {
   position: absolute;
   top: -30px;
   right: 18px;
-  transform: translateY(-50%);
-  z-index: 999;
+  z-index: 3;
   display: flex;
   flex-direction: row;
 }
 
 .language__img {
   width: 35px;
-  margin: 0 10px;
+  margin-right: 20px;
   cursor: pointer;
   opacity: 0.5;
 }
