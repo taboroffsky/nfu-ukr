@@ -698,8 +698,16 @@ div.cookiebanner > a {
   }
 }
 @media screen and (max-width: 425px) {
+  .language {
+    top: 0;
+    right: 16px;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+  }
   .language__img {
-    width: 24px;
+    width: 26px;
+    padding-left: 8px;
   }
   .language__img:hover,
 .language__img_active {
@@ -725,6 +733,10 @@ div.cookiebanner > a {
   }
   .description-item {
     font-size: 18px;
+  }
+  canvas {
+    top: -20px;
+    left: 12px;
   }
   .products {
     width: 80%;
