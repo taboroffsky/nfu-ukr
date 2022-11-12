@@ -93,19 +93,19 @@ hr {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 235px;
+  width: 225px;
 }
 
 .left {
   position: relative;
   top: 14px;
-  left: 45px;
+  left: 25px;
 }
 
 .right {
   position: absolute;
   top: 14px;
-  right: 45px;
+  right: 55px;
   transform: scaleX(-1);
 }
 
@@ -138,6 +138,7 @@ hr {
 
 canvas {
   position: absolute;
+  width: inherit;
   z-index: -1;
   top: -30px;
   left: 0;
