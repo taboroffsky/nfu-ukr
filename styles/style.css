@@ -139,7 +139,7 @@ hr {
 canvas {
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: -30px;
   left: 0;
 }
 
