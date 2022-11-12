@@ -17,7 +17,17 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
+}
+
+.neural_connections {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
 }
 
 ul li {
@@ -42,8 +52,7 @@ hr {
 }
 
 .skiptranslate {
-  display: none !important;
-  position: absolute;
+  display: none;
 }
 
 .language {
@@ -95,7 +104,8 @@ hr {
   transform: scaleX(-1);
 }
 
-.logo_header, .description {
+.logo_header,
+.description {
   text-align: center;
 }
 
@@ -119,6 +129,12 @@ hr {
   font-size: 23px;
   font-weight: 300;
   letter-spacing: 2px;
+}
+canvas {
+	position: absolute;
+  z-index: -1;
+	top: 0;
+	left: 0;
 }
 
 // Gallery
