@@ -457,25 +457,11 @@ address a:hover {
 
 // Cookies
 
-.cookie-banner {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  z-index: 2;
-  text-align: center;
-  width: 50em;
-  margin: 0 auto;
-  bottom: 0;
-  background-color: $backgroundColor3;
-  color: $secondaryColor;
-  padding: 20px;
-  border-radius: 10px 10px 0 0;
+div.cookiebanner > a {
+  background: $backgroundColor2;
+  border: 1px solid #1d093f;
 }
 
-.js-cookie-dismiss {
-  @include myButton;
-  margin: 12px;
-}
 
 // Media queries
 
@@ -557,18 +543,6 @@ address a:hover {
   .about p {
     padding: 8px 0;
   }
-
-  .cookie-banner {
-    width: 40em;
-    margin: 0 auto;
-    padding: 18px;
-  }
-
-  .js-cookie-dismiss {
-    @include myButton;
-    margin: 12px;
-  }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -757,10 +731,6 @@ address a:hover {
     display: block;
     font-size: 16px;
   }
-
-  .cookie-banner {
-    width: 35em;
-  }
 }
 
 @media screen and (max-width: 425px) {
@@ -920,9 +890,5 @@ address a:hover {
     width: 85%;
     margin: 0 auto;
     font-size: 12px;
-  }
-
-  .cookie-banner {
-    width: 100%;
   }
 }

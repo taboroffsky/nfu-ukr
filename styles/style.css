@@ -475,34 +475,9 @@ address a:hover {
   font-size: 13px;
 }
 
-.cookie-banner {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  z-index: 2;
-  text-align: center;
-  width: 50em;
-  margin: 0 auto;
-  bottom: 0;
-  background-color: #FEF5AC;
-  color: #25316D;
-  padding: 20px;
-  border-radius: 10px 10px 0 0;
-}
-
-.js-cookie-dismiss {
-  box-shadow: 0 2px 18px 2px #FEF5AC;
-  color: #25316D;
-  background: #FFD600;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin: 12px;
+div.cookiebanner > a {
+  background: #1d093f;
+  border: 1px solid #1d093f;
 }
 
 @media screen and (max-width: 1440px) {
@@ -569,25 +544,6 @@ address a:hover {
   }
   .about p {
     padding: 8px 0;
-  }
-  .cookie-banner {
-    width: 40em;
-    margin: 0 auto;
-    padding: 18px;
-  }
-  .js-cookie-dismiss {
-    box-shadow: 0 2px 18px 2px #FEF5AC;
-    color: #25316D;
-    background: #FFD600;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 1px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 12px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -740,9 +696,6 @@ address a:hover {
     display: block;
     font-size: 16px;
   }
-  .cookie-banner {
-    width: 35em;
-  }
 }
 @media screen and (max-width: 425px) {
   .language__img {
@@ -875,8 +828,5 @@ address a:hover {
     width: 85%;
     margin: 0 auto;
     font-size: 12px;
-  }
-  .cookie-banner {
-    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
