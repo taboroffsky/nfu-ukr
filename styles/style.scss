@@ -81,25 +81,25 @@ hr {
 .header {
   min-height: 100vh;
   width: 97%;
-  margin: 25px auto;
+  margin: 5px auto;
 }
 
 .emblem {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 225px;
+  width: 380px;
 }
 
 .left {
   position: relative;
-  top: 14px;
+  top: 0;
   left: 25px;
 }
 
 .right {
   position: absolute;
-  top: 14px;
+  top: 0;
   right: 55px;
   transform: scaleX(-1);
 }
@@ -110,32 +110,34 @@ hr {
 }
 
 .logo_header img {
-  vertical-align: middle;
-  width: 400px;
+  position: absolute;
+  top: 300px;
+  right: 700px;
+  width: 500px;
 }
 
 .description::before {
   content: '';
-  display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
 .description-item {
-  display: inline-block;
-  vertical-align: middle;
+  position: absolute;
+  bottom: 30px;
+  right: 180px;
   color: $tertiaryColor;
-  padding: 50px 0;
-  font-size: 23px;
-  font-weight: 300;
+  font-size: 33px;
+  font-weight: 700;
   letter-spacing: 2px;
 }
+
 canvas {
-	position: absolute;
-  width: inherit;
+  position: absolute;
+  width: 100%;
   z-index: -1;
-	top: -35px;
-	left: 30px;
+  top: -35px;
+  left: 0;
 }
 
 // Gallery
@@ -457,7 +459,7 @@ address a:hover {
 
 // Cookies
 
-div.cookiebanner > a {
+div.cookiebanner>a {
   background: $backgroundColor2;
   border: 1px solid #1d093f;
 }
@@ -477,7 +479,7 @@ div.cookiebanner > a {
   }
 
   .emblem {
-    width: 160px;
+    width: 230px;
   }
 
   .left {
@@ -494,12 +496,24 @@ div.cookiebanner > a {
   }
 
   .logo_header img {
-    padding-top: 12em;
-    width: 320px;
+    position: absolute;
+    left: 450px;
+    width: 420px;
+  }
+
+  .description::before {
+    content: '';
+    height: 100%;
+    vertical-align: middle;
   }
 
   .description-item {
-    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    color: $tertiaryColor;
+    font-size: 53px;
+    font-weight: 800;
+    letter-spacing: 2px;
   }
 
   .popup-card {
