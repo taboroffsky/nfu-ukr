@@ -88,7 +88,7 @@ hr {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 380px;
+  width: 250px;
 }
 
 .left {
@@ -104,28 +104,19 @@ hr {
   transform: scaleX(-1);
 }
 
-.logo_header,
-.description {
-  text-align: center;
-}
-
-.logo_header img {
-  position: absolute;
-  top: 300px;
-  right: 700px;
+.logo_header {
   width: 500px;
-}
+  }
 
-.description::before {
-  content: '';
-  height: 100%;
-  vertical-align: middle;
-}
+.logo_header_image {
+  
+  margin: auto;
+  }
 
 .description-item {
   position: absolute;
-  bottom: 30px;
-  right: 180px;
+  bottom: 5em;
+  left: 6em;
   color: $tertiaryColor;
   font-size: 33px;
   font-weight: 700;
@@ -494,28 +485,7 @@ div.cookiebanner>a {
     right: 46px;
     transform: scaleX(-1);
   }
-
-  .logo_header img {
-    position: absolute;
-    left: 450px;
-    width: 420px;
-  }
-
-  .description::before {
-    content: '';
-    height: 100%;
-    vertical-align: middle;
-  }
-
-  .description-item {
-    display: inline-block;
-    vertical-align: middle;
-    color: $tertiaryColor;
-    font-size: 53px;
-    font-weight: 800;
-    letter-spacing: 2px;
-  }
-
+  
   .popup-card {
     position: relative;
     display: flex;

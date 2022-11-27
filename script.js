@@ -134,7 +134,7 @@ closeBtns.forEach((closeBtn) => {
 
 
 
-// Neural Connection Background
+// Neural Connections Background
 
 var w = c.width = window.innerWidth,
 		h = c.height = window.innerHeight,
@@ -142,12 +142,12 @@ var w = c.width = window.innerWidth,
 		
 		opts = {
 			
-			range: 180,
+			range: 250,
 			baseConnections: 50,
 			addedConnections: 60,
 			baseSize: 5,
 			minSize: 1,
-			dataToConnectionSize: .4,
+			dataToConnectionSize: .3,
 			sizeMultiplier: .7,
 			allowedDist: 60,
 			baseDist: 60,
@@ -164,7 +164,7 @@ var w = c.width = window.innerWidth,
 			rotVelY: .0011,
 			
 			repaintColor: '#1d093f',
-			connectionColor: 'FCFDF2',
+			connectionColor: '#883576',
 			rootColor: 'FCFDF2',
 			endColor: 'FFDE00',
 			dataColor: 'FFDE00',
