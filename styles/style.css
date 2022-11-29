@@ -93,7 +93,7 @@ hr {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 250px;
+  width: 12%;
 }
 
 .left {
@@ -115,15 +115,15 @@ hr {
 
 .logo_header_image {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 30%;
-  width: 40%;
+  width: 35%;
   text-align: center;
 }
 
 .description-item {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 33%;
   color: #FEF5AC;
   font-size: 33px;
@@ -484,18 +484,40 @@ div.cookiebanner > a {
     opacity: 1;
   }
   .emblem {
-    width: 230px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 12%;
   }
   .left {
-    position: absolute;
-    top: 8px;
-    left: 46px;
+    position: relative;
+    top: 0;
+    left: 25px;
   }
   .right {
     position: absolute;
-    top: 8px;
-    right: 46px;
+    top: 0;
+    right: 55px;
     transform: scaleX(-1);
+  }
+  .logo_header {
+    position: relative;
+  }
+  .logo_header_image {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 30%;
+    text-align: center;
+  }
+  .description-item {
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    color: #FEF5AC;
+    font-size: 33px;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
   .popup-card {
     position: relative;
@@ -541,9 +563,6 @@ div.cookiebanner > a {
   .language__img:hover,
 .language__img_active {
     opacity: 1;
-  }
-  .emblem {
-    width: 160px;
   }
   .left {
     position: absolute;
