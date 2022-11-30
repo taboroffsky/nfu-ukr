@@ -470,31 +470,28 @@ div.cookiebanner>a {
     opacity: 1;
   }
 
-   
+
   .emblem {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
     width: 12%;
   }
-  
+
   .left {
     position: relative;
     top: 0;
     left: 25px;
   }
-  
+
   .right {
     position: absolute;
     top: 0;
-    right: 55px;
+    right: 25px;
     transform: scaleX(-1);
   }
-  
+
   .logo_header {
     position: relative;
   }
-  
+
   .logo_header_image {
     position: absolute;
     top: 25%;
@@ -502,16 +499,13 @@ div.cookiebanner>a {
     width: 30%;
     text-align: center;
   }
-  
+
   .description-item {
     position: absolute;
     top: 75%;
     left: 30%;
-    color: $tertiaryColor;
-    font-size: 33px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
+
   .popup-card {
     position: relative;
     display: flex;
@@ -566,6 +560,10 @@ div.cookiebanner>a {
     opacity: 1;
   }
 
+  .emblem {
+    width: 18%;
+  }
+
   .left {
     position: absolute;
     top: 8px;
@@ -581,15 +579,15 @@ div.cookiebanner>a {
 
   .logo_header_image {
     position: absolute;
-    top: 160px;
+    top: 240px;
     left: 30%;
     width: 35%;
   }
-  
+
   .description-item {
     position: absolute;
     top: 70%;
-    left: 33%;
+    left: 30%;
     color: $tertiaryColor;
     font-size: 33px;
     font-weight: 700;
@@ -662,18 +660,13 @@ div.cookiebanner>a {
     position: absolute;
     top: 300px;
     left: 24%;
-    width: 48%;
-    
+    width: 44%;
   }
-  
+
   .description-item {
     position: absolute;
     top: 72%;
     left: 24%;
-    color: $tertiaryColor;
-    font-size: 33px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
 
   .gallery h1 {
@@ -795,15 +788,15 @@ div.cookiebanner>a {
 
   .logo_header_image {
     position: absolute;
-    top: 110px;
-    left: 10%;
-    width: 33%;
-     }
-  
+    top: 300px;
+    left: 15%;
+    width: 260px;
+  }
+
   .description-item {
     position: absolute;
-    top: 490px;
-    left: 10%;
+    top: 480px;
+    left: 15%;
     color: $tertiaryColor;
     font-size: 25px;
     font-weight: 700;
