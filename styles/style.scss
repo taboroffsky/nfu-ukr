@@ -79,6 +79,7 @@ hr {
 // Header
 
 .header {
+  position: relative;
   min-height: 100vh;
   width: 100%;
 }
@@ -103,34 +104,33 @@ hr {
   transform: scaleX(-1);
 }
 
-.logo_header {
-  position: relative;
+.logo_header, .description {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .logo_header_image {
-  position: absolute;
   top: 40%;
-  left: 24%;
   width: 32%;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .description-item {
-  position: absolute;
-  top: 70%;
-  left: 24%;
-  color: $tertiaryColor;
-  font-size: 33px;
+  margin: 35px auto;
+  // top: 60%;
+  width: max-content;
+  color: $btnColor1;
+  font-size: 43px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 canvas {
   position: absolute;
+  top: 0;
   width: 100%;
-  z-index: -1;
-  top: -35px;
-  left: 0;
+  z-index: -2;
 }
 
 // Gallery
@@ -470,7 +470,6 @@ div.cookiebanner>a {
     opacity: 1;
   }
 
-
   .emblem {
     width: 12%;
   }
@@ -488,22 +487,9 @@ div.cookiebanner>a {
     transform: scaleX(-1);
   }
 
-  .logo_header {
-    position: relative;
-  }
-
   .logo_header_image {
-    position: absolute;
-    top: 25%;
-    left: 30%;
+    top: 55%;
     width: 30%;
-    text-align: center;
-  }
-
-  .description-item {
-    position: absolute;
-    top: 75%;
-    left: 30%;
   }
 
   .popup-card {
@@ -578,9 +564,9 @@ div.cookiebanner>a {
   }
 
   .logo_header_image {
-    position: absolute;
-    top: 240px;
-    left: 30%;
+    display: block;
+    top: 180px;
+    margin: 0 auto;
     width: 35%;
   }
 
@@ -588,10 +574,6 @@ div.cookiebanner>a {
     position: absolute;
     top: 70%;
     left: 30%;
-    color: $tertiaryColor;
-    font-size: 33px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
 
   .gallery {
@@ -797,10 +779,6 @@ div.cookiebanner>a {
     position: absolute;
     top: 480px;
     left: 15%;
-    color: $tertiaryColor;
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
 
   canvas {

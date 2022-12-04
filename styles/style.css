@@ -84,6 +84,7 @@ hr {
 }
 
 .header {
+  position: relative;
   min-height: 100vh;
   width: 100%;
 }
@@ -108,34 +109,34 @@ hr {
   transform: scaleX(-1);
 }
 
-.logo_header {
-  position: relative;
+.logo_header, .description {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .logo_header_image {
-  position: absolute;
   top: 40%;
-  left: 24%;
   width: 32%;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .description-item {
-  position: absolute;
-  top: 70%;
-  left: 24%;
-  color: #FEF5AC;
-  font-size: 33px;
+  margin: 35px auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #FFD600;
+  font-size: 43px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 canvas {
   position: absolute;
+  top: 0;
   width: 100%;
-  z-index: -1;
-  top: -35px;
-  left: 0;
+  z-index: -2;
 }
 
 .products {
@@ -496,20 +497,9 @@ div.cookiebanner > a {
     right: 25px;
     transform: scaleX(-1);
   }
-  .logo_header {
-    position: relative;
-  }
   .logo_header_image {
-    position: absolute;
-    top: 25%;
-    left: 30%;
+    top: 55%;
     width: 30%;
-    text-align: center;
-  }
-  .description-item {
-    position: absolute;
-    top: 75%;
-    left: 30%;
   }
   .popup-card {
     position: relative;
@@ -571,19 +561,15 @@ div.cookiebanner > a {
     transform: scaleX(-1);
   }
   .logo_header_image {
-    position: absolute;
-    top: 240px;
-    left: 30%;
+    display: block;
+    top: 180px;
+    margin: 0 auto;
     width: 35%;
   }
   .description-item {
     position: absolute;
     top: 70%;
     left: 30%;
-    color: #FEF5AC;
-    font-size: 33px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
   .gallery {
     padding-bottom: 40px;
@@ -751,10 +737,6 @@ div.cookiebanner > a {
     position: absolute;
     top: 480px;
     left: 15%;
-    color: #FEF5AC;
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
   canvas {
     top: -20px;
