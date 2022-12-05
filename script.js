@@ -127,9 +127,6 @@ closeBtns.forEach((closeBtn) => {
   });
 });
 
-
-
-
 // Cookies
 
 
