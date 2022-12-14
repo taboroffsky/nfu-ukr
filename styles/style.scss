@@ -54,8 +54,11 @@ hr {
   margin: 0 auto;
 }
 
+// Header
+
 .skiptranslate {
   display: none;
+  overflow: hidden;
 }
 
 #header-nav {
@@ -64,11 +67,45 @@ hr {
   align-items: center;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 .language {
   z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
 }
 
 .language__img {
@@ -84,8 +121,6 @@ hr {
 .language__img_active {
   opacity: 1;
 }
-
-// Header
 
 .header {
   position: relative;
@@ -113,7 +148,8 @@ hr {
   transform: scaleX(-1);
 }
 
-.logo_header, .description {
+.logo_header,
+.description {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -621,6 +657,20 @@ div.cookiebanner>a {
 
 @media screen and (max-width: 768px) {
 
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  #header-nav {
+    display: none;
+  }
+
   .language__img {
     width: 28px;
   }
@@ -742,17 +792,16 @@ div.cookiebanner>a {
 
 @media screen and (max-width: 425px) {
 
-  .language {
-    top: 0;
-    right: 16px;
-    z-index: 3;
-    display: flex;
-    flex-direction: row;
+  .sidenav {
+    padding-top: 15px;
   }
 
-  .language__img {
-    width: 26px;
-    padding-left: 8px;
+  .sidenav a {
+    font-size: 18px;
+  }
+
+    .language__img {
+    width: 35px;
   }
 
   .language__img:hover,
