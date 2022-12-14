@@ -654,6 +654,9 @@ div.cookiebanner > a {
   #header-nav {
     display: none;
   }
+  .language {
+    left: 40%;
+  }
   .language__img {
     width: 28px;
   }
@@ -683,7 +686,8 @@ div.cookiebanner > a {
   }
   .description-item {
     position: absolute;
-    top: 72%;
+    max-width: 50%;
+    top: 55%;
     left: 24%;
   }
   .gallery h1 {
@@ -759,6 +763,9 @@ div.cookiebanner > a {
   .sidenav a {
     font-size: 18px;
   }
+  .language {
+    left: 35%;
+  }
   .language__img {
     width: 35px;
   }
@@ -783,15 +790,16 @@ div.cookiebanner > a {
   .logo_header_image {
     position: absolute;
     top: 300px;
-    left: 15%;
-    width: 260px;
+    left: 17%;
+    width: 290px;
   }
   .description-item {
     position: absolute;
-    width: 200px;
+    max-width: 50%;
     top: 460px;
     left: 15%;
     font-size: 22px;
+    text-align: center;
   }
   canvas {
     top: -20px;
