@@ -797,9 +797,9 @@ div.cookiebanner > a {
     position: absolute;
     max-width: 50%;
     top: 460px;
-    left: 15%;
+    left: 17%;
     font-size: 22px;
-    text-align: center;
+    text-align: left;
   }
   canvas {
     top: -20px;
