@@ -401,7 +401,8 @@ canvas {
 }
 
 .team-card {
-  background: $backgroundColor2;
+  
+  background: $backgroundColor1;
   box-shadow: $boxShadow1;
   width: 14%;
   display: inline-block;
@@ -411,6 +412,7 @@ canvas {
 }
 
 .team-card img {
+  filter: grayscale(100%);
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
@@ -426,8 +428,9 @@ canvas {
   font-size: 14px;
 }
 
-.team-card:hover {
-  transform: scale(1.1);
+.team-card img:hover {
+  filter: none;
+  
   color: $mainColor;
 }
 

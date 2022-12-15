@@ -20,7 +20,7 @@ a {
 
 html {
   height: 100%;
-  background: #1d093f;
+  background: #00005b;
 }
 
 body {
@@ -320,7 +320,7 @@ canvas {
 
 .popup-card .info {
   z-index: 2;
-  background: #1d093f;
+  background: #00005b;
   display: flex;
   flex-direction: column;
   width: 55%;
@@ -425,7 +425,7 @@ canvas {
 }
 
 .team-card {
-  background: #1d093f;
+  background: #883576;
   box-shadow: 0 2px 18px 2px #FEF5AC;
   width: 14%;
   display: inline-block;
@@ -435,6 +435,7 @@ canvas {
 }
 
 .team-card img {
+  filter: grayscale(100%);
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
@@ -450,8 +451,8 @@ canvas {
   font-size: 14px;
 }
 
-.team-card:hover {
-  transform: scale(1.1);
+.team-card img:hover {
+  filter: none;
   color: #EFFFFD;
 }
 
@@ -515,7 +516,7 @@ address a:hover {
 }
 
 div.cookiebanner > a {
-  background: #1d093f;
+  background: #00005b;
   border: 1px solid #1d093f;
 }
 
@@ -822,7 +823,7 @@ div.cookiebanner > a {
     left: 0;
   }
   .popup-card .product-img {
-    background: #1d093f;
+    background: #00005b;
     width: auto;
     height: 50%;
     border-radius: 10px 10px 0 0;

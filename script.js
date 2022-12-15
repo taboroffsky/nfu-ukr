@@ -1,14 +1,6 @@
 
 // Mobile Menu
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
 
 // Main site translator
 
@@ -138,7 +130,7 @@ closeBtns.forEach((closeBtn) => {
 	});
 });
 
-// Cookies
+
 
 
 
@@ -171,9 +163,9 @@ var w = c.width = window.innerWidth,
 		rotVelX: .0022,
 		rotVelY: .0011,
 
-		repaintColor: '#1d093f',
+		repaintColor: '#00005b',
 		connectionColor: '#883576',
-		rootColor: 'FCFDF2',
+		rootColor: '#00005b',
 		endColor: 'FFDE00',
 		dataColor: 'FFDE00',
 
@@ -296,9 +288,7 @@ Connection.prototype.link = function () {
 
 			if (passedExisting && passedBuffered)
 				links.push({ x: pos.x, y: pos.y, z: pos.z });
-
 		}
-
 	}
 
 	if (links.length === 0)
@@ -496,3 +486,9 @@ window.addEventListener('resize', function () {
 	ctx.fillRect(0, 0, w, h);
 });
 window.addEventListener('click', init);
+
+
+// Cookies
+
+
+
