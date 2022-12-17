@@ -18,5 +18,10 @@
     text-align: center;
     padding: 18px 15px;
     color: $mainColor;
-  }  
+  }
+}
+
+@mixin transition($obj, $dur, $del, $obj2, $dur2, $del2) {
+  -webkit-transition: $obj $dur $del, $obj2 $dur2 $del2;
+  transition: $obj $dur $del, $obj2 $dur2 $del2;
 }

@@ -20,12 +20,14 @@ a {
 
 html {
   height: 100%;
-  background: #1d093f;
+  background: #00005b;
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  top: 40px;
 }
 
 .neural_connections {
@@ -60,22 +62,63 @@ hr {
 
 .skiptranslate {
   display: none;
+  overflow: hidden;
+}
+
+#header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 .language {
-  position: absolute;
-  top: 0;
-  right: 16px;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
 }
 
 .language__img {
-  width: 30px;
-  margin-bottom: 20px;
+  width: 35px;
+  margin: 20px;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.4;
+  border: 2px solid #883576;
+  box-shadow: 0 4px 8px 0 #FFD600, 0 6px 20px 0 #FEF5AC;
 }
 
 .language__img:hover,
@@ -97,7 +140,7 @@ hr {
 }
 
 .left {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 25px;
 }
@@ -109,7 +152,8 @@ hr {
   transform: scaleX(-1);
 }
 
-.logo_header, .description {
+.logo_header,
+.description {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -276,7 +320,7 @@ canvas {
 
 .popup-card .info {
   z-index: 2;
-  background: #1d093f;
+  background: #00005b;
   display: flex;
   flex-direction: column;
   width: 55%;
@@ -381,7 +425,7 @@ canvas {
 }
 
 .team-card {
-  background: #1d093f;
+  background: #883576;
   box-shadow: 0 2px 18px 2px #FEF5AC;
   width: 14%;
   display: inline-block;
@@ -391,6 +435,7 @@ canvas {
 }
 
 .team-card img {
+  filter: grayscale(100%);
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
@@ -406,8 +451,8 @@ canvas {
   font-size: 14px;
 }
 
-.team-card:hover {
-  transform: scale(1.1);
+.team-card img:hover {
+  filter: none;
   color: #EFFFFD;
 }
 
@@ -471,7 +516,7 @@ address a:hover {
 }
 
 div.cookiebanner > a {
-  background: #1d093f;
+  background: #00005b;
   border: 1px solid #1d093f;
 }
 
@@ -487,7 +532,7 @@ div.cookiebanner > a {
     width: 12%;
   }
   .left {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 25px;
   }
@@ -599,6 +644,20 @@ div.cookiebanner > a {
   }
 }
 @media screen and (max-width: 768px) {
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  .topnav #myLinks {
+    display: none;
+  }
+  #header-nav {
+    display: none;
+  }
+  .language {
+    left: 40%;
+  }
   .language__img {
     width: 28px;
   }
@@ -628,7 +687,8 @@ div.cookiebanner > a {
   }
   .description-item {
     position: absolute;
-    top: 72%;
+    max-width: 50%;
+    top: 55%;
     left: 24%;
   }
   .gallery h1 {
@@ -698,16 +758,17 @@ div.cookiebanner > a {
   }
 }
 @media screen and (max-width: 425px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
   .language {
-    top: 0;
-    right: 16px;
-    z-index: 3;
-    display: flex;
-    flex-direction: row;
+    left: 35%;
   }
   .language__img {
-    width: 26px;
-    padding-left: 8px;
+    width: 35px;
   }
   .language__img:hover,
 .language__img_active {
@@ -730,15 +791,16 @@ div.cookiebanner > a {
   .logo_header_image {
     position: absolute;
     top: 300px;
-    left: 15%;
-    width: 260px;
+    left: 17%;
+    width: 290px;
   }
   .description-item {
     position: absolute;
-    width: 65%;
+    max-width: 50%;
     top: 460px;
-    left: 15%;
+    left: 17%;
     font-size: 22px;
+    text-align: left;
   }
   canvas {
     top: -20px;
@@ -761,7 +823,7 @@ div.cookiebanner > a {
     left: 0;
   }
   .popup-card .product-img {
-    background: #1d093f;
+    background: #00005b;
     width: auto;
     height: 50%;
     border-radius: 10px 10px 0 0;
