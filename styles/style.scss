@@ -18,6 +18,7 @@ html {
 
 body {
   min-height: 100%;
+  max-width: 100%;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   top: 40px;
@@ -57,15 +58,17 @@ hr {
 // Header
 
 .skiptranslate {
-  overflow: hidden;
+  display: none;
 }
 
 #header-nav {
-  display: flex;
-  justify-content: center;
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 30px;
+  position: fixed;
+  top: 20px;
+  left: 15%;
+  width: 70%;
 }
 
 .language {
@@ -96,11 +99,8 @@ hr {
 }
 
 .emblem {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   width: 12%;
-  padding-top: 3%;
+  padding-top: 10%;
 }
 
 .left {
@@ -125,12 +125,11 @@ hr {
 }
 
 .description-item {
-  margin: 35px auto;
-  // top: 60%;
-  width: max-content;
+  margin: 15px auto;
+  max-width: 70%;
   color: $btnColor1;
-  font-size: 43px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
@@ -364,7 +363,7 @@ canvas {
 }
 
 .team-card {
-  
+
   background: $backgroundColor1;
   box-shadow: $boxShadow1;
   width: 14%;
@@ -393,7 +392,7 @@ canvas {
 
 .team-card img:hover {
   filter: none;
-  
+
   color: $mainColor;
 }
 
@@ -482,6 +481,7 @@ div.cookiebanner>a {
   }
 
   .emblem {
+
     width: 12%;
   }
 
@@ -499,7 +499,7 @@ div.cookiebanner>a {
   }
 
   .logo_header_image {
-    top: 55%;
+    padding-top: 25%;
     width: 30%;
   }
 

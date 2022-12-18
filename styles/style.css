@@ -25,6 +25,7 @@ html {
 
 body {
   min-height: 100%;
+  max-width: 100%;
   font-family: "Montserrat", sans-serif;
   position: relative;
   top: 40px;
@@ -61,15 +62,18 @@ hr {
 }
 
 .skiptranslate {
-  overflow: hidden;
+  display: none;
 }
 
 #header-nav {
-  display: flex;
-  justify-content: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 20px;
+  left: 15%;
+  width: 70%;
 }
 
 .language {
@@ -100,11 +104,8 @@ hr {
 }
 
 .emblem {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   width: 12%;
-  padding-top: 3%;
+  padding-top: 10%;
 }
 
 .left {
@@ -129,13 +130,11 @@ hr {
 }
 
 .description-item {
-  margin: 35px auto;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  margin: 15px auto;
+  max-width: 70%;
   color: #FFD600;
-  font-size: 43px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
@@ -506,7 +505,7 @@ div.cookiebanner > a {
     transform: scaleX(-1);
   }
   .logo_header_image {
-    top: 55%;
+    padding-top: 25%;
     width: 30%;
   }
   .popup-card {
