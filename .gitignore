@@ -1,0 +1,27 @@
+# vscode
+.vscode
+
+# Hardhat
+hardhat-nfu-ukr/artifacts
+hardhat-nfu-ukr/cache
+hardhat-nfu-ukr/deployments
+hardhat-nfu-ukr/images
+node_modules
+hardhat-nfu-ukr/coverage
+hardhat-nfu-ukr/coverage.json
+hardhat-nfu-ukr/typechain
+hardhat-nfu-ukr/typechain-types
+
+# Yarn
+yarn.lock
+
+# Environment variables
+.env
+
+# Build artefacts
+bin/
+gen/
+out/
+
+# Log Files
+*.log
