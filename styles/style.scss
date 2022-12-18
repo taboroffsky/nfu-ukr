@@ -57,48 +57,15 @@ hr {
 // Header
 
 .skiptranslate {
-  display: none;
   overflow: hidden;
 }
 
 #header-nav {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
 }
 
 .language {
@@ -133,32 +100,28 @@ hr {
   justify-content: space-around;
   align-items: flex-start;
   width: 12%;
+  padding-top: 3%;
 }
 
 .left {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 25px;
 }
 
 .right {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 25px;
   transform: scaleX(-1);
 }
 
-.logo_header,
-.description {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
 .logo_header_image {
-  top: 40%;
-  width: 32%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  max-width: 70%;
   margin: 0 auto;
+  padding-top: 45%;
 }
 
 .description-item {
