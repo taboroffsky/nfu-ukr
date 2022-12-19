@@ -25,5 +25,6 @@ export const networkConfig: networkConfigInfo = {
     },
 };
 
+export const NonFungibleUkraineName: string = "NonFungibleUkraine";
 export const DevelopmentChains: string[] = ["hardhat", "localhost"];
 export const TokenUrisCache: string[] = ["ipfs://Qma8TuMUP5fAUT2oyuH3Ai9KdLYCwJNVVevS9TrSdxye9n", "ipfs://QmXjNfpdiSoEXhp6dN4RHAEZ8VTx6LtPbEgUDsqyWtJGoV", "ipfs://QmQGPiHHyqGi7TvsemdFvUWoTsxGsHbH7MzaaMvHDBYh3N"];

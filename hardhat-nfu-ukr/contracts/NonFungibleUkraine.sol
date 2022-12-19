@@ -14,6 +14,7 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
     mapping(string => uint256) private tokenUrisCounter;
 
     constructor(
+        string[] memory auctionTokenUris,
         string[] memory tokenUris,
         uint256 tokensPerUri,
         uint256 _mintFee
@@ -22,6 +23,10 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
 
         for (uint i = 0; i < tokenUris.length; i++) {
             tokenUrisCounter[tokenUris[i]] = tokensPerUri;
+        }
+
+        for (uint i = 0; i < auctionTokenUris.length; i++) {
+            _mintTokenUri(++tokenCounter, auctionTokenUris[i]);
         }
     }
 
@@ -34,7 +39,7 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
         }
     }
 
-    function mintNft(string memory tokenUri) public payable {
+    function mintNft(string calldata tokenUri) public payable {
         if (msg.value < mintFee) {
             revert NonFungibleUkraine__NotEnoughEth();
         }
@@ -43,10 +48,8 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
             revert NonFungibleUkraine__TokenUriCountExceeded();
         }
 
-        uint256 newItemId = tokenCounter++;
-        _safeMint(msg.sender, newItemId);
-        _setTokenURI(newItemId, tokenUri);
         tokenUrisCounter[tokenUri]--;
+        _mintTokenUri(++tokenCounter, tokenUri);
     }
 
     function kill() public onlyOwner {
@@ -61,5 +64,10 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
         string memory tokenURI
     ) public view returns (uint256) {
         return tokenUrisCounter[tokenURI];
+    }
+
+    function _mintTokenUri(uint256 tokenId, string memory tokenUri) private {
+        _safeMint(msg.sender, tokenId);
+        _setTokenURI(tokenId, tokenUri);
     }
 }
