@@ -12,6 +12,11 @@ hardhat-nfu-ukr/coverage.json
 hardhat-nfu-ukr/typechain
 hardhat-nfu-ukr/typechain-types
 
+# Next
+next-nfu-ukr/.next
+next-nfu-ukr/next-env.d.ts
+next-nfu-ukr/package-lock.json
+
 # Yarn
 yarn.lock
 
