@@ -75,7 +75,7 @@ nav {
 
 /*Styling logo*/
 .logo {
-  padding: 1vh 1vw;
+  padding: 1vh 2vw;
   text-align: center;
 }
 
@@ -154,20 +154,16 @@ nav {
 
 // Translator
 
-.language_header_menu_img {
-  display: none;
-}
 
-.language {
+.nav_language {
   z-index: 3;
-  position: absolute;
-  bottom: 10%;
-  left: 45%;
+  justify-content: last baseline;
+  align-items: center;
 }
 
 .language__img {
-  width: 35px;
-  margin: 20px;
+  width: 30px;
+  margin: 10px;
   cursor: pointer;
   opacity: .4;
   border: 2px solid #883576;
@@ -203,20 +199,18 @@ nav {
   transform: scaleX(-1);
 }
 
-.logo_header_menu_image {
-  display: none;
-}
-
 .logo_header_image {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 70%;
   margin: 0 auto;
-  padding-top: 45%;
 }
 
 .description-item {
-  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 70%;
   color: $btnColor1;
   font-size: 40px;
@@ -643,6 +637,10 @@ div.cookiebanner>a {
 
 @media screen and (max-width: 1024px) {
 
+  .nav_language {
+    margin: 0 auto;
+  }
+
   .language__img {
     width: 28px;
   }
@@ -793,14 +791,8 @@ div.cookiebanner>a {
 
   // translator
 
-  .language_header_menu_img {
-    width: 27px;
-    margin: 10px 15px;
-    float: right;
-  }
-
-  .language {
-    left: 40%;
+  .nav_language {
+    margin: 0 auto;
   }
 
   .language__img {
@@ -829,14 +821,9 @@ div.cookiebanner>a {
     transform: scaleX(-1);
   }
 
-  .logo_header_menu_image {
-    display: block;
-    float: left;
-    width: 80px;
-  }
-
   .logo_header_image {
-    width: 50%;
+    top: 50%;
+    width: 45%;
   }
 
   .description-item {
@@ -928,20 +915,13 @@ div.cookiebanner>a {
 
 @media screen and (max-width: 425px) {
 
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
-
-  .language {
-    left: 35%;
+  .nav_language {
+    margin: 0 auto;
   }
 
   .language__img {
-    width: 35px;
+    max-width: 28px;
+    max-height: 20px;
   }
 
   .language__img:hover,
@@ -968,7 +948,7 @@ div.cookiebanner>a {
 
   .logo_header_image {
     position: absolute;
-    top: 300px;
+    top: 230px;
     left: 17%;
     width: 290px;
   }
