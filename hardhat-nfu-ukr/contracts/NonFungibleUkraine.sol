@@ -7,26 +7,20 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract NonFungibleUkraine is ERC721URIStorage, Ownable {
     error NonFungibleUkraine__NotEnoughEth();
     error NonFungibleUkraine__TransferFailed();
-    error NonFungibleUkraine__TokenUriCountExceeded();
+    error NonFungibleUkraine__TokenUnavailable();
 
     uint256 public immutable mintFee;
     uint256 private tokenCounter;
-    mapping(string => uint256) private tokenUrisCounter;
+    mapping(string => bool) private tokensAvailability;
 
     constructor(
-        string[] memory auctionTokenUris,
         string[] memory tokenUris,
-        uint256 tokensPerUri,
         uint256 _mintFee
     ) ERC721("NonFungibleUkraine", "NFU") {
         mintFee = _mintFee;
 
         for (uint i = 0; i < tokenUris.length; i++) {
-            tokenUrisCounter[tokenUris[i]] = tokensPerUri;
-        }
-
-        for (uint i = 0; i < auctionTokenUris.length; i++) {
-            _mintTokenUri(++tokenCounter, auctionTokenUris[i]);
+            tokensAvailability[tokenUris[i]] = true;
         }
     }
 
@@ -44,30 +38,29 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
             revert NonFungibleUkraine__NotEnoughEth();
         }
 
-        if (tokenUrisCounter[tokenUri] <= 0) {
-            revert NonFungibleUkraine__TokenUriCountExceeded();
+        if (!tokensAvailability[tokenUri]) {
+            revert NonFungibleUkraine__TokenUnavailable();
         }
 
-        tokenUrisCounter[tokenUri]--;
-        _mintTokenUri(++tokenCounter, tokenUri);
+        tokensAvailability[tokenUri] = false;
+        uint256 tokenId = ++tokenCounter;
+        _safeMint(msg.sender, tokenId);
+        _setTokenURI(tokenId, tokenUri);
     }
 
     function kill() public onlyOwner {
         selfdestruct(payable(msg.sender));
     }
 
+    receive() external payable {}
+
     function getTokenCounter() public view returns (uint) {
         return tokenCounter;
     }
 
-    function getTokenUriCount(
+    function getTokenUriAvailability(
         string memory tokenURI
-    ) public view returns (uint256) {
-        return tokenUrisCounter[tokenURI];
-    }
-
-    function _mintTokenUri(uint256 tokenId, string memory tokenUri) private {
-        _safeMint(msg.sender, tokenId);
-        _setTokenURI(tokenId, tokenUri);
+    ) public view returns (bool) {
+        return tokensAvailability[tokenURI];
     }
 }
