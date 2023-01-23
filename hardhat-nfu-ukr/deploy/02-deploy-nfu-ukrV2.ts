@@ -32,7 +32,7 @@ const deploy: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         await verify(nonFungibleUkraineV2.address, args);
     }
 
-    console.log("deployed at " + nonFungibleUkraineV2.address);
+    console.log(`${NonFungibleUkraineV2Name} is deployed at ${nonFungibleUkraineV2.address}`);
 
     saveDeployOutput(NonFungibleUkraineV2Name, chainId.toString(), nonFungibleUkraineV2);
 };

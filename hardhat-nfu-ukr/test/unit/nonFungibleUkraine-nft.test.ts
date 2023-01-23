@@ -33,9 +33,12 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
 
           it("Should update counters on mint", async function () {
               for (const index in tokenUris) {
+                  let availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
+                  assert.equal(availability, true);
+
                   await mintNft(aliceNonFungibleUkraine, tokenUris[index]);
 
-                  const availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
+                  availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
                   assert.equal(availability, false);
 
                   const balance = await nonFungibleUkraine.balanceOf(alice.address);
@@ -44,6 +47,11 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
 
               const tokenCounter = await nonFungibleUkraine.getTokenCounter();
               assert.equal(tokenCounter.toNumber(), tokenUris.length);
+          });
+
+          it("Should return expected total supply", async function () {
+              const totalSupply = await nonFungibleUkraine.totalSupply();
+              assert.equal(totalSupply.toNumber(), tokenUris.length);
           });
 
           it("Should revert when not enouth eth sent", async function () {

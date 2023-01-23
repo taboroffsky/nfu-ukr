@@ -25,6 +25,7 @@
     "dotenv": "^16.0.0",
     "fs": "^0.0.1-security",
     "nft.storage": "^6.0.1",
+    "operator-filter-registry": "^1.4.0",
     "path": "^0.12.7",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solhint": "^3.3.7",
