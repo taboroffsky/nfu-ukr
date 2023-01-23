@@ -1,7 +1,7 @@
 import { ConnectButton } from 'web3uikit';
 import { useMoralis, useWeb3Contract } from 'react-moralis';
-import * as contractAbis from '../../../nfu-ukr-common/resources/contractAbi.json';
-import * as contractAddresses from '../../../nfu-ukr-common/resources/contractAddress.json';
+import contractAbis from '../../../nfu-ukr-common/resources/contractAbi.json';
+import contractAddresses from '../../../nfu-ukr-common/resources/contractAddress.json';
 
 export default function Web3Sample() {
   const { Moralis } = useMoralis()

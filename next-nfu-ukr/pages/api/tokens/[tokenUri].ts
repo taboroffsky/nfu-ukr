@@ -21,7 +21,7 @@ export default function hadler(request: NextApiRequest, response: NextApiRespons
         fs.writeFileSync("../" + StorageFilePath, JSON.stringify(tokens, null, 2));
         response.status(200).json(token);
     } catch (exception) {
-        console.log(exception);
+        console.log(`Request failed. \nRequest: ${request}\nException: ${exception}`);
         response.status(500).send("Request failed. View server logs for more details.");
     }
 }
