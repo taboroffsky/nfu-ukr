@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { StorageFilePath } from "../../nfu-ukr-common/constants";
 import { StorageToken, TokenMetadata } from "../../nfu-ukr-common/contracts";
+import getTokenUrisFromStorage from "../utils/getTokenUrisFromStorage";
 
 const pinataApiKey = process.env.PINATA_API_KEY!;
 const pinataApiSecret = process.env.PINATA_API_SECRET!;
@@ -18,10 +19,18 @@ const uploadTokensToPinata: () => Promise<void> = async function () {
     const absolutePathPrefix = absolutePath + "/";
     const imagesFilepaths = fs.readdirSync(absolutePath).filter((fileName) => fileName.endsWith(ImageExtension));
 
-    const storageTokens: StorageToken[] = [];
+    // We expect to have at least empty Storage file.
+    const storage = fs.readFileSync("../" + StorageFilePath).toString();
+    const storageTokens: StorageToken[] = JSON.parse(storage);
 
     for (const index in imagesFilepaths) {
         const imageFilepath = imagesFilepaths[index];
+
+        if (storageTokens.filter((token) => imageFilepath.startsWith(token.name)).length > 0) {
+            console.log(`Skipping upload of ${imageFilepath}`);
+            continue;
+        }
+
         const imageUri = await pinImageToPinata(absolutePathPrefix + imageFilepath);
         const imageEnglishDescription = fs.readFileSync(absolutePathPrefix + imageFilepath.replace(ImageExtension, EnglishDescriptionExtension));
         const imageUkrainianDescription = fs.readFileSync(absolutePathPrefix + imageFilepath.replace(ImageExtension, UnrainianDescrptionExtension));
@@ -54,7 +63,7 @@ const pinImageToPinata: (imagesFilePath: string) => Promise<string> = async func
         console.log(`pinning file to IPFS => ${imagesFilePath}`);
         //const response = { IpfsHash: "ipfs://image" };
         const response = await pinata.pinFileToIPFS(readStream);
-        console.log(`pin result: ${response.toString()}`);
+        console.log(`pin result: ${JSON.stringify(response)}`);
 
         return response.IpfsHash;
     } catch (error) {
@@ -68,7 +77,7 @@ const pinJSONToPinata: (metadata: TokenMetadata) => Promise<string> = async func
         console.log(`pinning token to IPFS => ${metadata.name}`);
         const response = await pinata.pinJSONToIPFS(metadata, { pinataMetadata: { name: metadata.name } });
         //const response = { IpfsHash: "ipfs://tokenMetadata" };
-        console.log(`pin result: ${response.toString()}`);
+        console.log(`pin result: ${JSON.stringify(response)}`);
 
         return response.IpfsHash;
     } catch (error) {

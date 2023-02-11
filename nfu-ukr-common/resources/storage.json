@@ -1,26 +1,146 @@
 [
   {
-    "name": "CryingCat",
-    "description": "This is a crying cat. It is crying. It is cat. It is crying cat.",
-    "image": "ipfs://Qme9axydaMpczrCLHHfpcrRhZtPd197UT6cx87hAog8a1Q",
-    "tokenUri": "ipfs://QmTzBTG2Bpjd4pTrvFCnQMni942d9PnDVU7Ts2b61spCBG",
-    "descriptionUa": "Це кіт, що плаче. Цей кіт плаче. Це такий кіт, який плаче.",
+    "name": "Resistance",
+    "description": "Before the full scale invasion such names as \"tiger\", \"fly\", \"leopard\" and others were merely members of the animal kingdom. Now the times have changed, and so did the associations. Any schoolchild can precisely describe what a \"Tigr\" looks like, but it won't be about a furry feline with black stripes.",
+    "image": "ipfs://QmbURvJBBwpVkNMpQdq5JYgYaEcad16p1eAsjZCxTXYvi2",
+    "tokenUri": "ipfs://QmdPgUoxhZimXRuaF3N2rrWoZiw7TgKEU1or6RNjirVY9Q",
+    "descriptionUa": "До повномаштабного вторгнення такі назви як тигр, муха, леопард та інші, були для нас лише представниками фауни. Нині часи змінилися та асоціації теж. Будь який школяр з точністю зможе описати як виглядає \"Тигр\", але то буде вже не пунаста кішка у чорну смужку.",
     "isListed": true
   },
   {
-    "name": "KissingCat",
-    "description": "This is a kissing cat. It is kissing. It is cat. It is kissing cat.",
-    "image": "ipfs://QmSiQD889xVZxkDm3Hhx6sMmsHJUj2bByZsEvF2pVrHeXd",
-    "tokenUri": "ipfs://QmNykqxhAQPoSnMUax78Bh5Qtq2Jrk48Z2NWEEAmaFj9AA",
-    "descriptionUa": "Це кіт, що цілує. Цей кіт цілує. Це такий кіт, який цілує.",
+    "name": "Six From Minsk",
+    "description": "Six citizens of Minsk, arrested for showing support for Ukraine",
+    "image": "ipfs://QmUcH2Ucm5PBbLHVFQYWXhjQiWHxS1LE67QwPPEDSVUNc1",
+    "tokenUri": "ipfs://QmSJCs8K98k44Fiew6GDNz7G3wAWdVgyoRx1NEqjFoHJUy",
+    "descriptionUa": "Шість жителів Мінська, що були затримані за прояв підтримки України",
     "isListed": true
   },
   {
-    "name": "SmilingCat",
-    "description": "This is a smiling cat. It is smiling. It is cat. It is smiling cat.",
-    "image": "ipfs://QmRnVxQbMRRHFheQS3itYYwHfdqbaZxf7iquotcVmPkfvF",
-    "tokenUri": "ipfs://QmX5jjkXiSp6tENUfyda7GUpJ7onjQUg8peWfMnnxPooB1",
-    "descriptionUa": "Це кіт, що сміється. Цей кіт сміється. Це такий кіт, який сміється.",
+    "name": "Rakes of russian cruelty",
+    "description": "\"Rakes of russian cruelty\": putin's Russia continues its three hundred year-old terror against Ukraine. Today russian war crimes are often compared with those of nazis. However a similarly apt comparison can be made with previous russian crimes as well. In particular, the Baturyn massacre of 1708, \"red terror\" in Kyiv during 1918, and brutal violence of 2022.",
+    "image": "ipfs://QmbQNVpHnZqfNwppYGFeJpotkLBjCduqurNdpWpkpEYtpB",
+    "tokenUri": "ipfs://QmZp889WL7pHJ8sEZBs7FjefbbKoNUe586ZccsivFLy43a",
+    "descriptionUa": "«Граблі російських звірств»: путінська Росія продовжує трьохсотлітній терор проти України. Російські воєнні злочини сьогодні часто порівнюють із нацистськими. Хоча не менш доречно порівняти їх із власне російськими. Зокрема, різанина в Батурині 1708 року, \"червоний терор\" у Києві 1918 року та звірства 2022 року",
+    "isListed": true
+  },
+  {
+    "name": "Bloodthirsty dictator",
+    "description": "The \"overpreside-nt\" of the neighboring temporarily existing quasi-country named russian federation has always dreamed to be remembered by history. His dream came true - he will be remembered as a bloodthirsty supported of terrorists, as a person that doesn't consider the value of human life, and as a fanatical follower of the most cruel dictators in history",
+    "image": "ipfs://QmeKudv2kUDnoqBVDVT7qdubAKo5zp7FMq52BmUii6spy9",
+    "tokenUri": "ipfs://QmQVM141TomKnACaZBPdd5FXVe1UE9FfPiiYvfutYERra3",
+    "descriptionUa": "Пересидент сусідньої тимчасово існуючої недодержави, яка має назву російська федерація, завжди мріяв увійти в історію. І його мрія збулася-він увійшов..як кривавий посібник терористів, особа, що не переймається цінністю людського життя, фанатичний послідовник найжорстокіших диктаторів усіх часів",
+    "isListed": true
+  },
+  {
+    "name": "Train of Life",
+    "description": "From the very beginning of full scale war the evacuation trains of Ukrzaliznytsia became a symbol of saving hundreds of thousands ukrainian lives, which found themselves in the most difficult of circumstances. In the first weeks following the invasion some train routes were basically travelling for 24 hours per day, relocating people outside the range of enemy fire.",
+    "image": "ipfs://QmZYYZ87CNjYu5BkhHEe3KweMNbFCnyFXfU2eqCAMC1fat",
+    "tokenUri": "ipfs://QmQxBEwxBbY72mqYAz8cmZUj8PfSNqn16bY47MmXdcD8C3",
+    "descriptionUa": "З самого початку повномасштабної війни евакуаційні потяги Укрзалізниці стали символом збереження сотен тисяч життів українців, що опинилися в найтяжчих умовах. В перші тижні вторгнення окремі рейси знаходились в дорозі буквально 24 години на добу, вивозячи людей від зони досягання ворожого вогню.",
+    "isListed": true
+  },
+  {
+    "name": "100000 subscribers",
+    "description": "The impressive number of 100000 killed russian occupants did not get ignored by General Zaluzhnyy.",
+    "image": "ipfs://QmQtUPR2D5G4ZqYBisjRWkvtNet1NyJ9W55zEdRydzVwxB",
+    "tokenUri": "ipfs://QmZ3gNuHhsz1gmxCfhkQ1W5tnguompYDrR9JvzPXog5Dp4",
+    "descriptionUa": "Приголомшлива цифра у 100000 вбитих російських окупантів не пройшла повз уваги генерала Залужного.",
+    "isListed": true
+  },
+  {
+    "name": "Army of drones",
+    "description": "It's important to remember that behind every drone is a person, as well as hundreds of lives saved.",
+    "image": "ipfs://QmVK7CHUSAceCDYvK1NajhP5QSRZv657rRBNw1gTA8iYRc",
+    "tokenUri": "ipfs://QmeFmsWbHZwXEKdm7HWNadvwdxp7JJVXtwC6aSDNp4Yp5J",
+    "descriptionUa": "Варто пам'ятати, що за кожним дроном стоїть людина та сотні врятованих життів.",
+    "isListed": true
+  },
+  {
+    "name": "Eternal flight",
+    "description": "The crew of a russian Mi-8 performed an airshow \"eternal flight\" near the village Berestove in Bakhmut region.",
+    "image": "ipfs://QmVuWNj2bPX23crGjwd3J8ZWVPw1tFF766vGVPPBxQm71M",
+    "tokenUri": "ipfs://QmZCYDqRzobuBHXr2uAdtvgW93EYmr6Mz794RxuLyndAqV",
+    "descriptionUa": "Екіпаж російського Мі-8 показав фігуру вищого пілотажу \"вєчний пальот\" поряд із селом Берестове Бахмутського району.",
+    "isListed": true
+  },
+  {
+    "name": "Grain deal",
+    "description": "Despite incessant active combat and missile strikes Ukraine continues to deliver grain produce to various countries.",
+    "image": "ipfs://QmPncSzhsj16AeY7F7HMugDFWWeTeSMnci4sxjrA3PkRWV",
+    "tokenUri": "ipfs://QmPszdjNNVGLLJ6hntJwjVuWRDS45iU128Kut4EL4pudzJ",
+    "descriptionUa": "Попри безперервні бойові дії та обстріли, Україна продовжує постачати зерно до різних країн світу.",
+    "isListed": true
+  },
+  {
+    "name": "Life",
+    "description": "Colors for the illustration were chosen not without reason, as these are the colors of the Ukrainian Rebel Army flag that represent the blue-yellow flag soaked in blood. On the image we can see a barely visible silhouette of a soldier who is resting, perhaps crying, and possibly is forever asleep, having given all of his strength to the earth.",
+    "image": "ipfs://QmVjkGvFDbXLEiCkTibV8XnhHEumKF1jpKfkQNiZVLkESU",
+    "tokenUri": "ipfs://QmXKKxQBCpq4FYHgkmnRbc7xPZgr1N6XCeunAP1R7eLnok",
+    "descriptionUa": "Кольори, що використані в ілюстрації вибрані не спроста, адже всім відомо ,що прапор УПА, то залитий кров'ю синьо-жовтий стяг.   На зоображенні ми також можемо побачити ледь помітний силует військового, який лежить відпочиває, можливо плаче, а можливо вже заснув навічно віддавши всі свої сили землі.",
+    "isListed": true
+  },
+  {
+    "name": "Minister of Lies",
+    "description": "\"The wise jewish people say that the most zealous antisemites are usually jews\"\r\n\r\n\"We did not invade Ukraine\"\r\n\r\n\"Just as Napoleon mobilized almost the entire Europe against the Russian Empire, and as Hitler mobilized, conquered, and conscripted the majority of european countries against the Soviet Union, so has the USA formed a coalition of almost all europeans that are members of NATO and/or the EU, and via Ukraine are waging war against our country with that same goal - the final solution of the \"russian question\".",
+    "image": "ipfs://QmPTwoHmE5qMk262naFXsNHeTuywjQRRXne4Nw8ktmKXDc",
+    "tokenUri": "ipfs://QmNSGpLi7ZXz7G9akZqMDPaU2Jw12GfsK7fg8xTTPYFCgC",
+    "descriptionUa": "«Мудрий єврейський народ каже, що найбільш затяті антисеміти, як правило, євреї»\r\n\"Ми не вторгалися на Україну\"\r\n«Так само як Наполеон мобілізував практично всю Європу проти Російської імперії, як Гітлер мобілізував і захопив, поставив під рушницю більшість європейських країн і кинув їх проти Радянського союзу, зараз теж США сформували коаліцію практично з усіх європейців, які входять до НАТО та членів ЄС, і через Україну, за довіреністю, ведуть війну проти нашої країни з тим самим завданням – остаточного вирішення «російського питання»",
+    "isListed": true
+  },
+  {
+    "name": "Not Sparta",
+    "description": "The illustration represents the narrow strip of road guarded by the Spartans, and later the narrow strip was defended by the Azovstals. In the middle we can see a portrait made of 300 lines, 300 defenders. Pain, terror, fluttering of hearts...for freedom.",
+    "image": "ipfs://QmPT54mFWsKbCSvauovYL1mKKNW31rjhPMBT1cfMJHYxTs",
+    "tokenUri": "ipfs://QmQrwRCNBogrGPTwRo9Jp84HwBtpFbrXaCDzmYoo8gcD3i",
+    "descriptionUa": "Ілюстрація являє собою ту вузьку смужку дороги,що охороняли спартанці, та пізніше свою вузьку смужку захищали азовстальці. Посередині ми можемо бачити портрет створений з 300 ліній, 300 захисників. Біль, жах, трепетання сердець....заради свободи.",
+    "isListed": true
+  },
+  {
+    "name": "Putin",
+    "description": "Everyone knows what an image hides.",
+    "image": "ipfs://QmeBLhWHWatDWXqLdehUuwPCe65fH8T1BESU5APWhNHQ6A",
+    "tokenUri": "ipfs://QmP3CzMvBh38WYpnyqNHLCC6XD5wiUGPYfJbHxQd8FVFEx",
+    "descriptionUa": "Кожен знає, що приховує за собою образ.",
+    "isListed": true
+  },
+  {
+    "name": "Religion Weapon",
+    "description": "The most significant period of the church's transformation into a department of the KGB were the 1930's. Since then priests not only prayed and forgave sins during visits but also wrote numerous reports on their parishioners. At first attempts were made to somehow hide this, but by now representatives of ROC MP openly propagandize violence, killing, genocide.",
+    "image": "ipfs://QmYDQfYxKvRSBgHpsBeW7S9htqnWazz1hxLpUU5DuwmcPf",
+    "tokenUri": "ipfs://QmW13Waw6kiZeVwAo3gzVGhcxm4SXXhqgCiVJVVg5NjH7j",
+    "descriptionUa": "Найбільш знаковим періодом перетворення церкви на філіал КДБ були 30-ті роки ХХ століття. З тих пір священники не тільки молилися та відпускали гріхи на сповідях, а ще й писали доноси, багато доносів на своїх парафіян. Спочатку це хоч якось намагалися приховати, а зараз предстваники РПЦ МП відкрито пропагують насилля, вбивства, геноцид.",
+    "isListed": true
+  },
+  {
+    "name": "Ring of Shame",
+    "description": "\"He\" thinks that has the ring of absolute power and sees everything, controls the army of orcs. We know, however, that in the end the ring will be melted down, and evil destroyed.",
+    "image": "ipfs://QmYd9oZa2QJT56HEDXkG74uAnDayL8ctrxSTZVJUXUCCvw",
+    "tokenUri": "ipfs://QmUKrH8jhW52J7C1tvKz3FjviCiguK1iubxnzVe523xMgw",
+    "descriptionUa": "\"Він\" думає, що має кільце всевладдя та усе бачить, управляє армією орків.  Ми ж знаємо ,що у кінці кільце буде розплавлене, а зло - знищене.",
+    "isListed": true
+  },
+  {
+    "name": "Space marines",
+    "description": "Very often throughout numerous intercepted conversations of the invaders with their families you can hear their wondrous amazement... not just due to the presence of washing machines or toilets in the house... often this amazed delight is caused by the equipment of ukrainian soldiers, who thus get compared with fictional warriors - space marines.",
+    "image": "ipfs://QmYZ2aDfRZiELWDzBqoWobNmceNe2FbecSvso6pvNcCiRN",
+    "tokenUri": "ipfs://Qmej3GFySHz66kTGudXMEzJUxydJuHePqAxBoggYV7NoGS",
+    "descriptionUa": "Серед купи перехоплених розмов окупантів зі своїми родичами, дуже часто можна почути захоплення..і не лише наявністю пральних машин у домі, або унітазів..часто захоплення викликає забезпечення українських військових, тому і порівнюють їх з фантастичними воїнами, космічним десантом.",
+    "isListed": true
+  },
+  {
+    "name": "The first morning",
+    "description": "Every ukrainian woke up that day either due to explosions or due to worried calls of their family and friends. The time was 5 hours in the morning, it was supposed to be dark, yet the sky was bright like day, those were rockets. On that day, when we said our goodbyes, we could not know whether we were holding the hand of someone close to us for the last time, and then time itself stopped...",
+    "image": "ipfs://QmUNzqDkNEHsEq7GyRnRdfs3539fLXyrxRLtTx1aPKHhLZ",
+    "tokenUri": "ipfs://QmWq6pCSLJQa34o3537yh2EknHw3QMXoyC7gTro53P2jZG",
+    "descriptionUa": "Кожен українець прокинувся у той день чи від вибухів, чи від стурбованих дзвінків близкьих. Була 5та година ранку, повинно бути темно, але небо було світлим як вдень, то були ракети. У той день , прощаючись, ми не знали чи тримаємо руку близької людини восстаннє, а потім час зупинився...",
+    "isListed": true
+  },
+  {
+    "name": "Ties severed",
+    "description": "Ukraine severs diplomatic ties with russia due to the invasion of the russian army.",
+    "image": "ipfs://QmbqQACKCD387HEP9PrrfKSqUeNJxkPCexKQZWxT2tofgj",
+    "tokenUri": "ipfs://Qmb2SVJeZB6WqYveQi8SbfLYcXB1A559tJxwKA8nBNTa7S",
+    "descriptionUa": "Україна розірвала дипломатичні відносини з росією на тлі вторгнення російських військ",
     "isListed": true
   }
 ]
