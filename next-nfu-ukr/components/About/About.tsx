@@ -17,6 +17,7 @@ const About = (): JSX.Element => {
             від чистої ціни покупки шляхом переказу відповідної суми криптовалюти в наш гаманець NFU або інший
             гаманець.</em></p>
       </div>
+
       <div className={Style.card}>
         <h3>Що таке NFT?</h3>
         <p><em>NFT розшифровується як «Non-Fungible Token».</em></p>

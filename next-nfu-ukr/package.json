@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@moralisweb3/next": "^2.14.1",
+
     "@next/font": "13.0.7",
     "@types/node": "18.11.17",
     "@types/react": "18.0.26",

@@ -24,7 +24,6 @@ yarn.lock
 .env
 
 # Build artefacts
-node_modules
 bin/
 gen/
 out/

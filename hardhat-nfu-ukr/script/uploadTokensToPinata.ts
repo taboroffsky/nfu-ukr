@@ -63,6 +63,7 @@ const pinImageToPinata: (imagesFilePath: string) => Promise<string> = async func
         console.log(`pinning file to IPFS => ${imagesFilePath}`);
         //const response = { IpfsHash: "ipfs://image" };
         const response = await pinata.pinFileToIPFS(readStream);
+
         console.log(`pin result: ${JSON.stringify(response)}`);
 
         return response.IpfsHash;
@@ -77,6 +78,7 @@ const pinJSONToPinata: (metadata: TokenMetadata) => Promise<string> = async func
         console.log(`pinning token to IPFS => ${metadata.name}`);
         const response = await pinata.pinJSONToIPFS(metadata, { pinataMetadata: { name: metadata.name } });
         //const response = { IpfsHash: "ipfs://tokenMetadata" };
+
         console.log(`pin result: ${JSON.stringify(response)}`);
 
         return response.IpfsHash;

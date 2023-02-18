@@ -6,6 +6,7 @@ import { StorageToken, TokenMetadata } from "../../../nfu-ukr-common/contracts";
 import contractAddresses from "../../../nfu-ukr-common/resources/contractAddress.json";
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
+
     if (request.method !== "GET") {
         response.status(404).send(`Unexpected http method: ${request.method}`);
         return;

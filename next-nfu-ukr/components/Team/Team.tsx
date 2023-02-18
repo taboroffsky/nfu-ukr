@@ -28,7 +28,6 @@ const teamMembers = [
   }
 ];
 
-
 const Team = () => {
  return (
     <div>
