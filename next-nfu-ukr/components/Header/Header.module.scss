@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.nav-menu {
+  display: inline-block;
+  padding: 12px 0;
+  margin: 12px 0;
+
+  .a {
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  .emblem {
+    width: 12%;
+    padding-top: 10%;
+  }
+
+  .right {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    transform: scaleX(-1);
+  }
+
+  .left {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+  }
+}

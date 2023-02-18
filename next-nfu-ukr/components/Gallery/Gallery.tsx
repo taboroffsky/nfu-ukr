@@ -10,13 +10,13 @@ const Gallery = (): JSX.Element => {
           <h2 className="name">ОРК</h2>
           <span className="price">$140.00</span>
           <a className="popup-btn">Подробиці</a>
-          <img src="./images/wireframes/Russian_occupier.jpg" className="product-img" alt="Russian occupier image"/>
+          <img src="/wireframes/Russian_occupier.jpg" className="product-img" alt="Russian occupier image"/>
         </div>
         <div className="popup-view">
           <div className="popup-card">
             <a><i className="fas fa-times close-btn"></i></a>
             <div className="product-img">
-              <img src="./images/wireframes/Russian_occupier.jpg" alt="Russian occupier image"/>
+              <img src="/wireframes/Russian_occupier.jpg" alt="Russian occupier image"/>
             </div>
             <div className="info">
               <h2>ОРК</h2><span>колекція орки</span>

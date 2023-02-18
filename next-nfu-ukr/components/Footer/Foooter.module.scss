@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.contacts {
+  padding-top: 38px;
+}
+
+.container {
+  padding: 38px 0;
+  text-align: center;
+  color: $tertiaryColor;
+}
+
+.nav_menu {
+  display: inline-block;
+  padding: 12px 0;
+  margin: 12px 0;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer_media {
+  padding: 32px 0;
+}
