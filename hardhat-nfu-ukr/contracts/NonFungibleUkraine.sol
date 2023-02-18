@@ -1,32 +1,33 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.8;
+pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "operator-filter-registry/src/DefaultOperatorFilterer.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NonFungibleUkraine is ERC721URIStorage, Ownable {
+contract NonFungibleUkraine is
+    ERC721URIStorage,
+    Ownable,
+    DefaultOperatorFilterer
+{
     error NonFungibleUkraine__NotEnoughEth();
     error NonFungibleUkraine__TransferFailed();
-    error NonFungibleUkraine__TokenUriCountExceeded();
+    error NonFungibleUkraine__TokenUnavailable();
 
     uint256 public immutable mintFee;
+    uint256 public immutable totalSupply;
     uint256 private tokenCounter;
-    mapping(string => uint256) private tokenUrisCounter;
+    mapping(string => bool) private tokensAvailability;
 
     constructor(
-        string[] memory auctionTokenUris,
         string[] memory tokenUris,
-        uint256 tokensPerUri,
         uint256 _mintFee
     ) ERC721("NonFungibleUkraine", "NFU") {
         mintFee = _mintFee;
+        totalSupply = tokenUris.length;
 
         for (uint i = 0; i < tokenUris.length; i++) {
-            tokenUrisCounter[tokenUris[i]] = tokensPerUri;
-        }
-
-        for (uint i = 0; i < auctionTokenUris.length; i++) {
-            _mintTokenUri(++tokenCounter, auctionTokenUris[i]);
+            tokensAvailability[tokenUris[i]] = true;
         }
     }
 
@@ -44,30 +45,69 @@ contract NonFungibleUkraine is ERC721URIStorage, Ownable {
             revert NonFungibleUkraine__NotEnoughEth();
         }
 
-        if (tokenUrisCounter[tokenUri] <= 0) {
-            revert NonFungibleUkraine__TokenUriCountExceeded();
+        if (!tokensAvailability[tokenUri]) {
+            revert NonFungibleUkraine__TokenUnavailable();
         }
 
-        tokenUrisCounter[tokenUri]--;
-        _mintTokenUri(++tokenCounter, tokenUri);
+        tokensAvailability[tokenUri] = false;
+        uint256 tokenId = ++tokenCounter;
+        _safeMint(msg.sender, tokenId);
+        _setTokenURI(tokenId, tokenUri);
     }
 
     function kill() public onlyOwner {
         selfdestruct(payable(msg.sender));
     }
 
+    receive() external payable {}
+
     function getTokenCounter() public view returns (uint) {
         return tokenCounter;
     }
 
-    function getTokenUriCount(
+    function getTokenUriAvailability(
         string memory tokenURI
-    ) public view returns (uint256) {
-        return tokenUrisCounter[tokenURI];
+    ) public view returns (bool) {
+        return tokensAvailability[tokenURI];
     }
 
-    function _mintTokenUri(uint256 tokenId, string memory tokenUri) private {
-        _safeMint(msg.sender, tokenId);
-        _setTokenURI(tokenId, tokenUri);
+    // Default Operator Filter overrides:
+    function setApprovalForAll(
+        address operator,
+        bool approved
+    ) public override onlyAllowedOperatorApproval(operator) {
+        super.setApprovalForAll(operator, approved);
+    }
+
+    function approve(
+        address operator,
+        uint256 tokenId
+    ) public override onlyAllowedOperatorApproval(operator) {
+        super.approve(operator, tokenId);
+    }
+
+    function transferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public override onlyAllowedOperator(from) {
+        super.transferFrom(from, to, tokenId);
+    }
+
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public override onlyAllowedOperator(from) {
+        super.safeTransferFrom(from, to, tokenId);
+    }
+
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint256 tokenId,
+        bytes memory data
+    ) public override onlyAllowedOperator(from) {
+        super.safeTransferFrom(from, to, tokenId, data);
     }
 }
