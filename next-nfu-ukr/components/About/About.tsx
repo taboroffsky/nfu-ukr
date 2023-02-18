@@ -1,11 +1,14 @@
 import React from "react";
 
+import Style from "./About.module.scss"
+
 const About = (): JSX.Element => {
+  
  return (
     <div>
          <h1>Про проект</h1>
-    <div className="cards_container">
-      <div className="card">
+    <div className={Style.cards_container}>
+      <div className={Style.card}>
         <h3>Як ми використовуємо дохід?</h3>
 
         <p><em><strong>50% коштів, що виручені від кампанії, будуть передані Збройним силам України.</strong></em></p>
@@ -14,7 +17,8 @@ const About = (): JSX.Element => {
             від чистої ціни покупки шляхом переказу відповідної суми криптовалюти в наш гаманець NFU або інший
             гаманець.</em></p>
       </div>
-      <div className="card">
+
+      <div className={Style.card}>
         <h3>Що таке NFT?</h3>
         <p><em>NFT розшифровується як «Non-Fungible Token».</em></p>
         <p><em>Якщо щось не можна замінити, оскільки воно унікальне, воно є «незамінним».
@@ -28,7 +32,7 @@ const About = (): JSX.Element => {
             функціонують як сертифікати власності на віртуальні активи. Таким чином, NFT залишаються унікальними та
             захищеними від підробок.</em></p>
       </div>
-      <div className="card">
+      <div className={Style.card}>
         <h3>Що таке NFU?</h3>
         <p><em>NFU розшифровується як «Non-Fungible Ukraine».</em></p>
         <p><em>Як і NFT, NFU унікальні, оскільки існують лише в обмеженій кількості.</em></p>

@@ -1,5 +1,33 @@
 import React from "react";
 
+const teamMembers = [
+  {
+      name: "Андрій Костін",
+      role: "Засновник проекту",
+      image: "images/avatars/kostin.jpg"
+  },
+  {
+      name: "Олександр Лук'янюк",
+      role: "2D художник",
+      image: "images/avatars/lukianiuk.jpg"
+  },
+  {
+      name: "Тарас Іщук",
+      role: "Веб розробник",
+      image: "images/avatars/ishchuk.jpg"
+  },
+  {
+      name: "Влад Орсагош",
+      role: "Художник",
+      image: "images/avatars/orsahosh.jpg"
+  },
+  {
+      name: "Марія Андреченко",
+      role: "Маркетолог",
+      image: "images/avatars/andrechenko.jpg"
+  }
+];
+
 const Team = () => {
  return (
     <div>
