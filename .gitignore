@@ -14,6 +14,7 @@ hardhat-nfu-ukr/typechain-types
 
 # Next
 next-nfu-ukr/.next
+next-nfu-ukr/node_modules
 next-nfu-ukr/next-env.d.ts
 next-nfu-ukr/package-lock.json
 
