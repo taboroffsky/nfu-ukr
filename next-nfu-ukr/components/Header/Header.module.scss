@@ -31,3 +31,27 @@
     left: 25px;
   }
 }
+
+.logo {
+  padding: 1vh 2vw;
+  text-align: center;
+}
+
+.logo img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.logo_header_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 20%;
+  display: block;
+  position: absolute;
+  top: 230px;
+  left: 17%;
+  width: 290px;
+}

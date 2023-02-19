@@ -27,7 +27,7 @@ const Header = (): JSX.Element => {
     <div className={HeaderStyle.header} id="home">
         <nav>
       <div className="logo">
-        <img src="./images/logo/NFU_yellow.svg" alt="Logo Image"/>
+        <img src="logo/NFU_yellow.svg" alt="Logo Image"/>
       </div>
       <div className="hamburger">
         <div className="line1"></div>
@@ -42,15 +42,15 @@ const Header = (): JSX.Element => {
         <li><a href="#contacts">Контакти</a></li>
       </ul>
     </nav>
-    <div className="language">
-      <img src="/language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img"/>
-      <img src="/language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" className="language__img"/>
+    <div className="nav_language">
+      <img src="language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img"/>
+      <img src="language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" className="language__img"/>
     </div>
     <div className="icons-header">
       <img className="emblem left" src="/icons/flowers_corner.svg" alt="emblem icon left"/>
       <img className="emblem right" src="/icons/flowers_corner.svg" alt="emblem icon right"/>
     </div>
-    <div className="logo_header">
+    <div>
       <img className="logo_header_image" src="/logo/NFU-logo-300x300/NFU_yellow.svg" alt="logo header image"/>
     </div>
     <div className="description">
