@@ -1,14 +1,5 @@
 @import "../../../styles/variables";
 
-.container {
-  padding: 38px 0;
-  text-align: center;
-  color: $tertiaryColor;
-
-  h1 {
-    margin: 32px 0;
-  }
-}
 
 .cards_container {
     width: 80%;
@@ -26,6 +17,37 @@
       }
 }
 
+@media screen and (max-width: 1440px) {
+  .cards_container {
+    width: 80%;
+    margin: 8px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+
+    .card {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      padding: 10px;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards_container {
+    display: block;
+  }
+}
 
 .about{
   h3 {

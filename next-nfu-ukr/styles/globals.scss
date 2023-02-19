@@ -92,36 +92,11 @@ hr {
   opacity: 1;
 }
 
-.header {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.emblem {
-  width: 12%;
-  padding-top: 10%;
-}
-
-.left {
-  position: absolute;
-  top: 10px;
-  left: 25px;
-}
-
 .right {
   position: absolute;
   top: 10px;
   right: 25px;
   transform: scaleX(-1);
-}
-
-.logo_header_image {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  max-width: 70%;
-  margin: 0 auto;
-  padding-top: 45%;
 }
 
 .description-item {
@@ -415,50 +390,6 @@ address a:hover {
   color: $mainColor;
 }
 
-// Footer
-
-.footer {
-  text-align: center;
-}
-
-.nav_menu {
-  display: inline-block;
-  padding: 12px 0;
-  margin: 12px 0;
-}
-
-.nav_menu a {
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.nav_menu a:hover {
-  color: $tertiaryColor;
-  transform: scale(1.2);
-}
-
-.footer_media {
-  padding: 32px 0;
-}
-
-.icon-img {
-  width: 30px;
-  transition: all .3s;
-}
-
-.icon-img:hover {
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-.copyright {
-  color: $tertiaryColor;
-  margin: 14px 0;
-  padding-bottom: 35px;
-  font-weight: 200;
-  font-size: 13px;
-}
-
 // Cookies
 
 div.cookiebanner>a {
@@ -480,28 +411,10 @@ div.cookiebanner>a {
     opacity: 1;
   }
 
-  .emblem {
 
-    width: 12%;
-  }
 
-  .left {
-    position: absolute;
-    top: 0;
-    left: 25px;
-  }
 
-  .right {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    transform: scaleX(-1);
-  }
-
-  .logo_header_image {
-    padding-top: 25%;
-    width: 30%;
-  }
+  
 
   .popup-card {
     position: relative;
@@ -520,21 +433,6 @@ div.cookiebanner>a {
     right: 111px;
   }
 
-  .cards_container {
-    width: 80%;
-    margin: 8px auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 40px;
-  }
-
-  .card {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    padding: 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
 
   .about h3 {
     line-height: 18px;
@@ -555,30 +453,6 @@ div.cookiebanner>a {
   .language__img:hover,
   .language__img_active {
     opacity: 1;
-  }
-
-  .emblem {
-    width: 18%;
-  }
-
-  .left {
-    position: absolute;
-    top: 8px;
-    left: 46px;
-  }
-
-  .right {
-    position: absolute;
-    top: 8px;
-    right: 46px;
-    transform: scaleX(-1);
-  }
-
-  .logo_header_image {
-    display: block;
-    top: 180px;
-    margin: 0 auto;
-    width: 35%;
   }
 
   .description-item {
@@ -623,6 +497,31 @@ div.cookiebanner>a {
 
 @media screen and (max-width: 768px) {
 
+  nav {
+    position: fixed;
+    z-index: 3;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+
+
+  li.fade {
+    opacity: 1;
+  }
+
+  // translator
+
+
+
   .topnav {
     overflow: hidden;
     background-color: #333;
@@ -648,30 +547,6 @@ div.cookiebanner>a {
   .language__img:hover,
   .language__img_active {
     opacity: 1;
-  }
-
-  .emblem {
-    width: 22%;
-  }
-
-  .left {
-    position: absolute;
-    top: 8px;
-    left: 20px;
-  }
-
-  .right {
-    position: absolute;
-    top: 8px;
-    right: 20px;
-    transform: scaleX(-1);
-  }
-
-  .logo_header_image {
-    position: absolute;
-    top: 300px;
-    left: 24%;
-    width: 44%;
   }
 
   .description-item {
@@ -784,29 +659,11 @@ div.cookiebanner>a {
     opacity: 1;
   }
 
-  .emblem {
-    width: 30%;
-  }
 
-  .left {
-    position: absolute;
-    top: 0;
-    left: 20px;
-  }
 
-  .right {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    transform: scaleX(-1);
-  }
+  
 
-  .logo_header_image {
-    position: absolute;
-    top: 300px;
-    left: 17%;
-    width: 290px;
-  }
+ 
 
   .description-item {
     position: absolute;
@@ -944,3 +801,109 @@ div.cookiebanner>a {
     font-size: 12px;
   }
 }
+
+// Header
+
+.skiptranslate {
+  display: none;
+}
+
+// Header menu
+
+nav {
+  height: 5rem;
+  width: 100vw;
+  background: $backgroundColor2;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+/*Styling logo*/
+.logo {
+  padding: 1vh 2vw;
+  text-align: center;
+}
+
+.logo img {
+  height: 5rem;
+  width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+
+.nav-links li a:hover {
+  color: $btnColor1;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: $btnColor2;
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+}
+
+.nav-links li a:hover::before {
+  width: 80%;
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: $btnColor1;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.language__img {
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+  opacity: .4;
+  border: 2px solid #883576;
+  box-shadow: 0 4px 8px 0 #FFD600, 0 6px 20px 0 #FEF5AC;
+}
+

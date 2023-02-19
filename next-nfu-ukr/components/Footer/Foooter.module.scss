@@ -4,40 +4,30 @@
   padding-top: 38px;
 }
 
-.container {
-  padding: 38px 0;
-  text-align: center;
-  color: $tertiaryColor;
-
-  h1 {
-    margin: 32px 0;
-  }
-}
-
 .nav_menu {
   display: inline-block;
   padding: 12px 0;
   margin: 12px 0;
-}
+  
+  a {
+    font-size: 18px;
+    transition: 0.3s;
 
-.nav_menu a {
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.nav_menu a:hover {
-  color: $tertiaryColor;
-  transform: scale(1.2);
+    &:hover {
+      color: $tertiaryColor;
+      transform: scale(1.2);
+    }
+  }
 }
 
 .icon_img {
   width: 30px;
   transition: all .3s;
-}
 
-.icon_img:hover {
-  opacity: 1;
-  transform: scale(1.2);
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 .footer {

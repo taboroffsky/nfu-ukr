@@ -5,7 +5,7 @@ import Style from "./About.module.scss"
 const About = (): JSX.Element => {
   
  return (
-  <section className={`${Style.about} ${Style.container}`} id="about">
+  <section className={`${Style.about} container`} id="about">
          <h1>Про проект</h1>
     <div className={Style.cards_container}>
       <div className={Style.card}>
