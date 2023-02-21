@@ -2,12 +2,15 @@ import React from "react";
 
 import FooterStyle from "./Foooter.module.scss"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
+
 const Footer = () => {
     return (
       <>
           <section className={`${FooterStyle.contacts} container`} id="contacts">
             <h1>Контакти</h1>
-            <i className="fa-solid fa-envelope fa-6x"/>
+            <FontAwesomeIcon icon={faEnvelope} size="6x"/>
             <p><em><b>Зв'яжіться з нами:</b></em></p>
             <address>
               <a href="mailto:someone@example.com"><em>someone@example.com</em></a>

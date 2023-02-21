@@ -13,8 +13,8 @@ export default function Home() {
       <Canvas/>
       <Header/>
       <Gallery/>
-      <Team/>
       <About/>
+      <Team/>
       <Footer/>
    </div>
   )

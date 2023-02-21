@@ -6,6 +6,12 @@
   width: 100%;
 }
 
+.nav_language {
+  z-index: 3;
+  justify-content: last;
+  align-items: center;
+}
+
 /*Styling Links*/
 .nav_links {
   display: flex;
@@ -163,6 +169,10 @@
     top: 180px;
     margin: 0 auto;
     width: 35%;
+  }
+
+  .nav_language {
+    margin: 0 auto;
   }
   
   .description_item {
@@ -323,10 +333,8 @@
       transform: rotate(45deg) translate(-5px, -6px);
     }
   }
-
+  
   .nav_language {
-    z-index: 3;
-    justify-content: last baseline;
-    align-items: center;
+    margin: 0 auto;
   }
 }

@@ -39,11 +39,12 @@ const Header = (): JSX.Element => {
         <li><a href="#team">Наша команда</a></li>
         <li><a href="#contacts">Контакти</a></li>
       </ul>
-    </nav>
+   
     <div className={HeaderStyle.nav_language}>
       <img src="language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img"/>
       <img src="language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" className="language__img"/>
     </div>
+    </nav>
     <div>
       <img className={`${HeaderStyle.emblem} ${HeaderStyle.left}`} src="/icons/flowers_corner.svg" alt="emblem icon left"/>
       <img className={`${HeaderStyle.emblem} ${HeaderStyle.right}`} src="/icons/flowers_corner.svg" alt="emblem icon right"/>
