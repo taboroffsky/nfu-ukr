@@ -39,11 +39,16 @@ const Team = () => {
       </p>
 
       <div className={TeamStyle.team_card}>
+        {teamMembers.map(() =>
+        
         <img src={teamMembers.image} alt="Avatar" />
+
         <div>
           <h4>{teamMembers.name}</h4>
           <p>{teamMembers.role}</p>
         </div>
+        )
+        }
       </div>
     </section>
   );
