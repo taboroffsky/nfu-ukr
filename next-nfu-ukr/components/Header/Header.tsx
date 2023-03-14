@@ -1,27 +1,32 @@
 import React from "react";
+import useTranslation from 'next-translate/useTranslation';
+import setLanguage from 'next-translate/setLanguage'
+import Link from 'next/link'
 
 import HeaderStyle from "./Header.module.scss";
 
 // This function's behavior needs to be applied
-const mobileMenu = () =>{
-  const hamburger: any = document.querySelector(".hamburger");
-  const navLinks: any = document.querySelector(".nav-links");
-  const links: any = document.querySelectorAll(".nav-links li");
+// const mobileMenu = () =>{
+//   const hamburger: any = document.querySelector(".hamburger");
+//   const navLinks: any = document.querySelector(".nav-links");
+//   const links: any = document.querySelectorAll(".nav-links li");
   
-  hamburger.addEventListener('click', ()=>{
-     //Animate Links
-      navLinks.classList.toggle("open");
-      links.forEach(link => {
-          link.classList.toggle("fade");
-      });
+//   hamburger.addEventListener('click', ()=>{
+//      //Animate Links
+//       navLinks.classList.toggle("open");
+//       links.forEach(link => {
+//           link.classList.toggle("fade");
+//       });
   
-      //Hamburger Animation
-      hamburger.classList.toggle("toggle");
-  });
-}
+//       //Hamburger Animation
+//       hamburger.classList.toggle("toggle");
+//   });
+// }
 
 const Header = (): JSX.Element => {
- return (
+  const { t } = useTranslation('common');
+
+  return (
     <div className={HeaderStyle.header} id="home">
         <nav>
       <div className={HeaderStyle.logo}>
@@ -33,16 +38,16 @@ const Header = (): JSX.Element => {
         <div className={HeaderStyle.line3}></div>
       </div>
       <ul className={HeaderStyle.nav_links}>
-        <li><a href="#home">Головна</a></li>
-        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#home">{t('main')}</a></li>
+        <li><a href="#gallery">{t('gallery')}</a></li>
         <li><a href="#about">Про проект</a></li>
         <li><a href="#team">Наша команда</a></li>
         <li><a href="#contacts">Контакти</a></li>
       </ul>
-   
+    
     <div className={HeaderStyle.nav_language}>
-      <img src="language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img"/>
-      <img src="language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" className="language__img"/>
+      <img src="language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img" onClick={() => setLanguage('ua')}/>
+      <img src="language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" className="language__img" onClick={() => setLanguage('en')}/>
     </div>
     </nav>
     <div>
@@ -56,7 +61,7 @@ const Header = (): JSX.Element => {
       <div className={HeaderStyle.description_item}>Сучасне мистецтво крізь історію</div>
     </div>
   </div>
- )
+  )
 }
 
 export default Header
