@@ -13,13 +13,13 @@ export const networkConfig: networkConfigInfo = {
     31337: {
         name: "localhost",
         mintFee: "10000000000000000", // 0.01 ETH
-        tokensPerUri: 5,
+        tokensPerUri: 4,
         verificationBlockConfirmation: 1,
     },
     5: {
         name: "goerli",
         mintFee: "100000000000000", // 0.0001 ETH
-        tokensPerUri: 5,
+        tokensPerUri: 4,
         verificationBlockConfirmation: 6,
     },
 };

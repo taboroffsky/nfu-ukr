@@ -16,6 +16,7 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
           let aliceNonFungibleUkraine: NonFungibleUkraine;
 
           const tokenUris: string[] = getTokenUrisFromStorage("../" + StorageFilePath);
+          const tokensPerUri = currentNetwork.tokensPerUri;
 
           this.beforeEach(async function () {
               const accounts = await ethers.getSigners();
@@ -34,12 +35,12 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
           it("Should update counters on mint", async function () {
               for (const index in tokenUris) {
                   let availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
-                  assert.equal(availability, true);
+                  assert.equal(availability.toNumber(), tokensPerUri);
 
                   await mintNft(aliceNonFungibleUkraine, tokenUris[index]);
 
                   availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
-                  assert.equal(availability, false);
+                  assert.equal(availability.toNumber(), tokensPerUri - 1);
 
                   const balance = await nonFungibleUkraine.balanceOf(alice.address);
                   assert.equal(balance.toNumber(), Number.parseInt(index) + 1);
@@ -51,7 +52,7 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
 
           it("Should return expected total supply", async function () {
               const totalSupply = await nonFungibleUkraine.totalSupply();
-              assert.equal(totalSupply.toNumber(), tokenUris.length);
+              assert.equal(totalSupply.toNumber(), tokenUris.length * tokensPerUri);
           });
 
           it("Should revert when not enouth eth sent", async function () {
@@ -66,7 +67,13 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
 
           it("Should revert when token Uri is minted more times that allowed", async function () {
               const tokenUri = tokenUris[0];
-              await mintNft(nonFungibleUkraine, tokenUri);
+              for (let index = 0; index < tokensPerUri; index++) {
+                  await mintNft(nonFungibleUkraine, tokenUri);
+              }
+
+              const balance = await nonFungibleUkraine.balanceOf(deployer.address);
+              assert.equal(balance.toNumber(), tokensPerUri);
+
               await expect(mintNft(nonFungibleUkraine, tokenUri)).to.be.revertedWith("NonFungibleUkraine__TokenUnavailable");
           });
 

@@ -6,7 +6,6 @@ import { StorageToken, TokenMetadata } from "../../../nfu-ukr-common/contracts";
 import contractAddresses from "../../../nfu-ukr-common/resources/contractAddress.json";
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
-
     if (request.method !== "GET") {
         response.status(404).send(`Unexpected http method: ${request.method}`);
         return;
@@ -18,13 +17,13 @@ export default async function handler(request: NextApiRequest, response: NextApi
         return;
     }
 
-    const mintedTokenNames = await getMintedTokenNames();
-    if (!mintedTokenNames) {
+    const unavailableTokenNames = await getUnavailableTokenNames();
+    if (!unavailableTokenNames) {
         response.status(409).json(tokensFromStorage);
         return;
     }
 
-    const availableTokens = tokensFromStorage.filter((token) => !mintedTokenNames.includes(token.name));
+    const availableTokens = tokensFromStorage.filter((token) => !unavailableTokenNames.includes(token.name));
     response.status(200).json(availableTokens);
 }
 
@@ -39,9 +38,10 @@ const getTokensFromStorage: () => StorageToken[] | undefined = function () {
     }
 };
 
-const getMintedTokenNames: () => Promise<string[] | undefined> = async function () {
+const getUnavailableTokenNames: () => Promise<string[] | undefined> = async function () {
     try {
         const chain = process.env.NEXT_PUBLIC_CHAIN_ID!;
+        const tokensPerArt = process.env.TOKENS_PER_ART!;
         const address: string = (contractAddresses as any)[chain][NonFungibleUkraineName];
 
         try {
@@ -61,7 +61,15 @@ const getMintedTokenNames: () => Promise<string[] | undefined> = async function 
             chain,
         });
 
-        return moralisResponse.result.map((result) => (result.metadata as unknown as TokenMetadata).name);
+        const numberOfMintedTokensPerName = new Map<string, number>();
+
+        moralisResponse.result
+            .map((result) => (result.metadata as unknown as TokenMetadata).name)
+            .forEach((name) => {
+                numberOfMintedTokensPerName[name]++;
+            });
+
+        return Array.from(numberOfMintedTokensPerName.keys()).filter((key) => numberOfMintedTokensPerName[key] >= tokensPerArt);
     } catch (exception) {
         console.log("Failed to get token owners from Moralis:");
         console.error(exception);
