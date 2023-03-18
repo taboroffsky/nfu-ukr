@@ -29,7 +29,7 @@ const teamMembers = [
   },
 ];
 
-const Team = () => {
+const Team = (props) => {
   return (
     <section className={`${TeamStyle.team} container`} id="team">
       <h1>Наша команда</h1>
@@ -39,16 +39,13 @@ const Team = () => {
       </p>
 
       <div className={TeamStyle.team_card}>
-        {teamMembers.map(() =>
-        
-        <img src={teamMembers.image} alt="Avatar" />
+
+        <img src={props.image} alt="Avatar" />
 
         <div>
-          <h4>{teamMembers.name}</h4>
-          <p>{teamMembers.role}</p>
+          <h4>{props.name}</h4>
+          <p>{props.role}</p>
         </div>
-        )
-        }
       </div>
     </section>
   );
