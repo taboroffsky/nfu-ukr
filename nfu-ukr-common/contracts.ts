@@ -1,13 +1,12 @@
-export interface StorageToken extends TokenMetadata {
-    tokenUri: string;
-    descriptionUa: string;
-    isListed: boolean;
-}
-
 export interface TokenMetadata {
     name: string;
     description: string;
     image: string;
+}
+
+export interface Token {
+    name: string;
+    tokenUri: string;
 }
 
 export interface ContractAddress {
