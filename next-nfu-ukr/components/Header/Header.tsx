@@ -1,7 +1,6 @@
 import React from "react";
 import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage'
-import Link from 'next/link'
 import { ConnectButton } from 'web3uikit';
 
 import HeaderStyle from "./Header.module.scss";
@@ -41,9 +40,9 @@ const Header = (): JSX.Element => {
         <ul className={HeaderStyle.nav_links}>
           <li><a href="#home">{t('main')}</a></li>
           <li><a href="#gallery">{t('gallery')}</a></li>
-          <li><a href="#about">Про проект</a></li>
-          <li><a href="#team">Наша команда</a></li>
-          <li><a href="#contacts">Контакти</a></li>
+          <li><a href="#about">{t("aboutProject")}</a></li>
+          <li><a href="#team">{t("ourTeam")}</a></li>
+          <li><a href="#contacts">{t("contacts")}</a></li>
           <li><ConnectButton moralisAuth={false} /></li>
         </ul>
 
@@ -60,7 +59,7 @@ const Header = (): JSX.Element => {
         <img className={HeaderStyle.logo_header_image} src="/logo/NFU-logo-300x300/NFU_yellow.svg" alt="logo header image" />
       </div>
       <div>
-        <div className={HeaderStyle.description_item}>Сучасне мистецтво крізь історію</div>
+        <div className={HeaderStyle.description_item}>{t("motto")}</div>
       </div>
     </div>
   )

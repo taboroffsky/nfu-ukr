@@ -3,7 +3,7 @@ import path from "path";
 import pinataSDK, { PinataClient } from "@pinata/sdk";
 import { load as loadEnvironment } from "ts-dotenv";
 import { execFile } from "node:child_process";
-import { StorageFilePath } from "../constants";
+import { StorageFilePath, NameSuffix, DescriptionSuffix } from "../constants";
 import { Token, TokenMetadata } from "../contracts";
 
 interface ImageMetadata {
@@ -24,8 +24,6 @@ const env = loadEnvironment({
 
 const pinata: PinataClient = pinataSDK(env.PINATA_API_KEY, env.PINATA_API_SECRET);
 
-const descriptionSuffix: string = "_description";
-const nameSuffix: string = "_name";
 const imageExtension: string = ".png";
 const metadataExtension: string = ".metadata.txt";
 const IpfsSchema: string = "ipfs://";
@@ -100,10 +98,10 @@ const seedCollectionData = async function () {
     // update storage, save token locales, copy image to public resources folder
     for (const imageName in imagesMetadata) {
         const imageMetadata = imagesMetadata[imageName];
-        enLocales[imageName + nameSuffix] = imageName;
-        enLocales[imageName + descriptionSuffix] = imageMetadata.descriptionEn;
-        uaLocales[imageName + nameSuffix] = imageMetadata.nameUa;
-        uaLocales[imageName + descriptionSuffix] = imageMetadata.descriptionUa;
+        enLocales[imageName + NameSuffix] = imageName;
+        enLocales[imageName + DescriptionSuffix] = imageMetadata.descriptionEn;
+        uaLocales[imageName + NameSuffix] = imageMetadata.nameUa;
+        uaLocales[imageName + DescriptionSuffix] = imageMetadata.descriptionUa;
 
         const fromFilePath = path.join(inputFolderFilePath, imagesMetadata[imageName].filePath);
         const toFilePath = path.join(tokensImagesFolderFilePath, imagesMetadata[imageName].filePath);

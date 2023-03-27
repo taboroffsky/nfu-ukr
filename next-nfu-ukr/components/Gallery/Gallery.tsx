@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useTranslation from 'next-translate/useTranslation';
 
 import { Token } from "../../../nfu-ukr-common/contracts";
+import { NameSuffix } from "../../../nfu-ukr-common/constants";
 import GalleryPopup from "./Gallery-popup";
 import GalleryStyle from "./Gallery.module.scss";
 
@@ -11,11 +12,13 @@ const loadGalleryItems = async (): Promise<Token[]> => {
 }
 
 const Gallery = (): JSX.Element => {
-  const { t } = useTranslation('tokens');
+  const { t: tTokens } = useTranslation('tokens');
+  const { t: tCommon } = useTranslation('common');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
   const [tokens, setTokens] = useState<Token[]>([]);
   const [isPopupVisible, setIsPopupVisible] = useState<boolean>(false);
+  const [activeToken, setActiveToken] = useState<Token>(null);
 
   const fetchTokens = (): void => {
     setIsLoading(true);
@@ -38,7 +41,7 @@ const Gallery = (): JSX.Element => {
 
   return (
     <section className={`${GalleryStyle.gallery} container`} id="gallery">
-      <h1>Галерея</h1>
+      <h1>{tCommon("gallery")}</h1>
       <div className={GalleryStyle.products}>
         {
           isLoading
@@ -47,16 +50,16 @@ const Gallery = (): JSX.Element => {
               tokens.map((token) =>
                 <div className={GalleryStyle.product}>
                   <div className={GalleryStyle.product_card}>
-                    <h2 className={GalleryStyle.name}>{t(token.name)}</h2>
-                    <span className={GalleryStyle.price}>$140.00</span>
-                    <a className={GalleryStyle.popup_btn} onClick={() => setIsPopupVisible(true)}>Подробиці</a>
+                    <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
+                    <span className={GalleryStyle.price}>{process.env.NEXT_PUBLIC_TOKEN_PRICE} ETH</span>
+                    <a className={GalleryStyle.popup_btn} onClick={() => setActiveToken(token)}>{tCommon("tokenDetails")}</a>
                     <img src={`tokens/${token.name}.png`} className={GalleryStyle.product_img} alt="image" />
                   </div>
-                  {isPopupVisible && <GalleryPopup Close={() => setIsPopupVisible(false)} token={token} />}
                 </div>
               )
             )
         }
+        {activeToken && <GalleryPopup Close={() => setActiveToken(null)} token={activeToken} />}
       </div>
     </section>
   )

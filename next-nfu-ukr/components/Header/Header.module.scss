@@ -32,7 +32,7 @@
       &:hover {
         color: $btnColor1;
       }
-      
+
       &:before {
         content: "";
         display: block;
@@ -42,10 +42,10 @@
         position: absolute;
         transition: all ease-in-out 250ms;
         margin: 0 0 0 10%;
-      }  
+      }
 
       &:hover::before {
-       width: 80%;
+        width: 80%;
       }
     }
   }
@@ -59,40 +59,38 @@
   margin: 0 auto;
 }
 
-.nav-links 
+.nav-links .a {
+  font-size: 18px;
+  transition: 0.3s;
+}
 
+.emblem {
+  width: 12%;
+  padding-top: 10%;
+}
 
-  .a {
-    font-size: 18px;
-    transition: 0.3s;
-  }
-  .emblem {
-    width: 12%;
-    padding-top: 10%;
-  }
+.right {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  transform: scaleX(-1);
+}
 
-  .right {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    transform: scaleX(-1);
-  }
+.left {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
 
-  .left {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-  }
-
-  .description_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $btnColor1;
-    font-size: 40px;
-    font-weight: 600;
-    letter-spacing: 2px;
-  }
+.description_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $btnColor1;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 
 
 .logo {
@@ -174,7 +172,7 @@
   .nav_language {
     margin: 0 auto;
   }
-  
+
   .description_item {
     position: absolute;
     top: 70%;
@@ -333,7 +331,7 @@
       transform: rotate(45deg) translate(-5px, -6px);
     }
   }
-  
+
   .nav_language {
     margin: 0 auto;
   }

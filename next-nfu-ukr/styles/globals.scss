@@ -38,6 +38,11 @@ ul li {
   list-style-type: none;
 }
 
+// This style is designed for ConnectButton imported from web3uikit
+.identicon {
+  visibility: collapse;
+}
+
 .container {
   padding: 38px 0;
   text-align: center;
@@ -185,7 +190,7 @@ div.cookiebanner>a {
 
 
 
-  
+
 
   .popup-card {
     position: relative;
@@ -467,4 +472,3 @@ nav {
   border: 2px solid #883576;
   box-shadow: 0 4px 8px 0 #FFD600, 0 6px 20px 0 #FEF5AC;
 }
-
