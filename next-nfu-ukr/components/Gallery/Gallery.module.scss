@@ -2,103 +2,108 @@
 @import "../../../styles/variables";
 
 .products {
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  
-  .product_card {
-    z-index: 1;
-    box-shadow: $boxShadow1;
-    background: $backgroundColor1;
-    position: relative;
-    width: 300px;
-    height: 400px;
-    margin: 40px auto;
-    border-radius: 10px;
-
-    h2 {
-        text-transform: uppercase;
-        padding: 12px 0;
-    }
-
-    .product_img {
-        z-index: 1;
-        object-fit: contain;
-        object-position: 0 10%;
-        position: absolute;
-        border-radius: 10px;
-        max-width: 300px;
-        width: 100%;
-        height: inherit;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -30%);
-    }
-
-    .name {
-        z-index: 2;
-        color: $tertiaryColor;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        bottom: 130px;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-    
-    .price {
-        z-index: 2;
-        background: $backgroundColor1;
-        color: $tertiaryColor;
-        position: absolute;
-        width: 55%;
-        text-align: center;
-        border-radius: 0 10px 10px 0;
-        border: 1px solid $borderColor2;
-        bottom: 85px;
-        padding: 8px;
-        font-size: 20px;
-        font-weight: 300;
-    }
-
-    .popup_btn {
-        @include myButton;
-        z-index: 2;
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-  
-  
+
+.product_card {
+  z-index: 1;
+  box-shadow: $boxShadow1;
+  background: $backgroundColor1;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+
+  h2 {
+    text-transform: uppercase;
+    padding: 12px 0;
+  }
+
+  .product_img {
+    z-index: 1;
+    object-fit: contain;
+    object-position: 0 10%;
+    position: absolute;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: inherit;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .name {
+    z-index: 2;
+    color: $tertiaryColor;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 130px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .price {
+    z-index: 2;
+    background: $backgroundColor1;
+    color: $tertiaryColor;
+    position: absolute;
+    width: 55%;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid $borderColor2;
+    bottom: 85px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 300;
+
+    .ethereumIcon {
+      margin-right: 5px;
+    }
+  }
+
+  .popup_btn {
+    @include myButton;
+    z-index: 2;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
 
 @media screen and (max-width: 1024px) {
-    .gallery {
-        padding-bottom: 40px;
+  .gallery {
+    padding-bottom: 40px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .product_card {
+    .price {
+      width: 55%;
     }
 
-    .products {
-        display: grid;
-        grid-template-columns: auto auto;
+    .close_btn {
+      right: 70px;
     }
+  }
 
-    .product_card{
-        .price {
-            width: 55%;
-        } 
-        .close_btn {
-            right: 70px;
-      }
-    }
-
-    .cards_container {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 60px;
-    }
+  .cards_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -116,20 +121,20 @@
     margin: 14px auto;
   }
 
-  
+
 }
 
 @media screen and (max-width: 425px) {
-    .products {
-        width: 80%;
-        margin: 0 auto;
-        display: block;
-      }
-    
-      .product_card {
-        width: 310px;
-        height: 600px;
-        margin-bottom: 72px;
-      }
+  .products {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .product_card {
+    width: 310px;
+    height: 600px;
+    margin-bottom: 72px;
+  }
 
 }

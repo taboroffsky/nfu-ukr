@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GalleryPopupStyle from "./Gallery-popup.module.scss"
 import { faClose } from "@fortawesome/free-solid-svg-icons"
+import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useTranslation from 'next-translate/useTranslation';
 import { useMoralis, useWeb3Contract } from 'react-moralis';
@@ -37,7 +38,10 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
     const mint = async function () {
         const result = await mintNftFunction({
             onError: (error) => { console.log(error) },
-            onSuccess: async (tx) => { console.log(tx) }
+            onSuccess: async (tx) => {
+                console.log(tx);
+                props.Close();
+            }
         });
     }
 
@@ -51,7 +55,10 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
                 <div className={GalleryPopupStyle.info}>
                     <h2>{tTokens(props.token.name + NameSuffix)}</h2>
                     <span>{tCommon("collectionName")}</span>
-                    <span className={GalleryPopupStyle.price}>{process.env.NEXT_PUBLIC_TOKEN_PRICE} ETH</span>
+                    <span className={GalleryPopupStyle.price}>
+                        <FontAwesomeIcon className={GalleryPopupStyle.ethereumIcon} icon={faEthereum} />
+                        {process.env.NEXT_PUBLIC_TOKEN_PRICE}
+                    </span>
                     <a href="#" className={GalleryPopupStyle.add_cart_btn} onClick={mint}>{tCommon("buy")}</a>
                     <p>{tTokens(props.token.name + DescriptionSuffix)}</p>
                 </div>

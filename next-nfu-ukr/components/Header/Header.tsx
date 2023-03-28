@@ -55,10 +55,8 @@ const Header = (): JSX.Element => {
         <img className={`${HeaderStyle.emblem} ${HeaderStyle.left}`} src="/icons/flowers_corner.svg" alt="emblem icon left" />
         <img className={`${HeaderStyle.emblem} ${HeaderStyle.right}`} src="/icons/flowers_corner.svg" alt="emblem icon right" />
       </div>
-      <div>
+      <div className={HeaderStyle.header_container}>
         <img className={HeaderStyle.logo_header_image} src="/logo/NFU-logo-300x300/NFU_yellow.svg" alt="logo header image" />
-      </div>
-      <div>
         <div className={HeaderStyle.description_item}>{t("motto")}</div>
       </div>
     </div>

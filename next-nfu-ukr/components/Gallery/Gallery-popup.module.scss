@@ -2,7 +2,7 @@
 
 @import "../../../styles/_mixins";
 @import "../../../styles/variables";
-  
+
 .popup_view {
     z-index: 1;
     backdrop-filter: blur(3px);
@@ -20,9 +20,9 @@
         opacity: 1;
         visibility: visible;
     }
-  }
+}
 
-  .popup_card {
+.popup_card {
     position: relative;
     display: flex;
     width: 70%;
@@ -65,7 +65,7 @@
             font-size: 40px;
             line-height: 20px;
             margin: 10px;
-        
+
             span {
                 color: $tertiaryColor;
                 font-size: 15px;
@@ -86,6 +86,10 @@
             font-size: 30px;
             font-weight: 200;
             margin: 10px;
+
+            .ethereumIcon {
+                margin-right: 5px;
+            }
         }
 
         .add_cart_btn {
@@ -104,172 +108,174 @@
         margin: 20px;
         cursor: pointer;
     }
-  }
+}
 
-  @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .popup_card {
         position: relative;
         display: flex;
         left: -15px;
         top: -25px;
-    
-            .product_img {
-                width: 50%;
-                height: 100%;
-                border-radius: 10px 0 10px 10px;
-            }
-    
-            .close_btn {
-                top: 0px;
-                right: 8px;
-                font-size: 14px;
-                padding: 12px;
-                cursor: pointer;
-            }
-    
-            .info {
-                h2 {
+
+        .product_img {
+            width: 50%;
+            height: 100%;
+            border-radius: 10px 0 10px 10px;
+        }
+
+        .close_btn {
+            top: 0px;
+            right: 8px;
+            font-size: 14px;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        .info {
+            h2 {
+                color: $tertiaryColor;
+                font-size: 25px;
+                line-height: 20px;
+                padding-top: 24px;
+                margin: 0;
+
+                span {
                     color: $tertiaryColor;
-                    font-size: 25px;
-                    line-height: 20px;
-                    padding-top: 24px;
-                    margin: 0;
-    
-                    span {
-                        color: $tertiaryColor;
-                        font-size: 15px;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        padding: 10px;
-                    }
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    padding: 10px;
                 }
-                .price {
-                    color: $tertiaryColor;
-                    font-size: 30px;
-                    font-weight: 200;
-                    margin: 0;
-                }
+            }
+
+            .price {
+                color: $tertiaryColor;
+                font-size: 30px;
+                font-weight: 200;
+                margin: 0;
             }
         }
-  }
+    }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .popup_card {
         position: relative;
         display: flex;
         left: -15px;
         top: -25px;
-    
-            .product_img {
-                width: 50%;
-                height: 100%;
-                border-radius: 10px 0 10px 10px;
-            }
-    
-            .close_btn {
-                top: 0px;
-                right: 8px;
-                font-size: 14px;
-                padding: 12px;
-                cursor: pointer;
-            }
-    
-            .info {
-                h2 {
+
+        .product_img {
+            width: 50%;
+            height: 100%;
+            border-radius: 10px 0 10px 10px;
+        }
+
+        .close_btn {
+            top: 0px;
+            right: 8px;
+            font-size: 14px;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        .info {
+            h2 {
+                color: $tertiaryColor;
+                font-size: 25px;
+                line-height: 20px;
+                padding-top: 24px;
+                margin: 0;
+
+                span {
                     color: $tertiaryColor;
-                    font-size: 25px;
-                    line-height: 20px;
-                    padding-top: 24px;
-                    margin: 0;
-    
-                    span {
-                        color: $tertiaryColor;
-                        font-size: 15px;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        padding: 10px;
-                    }
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    padding: 10px;
                 }
-                .price {
-                    color: $tertiaryColor;
-                    font-size: 30px;
-                    font-weight: 200;
-                    margin: 0;
-                }
+            }
+
+            .price {
+                color: $tertiaryColor;
+                font-size: 30px;
+                font-weight: 200;
+                margin: 0;
             }
         }
-  }
+    }
+}
 
-  @media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
     .popup_card {
         display: block;
         width: 90%;
         top: -110px;
         left: 0;
 
-            .product_img {
-                background: $backgroundColor2;
-                width: auto;
-                height: 50%;
-                border-radius: 10px 10px 0 0;
+        .product_img {
+            background: $backgroundColor2;
+            width: auto;
+            height: 50%;
+            border-radius: 10px 10px 0 0;
 
-                img {
-                    height: 100%;
-                    width: auto;
-                    border-radius: 0;
-                }
+            img {
+                height: 100%;
+                width: auto;
+                border-radius: 0;
             }
+        }
 
-            .info {
-                background: $backgroundColor1;
-                height: 80%;
-                width: auto;
-                border-radius: 0 0 10px 10px;
+        .info {
+            background: $backgroundColor1;
+            height: 80%;
+            width: auto;
+            border-radius: 0 0 10px 10px;
 
-                h2 {
-                    font-size: 20px;
-                    line-height: 18px;
+            h2 {
+                font-size: 20px;
+                line-height: 18px;
 
-                    span {
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                    }
-                }
-
-                p {
-                    font-size: 16px;
-                    text-align: justify;
-                    letter-spacing: 1px;
-                    overflow: scroll;
-                }
-
-                .price {
-                    color: $mainColor;
-                    font-size: 25px;
-                    font-weight: 200;
-                    margin: 0;
-                }
-
-                .add_cart_btn {
-                    color: $secondaryColor;
-                    background: $btnColor1;
-                    font-size: 16px;
-                    font-weight: 700;
-                    text-align: center;
-                    text-decoration: none;
+                span {
+                    font-size: 14px;
                     text-transform: uppercase;
-                    margin: 6px auto;
-                    padding: 8px 50px;
-                    border-radius: 10px;
+                    letter-spacing: 2px;
                 }
             }
 
-            .close_btn {
-                font-size: 14px;
-                top: 29px;
-                right: -10px;
-                cursor: pointer;
+            p {
+                font-size: 16px;
+                text-align: justify;
+                letter-spacing: 1px;
+                overflow: scroll;
             }
-      }
-  }
+
+            .price {
+                color: $mainColor;
+                font-size: 25px;
+                font-weight: 200;
+                margin: 0;
+            }
+
+            .add_cart_btn {
+                color: $secondaryColor;
+                background: $btnColor1;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin: 6px auto;
+                padding: 8px 50px;
+                border-radius: 10px;
+            }
+        }
+
+        .close_btn {
+            font-size: 14px;
+            top: 29px;
+            right: -10px;
+            cursor: pointer;
+        }
+    }
+}
