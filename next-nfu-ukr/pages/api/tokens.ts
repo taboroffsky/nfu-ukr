@@ -41,12 +41,10 @@ const getTokensFromStorage: () => Token[] | undefined = function () {
 const getUnavailableTokenNames: () => Promise<string[] | undefined> = async function () {
     try {
         const chain = process.env.NEXT_PUBLIC_CHAIN_ID!;
-
         // not tracking minted tokens for local chain:
         if (chain == "31337"){
             return new Array<string>();
         }
-
 
         const tokensPerArt = process.env.TOKENS_PER_ART!;
         const address: string = (contractAddresses as any)[chain][NonFungibleUkraineName];
