@@ -1,83 +1,73 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import useTranslation from 'next-translate/useTranslation';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 
-import { StorageToken } from "../../../nfu-ukr-common/contracts";
+import { Token } from "../../../nfu-ukr-common/contracts";
+import { NameSuffix } from "../../../nfu-ukr-common/constants";
+import GalleryPopup from "./Gallery-popup";
 import GalleryStyle from "./Gallery.module.scss";
 
-  const loadGalleryItems = async (): Promise<StorageToken[]>  => {
-      const items: Promise<StorageToken[]> = (await fetch("http://localhost:3000/api/tokens")).json();
-      return items;
-  }
+const loadGalleryItems = async (): Promise<Token[]> => {
+  const items: Promise<Token[]> = (await fetch("http://localhost:3000/api/tokens")).json();
+  return items;
+}
 
 const Gallery = (): JSX.Element => {
-    
-    const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
-    const [tokens, setTokens] = useState<StorageToken[]>([]);
+  const { t: tTokens } = useTranslation('tokens');
+  const { t: tCommon } = useTranslation('common');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
+  const [tokens, setTokens] = useState<Token[]>([]);
+  const [isPopupVisible, setIsPopupVisible] = useState<boolean>(false);
+  const [activeToken, setActiveToken] = useState<Token>(null);
 
-    const fetchImage = (tokens: StorageToken[]) : void  => {
-      tokens.map( async (token) => token.image = await fetch(token.image.replace("ipfs://", "https://gateway.pinata.cloud/ipfs/")).toString());
-    };
+  const fetchTokens = (): void => {
+    setIsLoading(true);
+    setIsImageLoading(true);
+    loadGalleryItems().then(
+      (loadedTokens: Token[]) => {
+        setTokens(loadedTokens);
+      }
+    ).finally(
+      () => {
+        setIsLoading(false);
+        setIsImageLoading(false);
+      }
+    );
+  }
 
-    const fetchTokens = (): void => {
-      setIsLoading(true);
-      setIsImageLoading(true);
-      loadGalleryItems().then(
-        (tokens : StorageToken[]) => {
-          fetchImage(tokens)
-          setTokens(tokens);
-        }
-        ).finally(
-          () => {
-              setIsLoading(false);
-              setIsImageLoading(false);
-          }
-        );
-    }
+  useEffect(() => {
+    fetchTokens();
+  }, [])
 
-    useEffect(() => {
-       fetchTokens();
-    }, [])
-
-    return (
-      <section className={`${GalleryStyle.gallery} container`} id="gallery">
-        <h1>Галерея</h1>
-        <div className={GalleryStyle.products}>
-          {
-            isLoading 
+  return (
+    <section className={`${GalleryStyle.gallery} container`} id="gallery">
+      <h1>{tCommon("gallery")}</h1>
+      <div className={GalleryStyle.products}>
+        {
+          isLoading
             ? null
             : (
-              tokens.map((token) => 
+              tokens.map((token) =>
                 <div className={GalleryStyle.product}>
                   <div className={GalleryStyle.product_card}>
-                    <h2 className={GalleryStyle.name}>{token.name}</h2>
-                    <span className={GalleryStyle.price}>$140.00</span>
-                    <a className={GalleryStyle.popup_btn}>Подробиці</a>
-                    <img src={isImageLoading ? "" : token.image.replace("ipfs://", "https://gateway.pinata.cloud/ipfs/")} className={GalleryStyle.product_img} alt="image"/>
-                  </div>
-                  <div className={GalleryStyle.popup_view}>
-                    <div className={GalleryStyle.popup_card}>
-                      <a><i className="fas fa-times close-btn"></i></a>
-                      <div className={GalleryStyle.product_img}>
-                        <img src="/wireframes/Russian_occupier.jpg" alt="image"/>
-                      </div>
-                      <div className={GalleryStyle.info}>
-                        <h2>ОРК</h2><span>колекція орки</span>
-                        <span className={GalleryStyle.price}>$ 140.00</span>
-                        <a href="#" className={GalleryStyle.add_cart_btn}>Купити</a>
-                        <p>У літературі орками називали армію міфічних істот, які були відлюдниками з низьким інтелектом. У
-                          розумінні англійського письменника Джона Толкіна, орки – це темні створіння, які втілюють зло. Вони
-                          підкорялися Темному Володарю і становили основу його збройних сил. Їх військо підкорювало не силою, а
-                          кількістю. Орки мали вкрай низький інтелект і не звикли жити в комфорті..</p>
-                      </div>
-                    </div>
+                    <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
+                    <span className={GalleryStyle.price}>
+                      <FontAwesomeIcon className={GalleryStyle.ethereumIcon} icon={faEthereum} />
+                      {process.env.NEXT_PUBLIC_TOKEN_PRICE}
+                    </span>
+                    <a className={GalleryStyle.popup_btn} onClick={() => setActiveToken(token)}>{tCommon("tokenDetails")}</a>
+                    <img src={`tokens/${token.name}.png`} className={GalleryStyle.product_img} alt="image" />
                   </div>
                 </div>
               )
             )
-          }
-        </div>
-      </section>
-    )
+        }
+        {activeToken && <GalleryPopup Close={() => setActiveToken(null)} token={activeToken} />}
+      </div>
+    </section>
+  )
 }
 
 export default Gallery;

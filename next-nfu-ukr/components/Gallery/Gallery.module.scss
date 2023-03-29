@@ -2,208 +2,108 @@
 @import "../../../styles/variables";
 
 .products {
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  
-  .product_card {
-    z-index: 1;
-    box-shadow: $boxShadow1;
-    background: $backgroundColor1;
-    position: relative;
-    width: 300px;
-    height: 400px;
-    margin: 40px auto;
-    border-radius: 10px;
-
-    h2 {
-        text-transform: uppercase;
-        padding: 12px 0;
-    }
-
-    .product_img {
-        z-index: 1;
-        object-fit: cover;
-        object-position: 0 10%;
-        position: absolute;
-        border-radius: 10px;
-        max-width: 300px;
-        width: 100%;
-        height: inherit;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -30%);
-    }
-
-    .name {
-        z-index: 2;
-        color: $tertiaryColor;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        bottom: 130px;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-    
-    .price {
-        z-index: 2;
-        background: $backgroundColor1;
-        color: $tertiaryColor;
-        position: absolute;
-        width: 55%;
-        text-align: center;
-        border-radius: 0 10px 10px 0;
-        border: 1px solid $borderColor2;
-        bottom: 85px;
-        padding: 8px;
-        font-size: 20px;
-        font-weight: 300;
-    }
-
-    .popup_btn {
-        @include myButton;
-        z-index: 2;
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-  
-  /*Styles for popup view*/
-  
-  .popup_view {
-    z-index: 2;
-    background: #fef4ac9f;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
 
-    .active {
-        opacity: 1;
-        visibility: visible;
+.product_card {
+  z-index: 1;
+  box-shadow: $boxShadow1;
+  background: $backgroundColor1;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+
+  h2 {
+    text-transform: uppercase;
+    padding: 12px 0;
+  }
+
+  .product_img {
+    z-index: 1;
+    object-fit: contain;
+    object-position: 0 10%;
+    position: absolute;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: inherit;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .name {
+    z-index: 2;
+    color: $tertiaryColor;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 130px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .price {
+    z-index: 2;
+    background: $backgroundColor1;
+    color: $tertiaryColor;
+    position: absolute;
+    width: 55%;
+    text-align: center;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid $borderColor2;
+    bottom: 85px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 300;
+
+    .ethereumIcon {
+      margin-right: 5px;
     }
   }
 
-  .popup_card {
-    position: relative;
-    display: flex;
-    width: 70%;
-    height: 500px;
+  .popup_btn {
+    @include myButton;
+    z-index: 2;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 
-    .product_img {
-        z-index: 2;
-        background: $backgroundColor1;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 45%;
-        height: 100%;
-        transform: translateY(25px);
-        border-radius: 10px 0 10px 10px;
 
-        img {
-            z-index: 2;
-            position: relative;
-            width: 80%;
-            border-radius: 10px;
-            object-fit: fill;
-        }
-    }
 
-    .info {
-        z-index: 2;
-        background: $backgroundColor2;
-        display: flex;
-        flex-direction: column;
-        width: 55%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 40px;
-        border-radius: 10px 10px 10px 0;
+@media screen and (max-width: 1024px) {
+  .gallery {
+    padding-bottom: 40px;
+  }
 
-        h2 {
-            color: $tertiaryColor;
-            font-size: 40px;
-            line-height: 20px;
-            margin: 10px;
-        
-            span {
-                color: $tertiaryColor;
-                font-size: 15px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                padding: 10px;
-            }
-        }
+  .products {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 
-        p {
-            color: $tertiaryColor;
-            font-size: 15px;
-            margin: 10px;
-        }
-
-        .price {
-            color: $tertiaryColor;
-            font-size: 30px;
-            font-weight: 200;
-            margin: 10px;
-        }
-
-        .add_cart_btn {
-            @include myButton;
-            width: fit-content;
-            margin: 15px auto;
-        }
+  .product_card {
+    .price {
+      width: 55%;
     }
 
     .close_btn {
-        color: $btnColor1;
-        z-index: 3;
-        position: absolute;
-        right: 0;
-        font-size: 20px;
-        margin: 20px;
-        cursor: pointer;
+      right: 70px;
     }
   }
 
-@media screen and (max-width: 1024px) {
-    .gallery {
-        padding-bottom: 40px;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-
-    .product_card{
-        .price {
-            width: 55%;
-        } 
-        .close_btn {
-            right: 70px;
-      }
-    }
-
-    .cards_container {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 60px;
-    }
+  .cards_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -221,134 +121,20 @@
     margin: 14px auto;
   }
 
-  .popup_card {
-    position: relative;
-    display: flex;
-    left: -15px;
-    top: -25px;
 
-        .product_img {
-            width: 50%;
-            height: 100%;
-            border-radius: 10px 0 10px 10px;
-        }
-
-        .close_btn {
-            top: 0px;
-            right: 8px;
-            font-size: 14px;
-            padding: 12px;
-            cursor: pointer;
-        }
-
-        .info {
-            h2 {
-                color: $tertiaryColor;
-                font-size: 25px;
-                line-height: 20px;
-                padding-top: 24px;
-                margin: 0;
-
-                span {
-                    color: $tertiaryColor;
-                    font-size: 15px;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    padding: 10px;
-                }
-            }
-            .price {
-                color: $tertiaryColor;
-                font-size: 30px;
-                font-weight: 200;
-                margin: 0;
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 425px) {
-    .products {
-        width: 80%;
-        margin: 0 auto;
-        display: block;
-      }
-    
-      .product_card {
-        width: 310px;
-        height: 600px;
-        margin-bottom: 72px;
-      }
-    
-      .popup_card {
-        display: block;
-        width: 90%;
-        top: -110px;
-        left: 0;
+  .products {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
 
-            .product_img {
-                background: $backgroundColor2;
-                width: auto;
-                height: 50%;
-                border-radius: 10px 10px 0 0;
+  .product_card {
+    width: 310px;
+    height: 600px;
+    margin-bottom: 72px;
+  }
 
-                img {
-                    height: 100%;
-                    width: auto;
-                    border-radius: 0;
-                }
-            }
-
-            .info {
-                background: $backgroundColor1;
-                height: 80%;
-                width: auto;
-                border-radius: 0 0 10px 10px;
-
-                h2 {
-                    font-size: 20px;
-                    line-height: 18px;
-
-                    span {
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                    }
-                }
-
-                p {
-                    font-size: 16px;
-                    text-align: justify;
-                    letter-spacing: 1px;
-                    overflow: scroll;
-                }
-
-                .price {
-                    color: $mainColor;
-                    font-size: 25px;
-                    font-weight: 200;
-                    margin: 0;
-                }
-
-                .add_cart_btn {
-                    color: $secondaryColor;
-                    background: $btnColor1;
-                    font-size: 16px;
-                    font-weight: 700;
-                    text-align: center;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    margin: 6px auto;
-                    padding: 8px 50px;
-                    border-radius: 10px;
-                }
-            }
-
-            .close_btn {
-                font-size: 14px;
-                top: 29px;
-                right: -10px;
-                cursor: pointer;
-            }
-      }
 }

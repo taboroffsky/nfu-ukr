@@ -17,6 +17,11 @@ next-nfu-ukr/.next
 next-nfu-ukr/node_modules
 next-nfu-ukr/next-env.d.ts
 next-nfu-ukr/package-lock.json
+next-nfu-ukr/locales/*/tokensDescription.json
+
+# Common
+
+nfu-ukr-common/node_modules
 
 # Yarn
 yarn.lock
