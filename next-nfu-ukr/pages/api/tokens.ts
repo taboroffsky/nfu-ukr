@@ -2,11 +2,10 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import Moralis from "moralis";
 import { StorageFilePath, NonFungibleUkraineName } from "../../../nfu-ukr-common/constants";
-import { StorageToken, TokenMetadata } from "../../../nfu-ukr-common/contracts";
+import { Token, TokenMetadata } from "../../../nfu-ukr-common/contracts";
 import contractAddresses from "../../../nfu-ukr-common/resources/contractAddress.json";
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
-
     if (request.method !== "GET") {
         response.status(404).send(`Unexpected http method: ${request.method}`);
         return;
@@ -28,10 +27,10 @@ export default async function handler(request: NextApiRequest, response: NextApi
     response.status(200).json(availableTokens);
 }
 
-const getTokensFromStorage: () => StorageToken[] | undefined = function () {
+const getTokensFromStorage: () => Token[] | undefined = function () {
     try {
         const readStream = fs.readFileSync("../" + StorageFilePath);
-        const tokens: StorageToken[] = JSON.parse(readStream.toString());
+        const tokens: Token[] = JSON.parse(readStream.toString());
         return tokens;
     } catch (exception) {
         console.log("Failed to get tokens from local storage:");
@@ -42,6 +41,12 @@ const getTokensFromStorage: () => StorageToken[] | undefined = function () {
 const getMintedTokenNames: () => Promise<string[] | undefined> = async function () {
     try {
         const chain = process.env.NEXT_PUBLIC_CHAIN_ID!;
+
+        // not tracking minted tokens for local chain:
+        if (chain == "31337"){
+            return new Array<string>();
+        }
+
         const address: string = (contractAddresses as any)[chain][NonFungibleUkraineName];
 
         try {

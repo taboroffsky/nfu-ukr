@@ -1,11 +1,10 @@
-import { StorageToken } from "../../nfu-ukr-common/contracts";
 import fs from "fs";
+import { Token } from "../../nfu-ukr-common/contracts";
 
 const getTokenUrisFromStorage: (filepath: string) => string[] = function (filepath) {
     const storage = fs.readFileSync(filepath).toString();
-    const storageTokens: StorageToken[] = JSON.parse(storage);
-    const tokenUris: string[] = storageTokens.map((token) => token.tokenUri);
-    return tokenUris;
+    const storageTokens: Token[] = JSON.parse(storage);
+    return storageTokens.map((token) => token.tokenUri);
 };
 
 export default getTokenUrisFromStorage;
