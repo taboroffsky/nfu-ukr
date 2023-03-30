@@ -31,7 +31,7 @@ const teamMembers = [
 
 const Team = (teamMembers) => {
   return (
-    <>
+    
     <div className={`${TeamStyle.team} container`} id="team">
       <h1>Наша команда</h1>
       <p>
@@ -41,12 +41,12 @@ const Team = (teamMembers) => {
 
       <div className={TeamStyle.team_card}>
         {teamMembers.map((teamMember) =>{
-          return < teamMember = {teamMember}/>
+          return < teamMember = {teamMember} />
         })}
 
       </div>
     </div>
-    </>
+    
   );
 };
 
