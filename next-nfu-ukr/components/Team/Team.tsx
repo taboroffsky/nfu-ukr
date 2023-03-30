@@ -31,7 +31,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className={${TeamStyle.team} container} id="team">
+    <section className={`${TeamStyle.team} container`} id="team">
       <h1>Наша команда</h1>
       <p>Наша мрія, як і мрія багатьох, — мир в Україні. Мир усьому світу! <br /> Щиро дякуємо всім за
         підтримку та допомогу Україні!</p>
