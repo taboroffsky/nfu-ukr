@@ -1,40 +1,14 @@
 import React from "react";
 import TeamStyle from "./Team.module.scss";
-
-const teamMembers = [
-  {
-    name: "Андрій Костін",
-    role: "Засновник проекту",
-    image: "avatars/kostin.jpg"
-  },
-  {
-    name: "Олександр Лук'янюк",
-    role: "2D художник",
-    image: "avatars/lukianiuk.jpg"
-  },
-  {
-    name: "Тарас Іщук",
-    role: "Веб розробник",
-    image: "avatars/ishchuk.jpg"
-  },
-  {
-    name: "Влад Орсагош",
-    role: "Художник",
-    image: "avatars/orsahosh.jpg"
-  },
-  {
-    name: "Марія Андреченко",
-    role: "Маркетолог",
-    image: "avatars/andrechenko.jpg"
-  }
-];
+import teamMembers from "../../../nfu-ukr-common/resources/teamMembers.json";
+import useTranslation from "next-translate/useTranslation";
 
 const Team = () => {
+  const {t} = useTranslation (`common`);
   return (
     <section className={`${TeamStyle.team} container`} id="team">
-      <h1>Наша команда</h1>
-      <p>Наша мрія, як і мрія багатьох, — мир в Україні. Мир усьому світу! <br /> Щиро дякуємо всім за
-        підтримку та допомогу Україні!</p>
+      <h1>{t("ourTeam")}</h1>
+      <p>{t("ourTeamManifest")}</p>
       {
         teamMembers.map((teamMember) =>
         (
