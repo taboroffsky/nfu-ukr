@@ -10,13 +10,13 @@ const Team = () => {
       <h1>{t("ourTeam")}</h1>
       <p>{t("ourTeamManifest")}</p>
       {
-        teamMembers.map((teamMember) =>
+        teamMembers.map((teamMember, index) =>
         (
           <div className={TeamStyle.team_card}>
             <img src={teamMember.image} alt="Avatar" />
             <div>
-              <h4>{teamMember.name}</h4>
-              <p>{teamMember.role}</p>
+              <h4>{t(`${teamMember.name}`)}</h4>
+              <p>{t(`${teamMember.role}`)}</p>
             </div>
           </div>
         ))
