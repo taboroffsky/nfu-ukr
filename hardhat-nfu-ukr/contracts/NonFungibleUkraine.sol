@@ -17,17 +17,18 @@ contract NonFungibleUkraine is
     uint256 public immutable mintFee;
     uint256 public immutable totalSupply;
     uint256 private tokenCounter;
-    mapping(string => bool) private tokensAvailability;
+    mapping(string => uint256) private tokensAvailability;
 
     constructor(
         string[] memory tokenUris,
-        uint256 _mintFee
+        uint256 _mintFee,
+        uint256 _tokensPerUri
     ) ERC721("NonFungibleUkraine", "NFU") {
         mintFee = _mintFee;
-        totalSupply = tokenUris.length;
+        totalSupply = tokenUris.length * _tokensPerUri;
 
         for (uint i = 0; i < tokenUris.length; i++) {
-            tokensAvailability[tokenUris[i]] = true;
+            tokensAvailability[tokenUris[i]] = _tokensPerUri;
         }
     }
 
@@ -45,11 +46,11 @@ contract NonFungibleUkraine is
             revert NonFungibleUkraine__NotEnoughEth();
         }
 
-        if (!tokensAvailability[tokenUri]) {
+        if (tokensAvailability[tokenUri] == 0) {
             revert NonFungibleUkraine__TokenUnavailable();
         }
 
-        tokensAvailability[tokenUri] = false;
+        tokensAvailability[tokenUri]--;
         uint256 tokenId = ++tokenCounter;
         _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, tokenUri);
@@ -67,7 +68,7 @@ contract NonFungibleUkraine is
 
     function getTokenUriAvailability(
         string memory tokenURI
-    ) public view returns (bool) {
+    ) public view returns (uint256) {
         return tokensAvailability[tokenURI];
     }
 

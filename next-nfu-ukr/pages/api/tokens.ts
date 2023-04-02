@@ -17,13 +17,13 @@ export default async function handler(request: NextApiRequest, response: NextApi
         return;
     }
 
-    const mintedTokenNames = await getMintedTokenNames();
-    if (!mintedTokenNames) {
+    const unavailableTokenNames = await getUnavailableTokenNames();
+    if (!unavailableTokenNames) {
         response.status(409).json(tokensFromStorage);
         return;
     }
 
-    const availableTokens = tokensFromStorage.filter((token) => !mintedTokenNames.includes(token.name));
+    const availableTokens = tokensFromStorage.filter((token) => !unavailableTokenNames.includes(token.name));
     response.status(200).json(availableTokens);
 }
 
@@ -38,15 +38,15 @@ const getTokensFromStorage: () => Token[] | undefined = function () {
     }
 };
 
-const getMintedTokenNames: () => Promise<string[] | undefined> = async function () {
+const getUnavailableTokenNames: () => Promise<string[] | undefined> = async function () {
     try {
         const chain = process.env.NEXT_PUBLIC_CHAIN_ID!;
-
         // not tracking minted tokens for local chain:
         if (chain == "31337"){
             return new Array<string>();
         }
 
+        const tokensPerArt = process.env.TOKENS_PER_ART!;
         const address: string = (contractAddresses as any)[chain][NonFungibleUkraineName];
 
         try {
@@ -66,7 +66,21 @@ const getMintedTokenNames: () => Promise<string[] | undefined> = async function 
             chain,
         });
 
-        return moralisResponse.result.map((result) => (result.metadata as unknown as TokenMetadata).name);
+        const numberOfMintedTokensPerName = new Map<string, number>();
+        const result: string[] = [];
+
+        moralisResponse.result
+            .map((result) => (result.metadata as unknown as TokenMetadata).name)
+            .forEach((name) => {
+                numberOfMintedTokensPerName[name] = numberOfMintedTokensPerName[name] || 0;
+                numberOfMintedTokensPerName[name]++;
+
+                if(numberOfMintedTokensPerName[name] === 4){
+                    result.push(name);
+                }
+            });
+
+        return result;
     } catch (exception) {
         console.log("Failed to get token owners from Moralis:");
         console.error(exception);

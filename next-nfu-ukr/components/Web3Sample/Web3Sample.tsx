@@ -5,11 +5,11 @@ import contractAddresses from '../../../nfu-ukr-common/resources/contractAddress
 
 export default function Web3Sample() {
   const { Moralis } = useMoralis()
-  const chainId = "5"
-  //const chainId = "31337"
-  const tokenUri = "ipfs://QmTzBTG2Bpjd4pTrvFCnQMni942d9PnDVU7Ts2b61spCBG";
-  //const tokenUri = "ipfs://QmNykqxhAQPoSnMUax78Bh5Qtq2Jrk48Z2NWEEAmaFj9AA";
-  //const tokenUri = "ipfs://QmX5jjkXiSp6tENUfyda7GUpJ7onjQUg8peWfMnnxPooB1";
+  //const chainId = "5"
+  const chainId = "31337"
+  const tokenUri = "ipfs://QmdPgUoxhZimXRuaF3N2rrWoZiw7TgKEU1or6RNjirVY9Q";
+  //const tokenUri = "ipfs://QmSJCs8K98k44Fiew6GDNz7G3wAWdVgyoRx1NEqjFoHJUy";
+  //const tokenUri = "ipfs://QmZp889WL7pHJ8sEZBs7FjefbbKoNUe586ZccsivFLy43a";
   const contractAddress = contractAddresses[chainId]["NonFungibleUkraine"];
   const contractAbi = JSON.parse(contractAbis["NonFungibleUkraine"]);
 
