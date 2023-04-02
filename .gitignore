@@ -21,7 +21,7 @@ next-nfu-ukr/locales/*/tokensDescription.json
 
 # Common
 
-nfu-ukr-common/node_modules
+#nfu-ukr-common/node_modules
 
 # Yarn
 yarn.lock
