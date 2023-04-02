@@ -18,7 +18,7 @@ const deploy: DeployFunction = async function ({ getNamedAccounts, deployments, 
     const args = [tokenUris, currentNetwork.mintFee];
     const nonFungibleUkraine = await deploy(NonFungibleUkraineName, {
         from: deployer,
-        args: [tokenUris, currentNetwork.mintFee],
+        args: [tokenUris, currentNetwork.mintFee, currentNetwork.tokensPerUri],
         log: true,
         waitConfirmations: currentNetwork.verificationBlockConfirmation,
     });
