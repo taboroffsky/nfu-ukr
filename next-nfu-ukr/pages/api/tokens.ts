@@ -67,14 +67,20 @@ const getUnavailableTokenNames: () => Promise<string[] | undefined> = async func
         });
 
         const numberOfMintedTokensPerName = new Map<string, number>();
+        const result: string[] = [];
 
         moralisResponse.result
             .map((result) => (result.metadata as unknown as TokenMetadata).name)
             .forEach((name) => {
+                numberOfMintedTokensPerName[name] = numberOfMintedTokensPerName[name] || 0;
                 numberOfMintedTokensPerName[name]++;
+
+                if(numberOfMintedTokensPerName[name] === 4){
+                    result.push(name);
+                }
             });
 
-        return Array.from(numberOfMintedTokensPerName.keys()).filter((key) => numberOfMintedTokensPerName[key] >= tokensPerArt);
+        return result;
     } catch (exception) {
         console.log("Failed to get token owners from Moralis:");
         console.error(exception);
