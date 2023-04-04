@@ -20,25 +20,28 @@
 </head>
 
 <body>
-
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#home"><span>Домашня сторінка</span></a>
-    <a href="#gallery"><span>Галерея</span></a>
-    <a href="#about"><span>Про проект</span></a>
-    <a href="#team"><span>Наша команда</span></a>
-    <a href="#contacts"><span>Контакти</span></a>
-    <span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; open</span>
-  </div>
-
   <div class="header" id="home">
-    <div class="nav_menu" id="header-nav">
-      <a href="#home"><span>Домашня сторінка</span></a>
-      <a href="#gallery"><span>Галерея</span></a>
-      <a href="#about"><span>Про проект</span></a>
-      <a href="#team"><span>Наша команда</span></a>
-      <a href="#contacts"><span>Контакти</span></a>
-    </div>
+    <nav>
+      <div class="logo">
+        <img src="./images/logo/NFU_yellow.svg" alt="Logo Image">
+      </div>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Головна</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#about">Про проект</a></li>
+        <li><a href="#team">Наша команда</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+      <div class="nav_language">
+        <img src="images/language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" class="language__img">
+        <img src="images/language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" class="language__img">
+      </div>
+    </nav>
     <div class="icons_header">
       <img class="emblem left" src="./images/icons/flowers_corner.svg" alt="emblem icon left">
       <img class="emblem right" src="./images/icons/flowers_corner.svg" alt="emblem icon right">
@@ -50,13 +53,8 @@
     <div class="description">
       <div class="description-item">Сучасне мистецтво крізь історію</div>
     </div>
-    <div class="language">
-      <img src="images/language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" class="language__img">
-      <img src="images/language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" class="language__img">
-    </div>
   </div>
-  </div>
-
+  
   <section class="gallery container" id="gallery">
     <h1>Галерея</h1>
     <div class="products">

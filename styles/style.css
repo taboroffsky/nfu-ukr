@@ -25,6 +25,7 @@ html {
 
 body {
   min-height: 100%;
+  max-width: 100%;
   font-family: "Montserrat", sans-serif;
   position: relative;
   top: 40px;
@@ -62,59 +63,104 @@ hr {
 
 .skiptranslate {
   display: none;
-  overflow: hidden;
 }
 
-#header-nav {
+nav {
+  height: 5rem;
+  width: 100vw;
+  background: #00005b;
   display: flex;
-  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+/*Styling logo*/
+.logo {
+  padding: 1vh 2vw;
+  text-align: center;
+}
+
+.logo img {
+  height: 5rem;
+  width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+
+.nav-links li a:hover {
+  color: #FFD600;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: #252629;
+  position: absolute;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+}
+
+.nav-links li a:hover::before {
+  width: 80%;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #FFD600;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav_language {
+  z-index: 3;
+  justify-content: last baseline;
   align-items: center;
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.language {
-  z-index: 3;
-  position: absolute;
-  bottom: 10%;
-  left: 45%;
-}
-
 .language__img {
-  width: 35px;
-  margin: 20px;
+  width: 30px;
+  margin: 10px;
   cursor: pointer;
   opacity: 0.4;
   border: 2px solid #883576;
@@ -133,46 +179,39 @@ hr {
 }
 
 .emblem {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   width: 12%;
+  padding-top: 10%;
 }
 
 .left {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 25px;
 }
 
 .right {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 25px;
   transform: scaleX(-1);
 }
 
-.logo_header,
-.description {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
 .logo_header_image {
-  top: 40%;
-  width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
   margin: 0 auto;
 }
 
 .description-item {
-  margin: 35px auto;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
   color: #FFD600;
-  font-size: 43px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
@@ -427,7 +466,7 @@ canvas {
 .team-card {
   background: #883576;
   box-shadow: 0 2px 18px 2px #FEF5AC;
-  width: 14%;
+  max-width: 80px;
   display: inline-block;
   margin: 25px;
   transition: 0.3s;
@@ -453,6 +492,7 @@ canvas {
 
 .team-card img:hover {
   filter: none;
+  transition: all ease-in-out 300ms;
   color: #EFFFFD;
 }
 
@@ -543,8 +583,12 @@ div.cookiebanner > a {
     transform: scaleX(-1);
   }
   .logo_header_image {
-    top: 55%;
+    padding-top: 20%;
     width: 30%;
+  }
+  .description-item {
+    margin: 0 auto;
+    padding-top: 15px;
   }
   .popup-card {
     position: relative;
@@ -584,6 +628,9 @@ div.cookiebanner > a {
   }
 }
 @media screen and (max-width: 1024px) {
+  .nav_language {
+    margin: 0 auto;
+  }
   .language__img {
     width: 28px;
   }
@@ -644,19 +691,68 @@ div.cookiebanner > a {
   }
 }
 @media screen and (max-width: 768px) {
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
+  nav {
+    position: fixed;
+    z-index: 3;
   }
-  .topnav #myLinks {
-    display: none;
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
   }
-  #header-nav {
-    display: none;
+  .nav-links {
+    position: fixed;
+    background: #00005b;
+    opacity: 0.85;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(40px at 90% -20%);
+    -webkit-clip-path: circle(40px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
   }
-  .language {
-    left: 40%;
+  .nav-links.open {
+    clip-path: circle(1100px at 90% -10%);
+    -webkit-clip-path: circle(1100px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  .nav_language {
+    margin: 0 auto;
   }
   .language__img {
     width: 28px;
@@ -680,10 +776,8 @@ div.cookiebanner > a {
     transform: scaleX(-1);
   }
   .logo_header_image {
-    position: absolute;
-    top: 300px;
-    left: 24%;
-    width: 44%;
+    top: 50%;
+    width: 45%;
   }
   .description-item {
     position: absolute;
@@ -758,17 +852,12 @@ div.cookiebanner > a {
   }
 }
 @media screen and (max-width: 425px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-  .language {
-    left: 35%;
+  .nav_language {
+    margin: 0 auto;
   }
   .language__img {
-    width: 35px;
+    max-width: 28px;
+    max-height: 20px;
   }
   .language__img:hover,
 .language__img_active {
@@ -790,7 +879,7 @@ div.cookiebanner > a {
   }
   .logo_header_image {
     position: absolute;
-    top: 300px;
+    top: 230px;
     left: 17%;
     width: 290px;
   }
