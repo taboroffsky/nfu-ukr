@@ -9,7 +9,7 @@ import GalleryPopup from "./Gallery-popup";
 import GalleryStyle from "./Gallery.module.scss";
 
 const loadGalleryItems = async (): Promise<Token[]> => {
-  const items: Promise<Token[]> = (await fetch("http://localhost:3000/api/tokens")).json();
+  const items: Promise<Token[]> = (await fetch("/api/tokens")).json();
   return items;
 }
 
