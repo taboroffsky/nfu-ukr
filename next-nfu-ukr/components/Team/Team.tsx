@@ -4,19 +4,21 @@ import teamMembers from "../../../nfu-ukr-common/resources/teamMembers.json";
 import useTranslation from "next-translate/useTranslation";
 
 const Team = () => {
-  const {t} = useTranslation (`common`);
+  const {t: tCommon} = useTranslation (`common`);
+  const {t: tTeamMembers} = useTranslation("teamMembers");
+
   return (
     <section className={`${TeamStyle.team} container`} id="team">
-      <h1>{t("ourTeam")}</h1>
-      <p>{t("ourTeamManifest")}</p>
+      <h1>{tCommon("ourTeam")}</h1>
+      <p>{tCommon("ourTeamManifest")}</p>
       {
-        teamMembers.map((teamMember, index) =>
+        teamMembers.map((teamMember) =>
         (
           <div className={TeamStyle.team_card}>
             <img src={teamMember.image} alt="Avatar" />
             <div>
-              <h4>{t(`${teamMember.name}`)}</h4>
-              <p>{t(`${teamMember.role}`)}</p>
+              <h4>{tTeamMembers(`${teamMember.name}`)}</h4>
+              <p>{tTeamMembers(`${teamMember.role}`)}</p>
             </div>
           </div>
         ))
