@@ -3,7 +3,7 @@ module.exports = {
     defaultLocale: 'ua', // Default language of your website
     localeDetection: false,
     pages: {
-        '*': ['common', 'tokens', 'teamMembers'], // Namespaces that you want to import per page (we stick to one namespace for all the application in this tutorial)
-        '/': ['common', 'tokens', 'teamMembers']
+        '*': ['common', 'tokens', 'teamMembers_t'], // Namespaces that you want to import per page (we stick to one namespace for all the application in this tutorial)
+        '/': ['common', 'tokens', 'teamMembers_t']
     },
   };

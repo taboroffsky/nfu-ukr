@@ -5,7 +5,7 @@ import useTranslation from "next-translate/useTranslation";
 
 const Team = () => {
   const {t: tCommon} = useTranslation (`common`);
-  const {t: tTeamMembers} = useTranslation("teamMembers");
+  const {t: tTeamMembers} = useTranslation("teamMembers_t");
 
   return (
     <section className={`${TeamStyle.team} container`} id="team">

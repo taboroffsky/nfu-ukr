@@ -5,23 +5,23 @@
         "image": "avatars/kostin.jpg"
     },
     {
-        "name": "Олександр Лук'янюк",
-        "role": "2D художник",
+        "name": "lukianiuk",
+        "role": "art_2D",
         "image": "avatars/lukianiuk.jpg"
     },
     {
-        "name": "Тарас Іщук",
-        "role": "Веб розробник",
+        "name": "ishchuk",
+        "role": "webdev",
         "image": "avatars/ishchuk.jpg"
     },
     {
-        "name": "Влад Орсагош",
-        "role": "Художник",
+        "name": "orsagosh",
+        "role": "art",
         "image": "avatars/orsahosh.jpg"
     },
     {
-        "name": "Марія Андреченко",
-        "role": "Маркетолог",
+        "name": "andrechenko",
+        "role": "smm",
         "image": "avatars/andrechenko.jpg"
     }
 ]
