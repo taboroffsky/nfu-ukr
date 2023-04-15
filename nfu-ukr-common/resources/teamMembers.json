@@ -1,27 +1,27 @@
 [
     {
-        "name": "Андрій Костін",
-        "role": "Засновник проекту",
-        "image": "images/avatars/kostin.jpg"
+        "name": "kostin",
+        "role": "founder",
+        "image": "avatars/kostin.jpg"
     },
     {
-        "name": "Олександр Лук'янюк",
-        "role": "2D художник",
-        "image": "images/avatars/lukianiuk.jpg"
+        "name": "lukianiuk",
+        "role": "art_2D",
+        "image": "avatars/lukianiuk.jpg"
     },
     {
-        "name": "Тарас Іщук",
-        "role": "Веб розробник",
-        "image": "images/avatars/ishchuk.jpg"
+        "name": "ishchuk",
+        "role": "webdev",
+        "image": "avatars/ishchuk.jpg"
     },
     {
-        "name": "Влад Орсагош",
-        "role": "Художник",
-        "image": "images/avatars/orsahosh.jpg"
+        "name": "orsagosh",
+        "role": "art",
+        "image": "avatars/orsahosh.jpg"
     },
     {
-        "name": "Марія Андреченко",
-        "role": "Маркетолог",
-        "image": "images/avatars/andrechenko.jpg"
+        "name": "andrechenko",
+        "role": "smm",
+        "image": "avatars/andrechenko.jpg"
     }
 ]
