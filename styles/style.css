@@ -419,7 +419,6 @@ canvas {
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 15px auto;
@@ -565,7 +564,7 @@ div.cookiebanner > a {
     width: 28px;
   }
   .language__img:hover,
-.language__img_active {
+  .language__img_active {
     opacity: 1;
   }
   .emblem {
@@ -635,7 +634,7 @@ div.cookiebanner > a {
     width: 28px;
   }
   .language__img:hover,
-.language__img_active {
+  .language__img_active {
     opacity: 1;
   }
   .emblem {
@@ -758,7 +757,7 @@ div.cookiebanner > a {
     width: 28px;
   }
   .language__img:hover,
-.language__img_active {
+  .language__img_active {
     opacity: 1;
   }
   .emblem {
@@ -860,7 +859,7 @@ div.cookiebanner > a {
     max-height: 20px;
   }
   .language__img:hover,
-.language__img_active {
+  .language__img_active {
     opacity: 1;
   }
   .emblem {
