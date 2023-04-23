@@ -1,0 +1,38 @@
+# vscode
+.vscode
+
+# Hardhat
+hardhat-nfu-ukr/artifacts
+hardhat-nfu-ukr/cache
+hardhat-nfu-ukr/deployments
+hardhat-nfu-ukr/input
+hardhat-nfu-ukr/node_modules
+hardhat-nfu-ukr/coverage
+hardhat-nfu-ukr/coverage.json
+hardhat-nfu-ukr/typechain
+hardhat-nfu-ukr/typechain-types
+
+# Next
+next-nfu-ukr/.next
+next-nfu-ukr/node_modules
+next-nfu-ukr/next-env.d.ts
+next-nfu-ukr/package-lock.json
+next-nfu-ukr/locales/*/tokensDescription.json
+
+# Common
+
+nfu-ukr-common/node_modules
+
+# Yarn
+yarn.lock
+
+# Environment variables
+.env
+
+# Build artefacts
+bin/
+gen/
+out/
+
+# Log Files
+*.log

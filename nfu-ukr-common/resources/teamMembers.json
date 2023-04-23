@@ -1,0 +1,27 @@
+[
+    {
+        "name": "kostin",
+        "role": "founder",
+        "image": "avatars/kostin.jpg"
+    },
+    {
+        "name": "lukianiuk",
+        "role": "art_2D",
+        "image": "avatars/lukianiuk.jpg"
+    },
+    {
+        "name": "ishchuk",
+        "role": "webdev",
+        "image": "avatars/ishchuk.jpg"
+    },
+    {
+        "name": "orsagosh",
+        "role": "art",
+        "image": "avatars/orsahosh.jpg"
+    },
+    {
+        "name": "andrechenko",
+        "role": "smm",
+        "image": "avatars/andrechenko.jpg"
+    }
+]

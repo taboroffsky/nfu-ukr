@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+
+.contacts {
+  padding-top: 38px;
+}
+
+.nav_menu {
+  display: inline-block;
+  padding: 12px 0;
+  margin: 12px 0;
+
+  a {
+    font-size: 18px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $tertiaryColor;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.icon_img {
+  width: 30px;
+  transition: all .3s;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer_media {
+  padding: 32px 0;
+}
+
+.copyright {
+  color: $tertiaryColor;
+  padding-bottom: 35px;
+  font-weight: 200;
+  width: 85%;
+  margin: 0 auto;
+  font-size: 12px;
+}
