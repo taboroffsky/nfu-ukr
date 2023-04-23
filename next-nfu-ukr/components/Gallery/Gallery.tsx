@@ -50,7 +50,7 @@ const Gallery = (): JSX.Element => {
             ? null
             : (
               tokens.map((token) =>
-                <div className={GalleryStyle.product}>
+                <div className={GalleryStyle.product} key={token.tokenUri}>
                   <div className={GalleryStyle.product_card}>
                     <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
                     <span className={GalleryStyle.price}>
