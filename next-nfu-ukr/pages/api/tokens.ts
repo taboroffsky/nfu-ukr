@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
 import Moralis from "moralis";
-import { StorageFilePath, NonFungibleUkraineName } from "../../../nfu-ukr-common/constants";
+import { NonFungibleUkraineName } from "../../../nfu-ukr-common/constants";
 import { Token, TokenMetadata } from "../../../nfu-ukr-common/contracts";
 import contractAddresses from "../../../nfu-ukr-common/resources/contractAddress.json";
+import storageTokens from "../../../nfu-ukr-common/resources/storage.json";
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
     if (request.method !== "GET") {
@@ -11,8 +11,9 @@ export default async function handler(request: NextApiRequest, response: NextApi
         return;
     }
 
-    const tokensFromStorage = getTokensFromStorage();
-    if (!tokensFromStorage) {
+    const tokensFromStorage : Token[] = storageTokens;
+    if (tokensFromStorage.length == 0) {
+        console.error("No tokens retrieved from storage.")
         response.status(500).send("Request failed. View server logs for more details.");
         return;
     }
@@ -26,17 +27,6 @@ export default async function handler(request: NextApiRequest, response: NextApi
     const availableTokens = tokensFromStorage.filter((token) => !unavailableTokenNames.includes(token.name));
     response.status(200).json(availableTokens);
 }
-
-const getTokensFromStorage: () => Token[] | undefined = function () {
-    try {
-        const readStream = fs.readFileSync("../" + StorageFilePath);
-        const tokens: Token[] = JSON.parse(readStream.toString());
-        return tokens;
-    } catch (exception) {
-        console.log("Failed to get tokens from local storage:");
-        console.error(exception);
-    }
-};
 
 const getUnavailableTokenNames: () => Promise<string[] | undefined> = async function () {
     try {

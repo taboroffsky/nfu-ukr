@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@import "../../styles/variables";
 
 .team {
     width: 80%;
@@ -9,7 +9,7 @@
         padding: 32px 12px;
         font-size: 18px;
         letter-spacing: 1px;
-  }
+    }
 }
 
 .team_card {
@@ -21,19 +21,22 @@
     transition: 0.3s;
     border-radius: 15px;
 
-     img {
+    img {
         filter: grayscale(100%);
         width: 100%;
         border-radius: 10px 10px 0 0;
+
         &:hover {
             filter: none;
             color: $mainColor;
         }
     }
+
     h4 {
         font-weight: 400;
         padding-top: 12px;
     }
+
     p {
         padding: 12px 6px;
         font-weight: 300;
@@ -44,8 +47,8 @@
 @media screen and (max-width: 1024px) {
     .team {
         padding-bottom: 48px;
-      }
-    
+    }
+
     .team_card {
         display: inline-block;
         width: 30%;
@@ -65,8 +68,8 @@
 @media screen and (max-width: 425px) {
     .team>p {
         padding: 20px;
-      }
-    
+    }
+
     .team_card {
         display: inline-block;
         width: 65%;
@@ -76,11 +79,12 @@
             padding: 8px;
             font-weight: 200;
             font-size: 16px;
-          }
+        }
+
         p {
             font-weight: 100;
             font-size: 14px;
             padding: 8px;
-          }
-      }
+        }
+    }
 }

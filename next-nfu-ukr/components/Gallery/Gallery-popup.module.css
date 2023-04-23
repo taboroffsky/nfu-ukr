@@ -1,0 +1,260 @@
+/*Styles for popup view*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500");
+.popup_view {
+  z-index: 1;
+  -webkit-backdrop-filter: blur(15px) brightness(0.25) grayscale(100%) saturate(85%);
+          backdrop-filter: blur(15px) brightness(0.25) grayscale(100%) saturate(85%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.popup_view .active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup_card {
+  position: relative;
+  display: flex;
+  width: 70%;
+  height: 500px;
+}
+.popup_card .product_img {
+  z-index: 2;
+  background: #883576;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  transform: translateY(25px);
+  box-shadow: -30px 0px 55px -4px rgb(255, 214, 0);
+  border-radius: 10px 0 10px 10px;
+}
+.popup_card .product_img img {
+  z-index: 2;
+  position: relative;
+  width: 80%;
+  border-radius: 10px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.popup_card .info {
+  z-index: 2;
+  background: #00005b;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  box-shadow: 30px 0px 55px -4px rgb(255, 214, 0);
+  border-radius: 10px 10px 10px 0;
+}
+.popup_card .info h2 {
+  color: #FEF5AC;
+  font-size: 36px;
+  line-height: 20px;
+  margin: 10px;
+}
+.popup_card .info h2 span {
+  color: #FEF5AC;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+.popup_card .info p {
+  color: #FEF5AC;
+  font-size: 15px;
+  margin: 10px;
+}
+.popup_card .info .price {
+  color: #FEF5AC;
+  font-size: 30px;
+  font-weight: 200;
+  margin: 10px;
+}
+.popup_card .info .price .ethereumIcon {
+  margin-right: 5px;
+}
+.popup_card .info .add_cart_btn {
+  box-shadow: 0 2px 18px 2px #FEF5AC;
+  color: #25316D;
+  background: #FFD600;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 15px auto;
+}
+.popup_card .close_btn {
+  color: #FFD600;
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .popup_card {
+    position: relative;
+    display: flex;
+    left: -15px;
+    top: -25px;
+  }
+  .popup_card .product_img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0 10px 10px;
+  }
+  .popup_card .close_btn {
+    top: 0px;
+    right: 8px;
+    font-size: 14px;
+    padding: 12px;
+    cursor: pointer;
+  }
+  .popup_card .info h2 {
+    color: #FEF5AC;
+    font-size: 25px;
+    line-height: 20px;
+    padding-top: 24px;
+    margin: 0;
+  }
+  .popup_card .info h2 span {
+    color: #FEF5AC;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+  }
+  .popup_card .info .price {
+    color: #FEF5AC;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup_card {
+    position: relative;
+    display: flex;
+    left: -15px;
+    top: -25px;
+  }
+  .popup_card .product_img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0 10px 10px;
+  }
+  .popup_card .close_btn {
+    top: 0px;
+    right: 8px;
+    font-size: 14px;
+    padding: 12px;
+    cursor: pointer;
+  }
+  .popup_card .info h2 {
+    color: #FEF5AC;
+    font-size: 25px;
+    line-height: 20px;
+    padding-top: 24px;
+    margin: 0;
+  }
+  .popup_card .info h2 span {
+    color: #FEF5AC;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+  }
+  .popup_card .info .price {
+    color: #FEF5AC;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .popup_card {
+    display: block;
+    width: 90%;
+    top: -110px;
+    left: 0;
+  }
+  .popup_card .product_img {
+    background: #00005b;
+    width: auto;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+  }
+  .popup_card .product_img img {
+    height: 100%;
+    width: auto;
+    border-radius: 0;
+  }
+  .popup_card .info {
+    background: #883576;
+    height: 80%;
+    width: auto;
+    border-radius: 0 0 10px 10px;
+  }
+  .popup_card .info h2 {
+    font-size: 20px;
+    line-height: 18px;
+  }
+  .popup_card .info h2 span {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .popup_card .info p {
+    font-size: 16px;
+    text-align: justify;
+    letter-spacing: 1px;
+    overflow: scroll;
+  }
+  .popup_card .info .price {
+    color: #EFFFFD;
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0;
+  }
+  .popup_card .info .add_cart_btn {
+    color: #25316D;
+    background: #FFD600;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 6px auto;
+    padding: 8px 50px;
+    border-radius: 10px;
+  }
+  .popup_card .close_btn {
+    font-size: 14px;
+    top: 29px;
+    right: -10px;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=Gallery-popup.module.css.map */
