@@ -5,23 +5,18 @@
         "image": "avatars/kostin.jpg"
     },
     {
-        "name": "lukianiuk",
-        "role": "art_2D",
-        "image": "avatars/lukianiuk.jpg"
-    },
-    {
         "name": "ishchuk",
         "role": "webdev",
         "image": "avatars/ishchuk.jpg"
     },
     {
-        "name": "orsagosh",
-        "role": "art",
-        "image": "avatars/orsahosh.jpg"
+        "name": "butinskaiia",
+        "role": "art/smm",
+        "image": "avatars/butinskaiia.jpg"
     },
     {
-        "name": "andrechenko",
-        "role": "smm",
-        "image": "avatars/andrechenko.jpg"
+        "name": "shestopalova",
+        "role": "art",
+        "image": "avatars/shestopalova.jpg"
     }
 ]
