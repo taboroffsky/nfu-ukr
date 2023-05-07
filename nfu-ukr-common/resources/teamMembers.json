@@ -2,26 +2,21 @@
     {
         "name": "kostin",
         "role": "founder",
-        "image": "avatars/kostin.jpg"
-    },
-    {
-        "name": "lukianiuk",
-        "role": "art_2D",
-        "image": "avatars/lukianiuk.jpg"
+        "image": "avatars/kostin_640x640.jpg"
     },
     {
         "name": "ishchuk",
         "role": "webdev",
-        "image": "avatars/ishchuk.jpg"
+        "image": "avatars/ishchuk_640x640.jpg"
     },
     {
-        "name": "orsagosh",
+        "name": "butinskaiia",
+        "role": "art/smm",
+        "image": "avatars/butinskaiia_640x640.jpg"
+    },
+    {
+        "name": "shestopalova",
         "role": "art",
-        "image": "avatars/orsahosh.jpg"
-    },
-    {
-        "name": "andrechenko",
-        "role": "smm",
-        "image": "avatars/andrechenko.jpg"
+        "image": "avatars/shestopalova_640x640.jpg"
     }
 ]
