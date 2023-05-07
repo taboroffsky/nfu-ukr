@@ -11,18 +11,20 @@ const Team = () => {
     <section className={`${TeamStyle.team} container`} id="team">
       <h1>{tCommon("ourTeam")}</h1>
       <p>{tCommon("ourTeamManifest")}</p>
-      {
-        teamMembers.map((teamMember) =>
-        (
-          <div className={TeamStyle.team_card} key={teamMember.name}>
-            <img src={teamMember.image} alt="Avatar" />
-            <div>
-              <h4>{tTeamMembers(`${teamMember.name}`)}</h4>
-              <p>{tTeamMembers(`${teamMember.role}`)}</p>
+      <div className={`${TeamStyle.team_members}`}>
+        {
+          teamMembers.map((teamMember) =>
+          (
+            <div className={TeamStyle.team_card} key={teamMember.name}>
+              <img src={teamMember.image} alt="Avatar" />
+              <div>
+                <h4>{tTeamMembers(`${teamMember.name}`)}</h4>
+                <p>{tTeamMembers(`${teamMember.role}`)}</p>
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </section>
   )
 }
