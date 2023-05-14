@@ -62,25 +62,25 @@
   border-radius: 10px 10px 10px 0;
 }
 .popup_card .info h2 {
-  color: #FEF5AC;
+  color: #dde2b1;
   font-size: 36px;
   line-height: 20px;
   margin: 10px;
 }
 .popup_card .info h2 span {
-  color: #FEF5AC;
+  color: #dde2b1;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 10px;
 }
 .popup_card .info p {
-  color: #FEF5AC;
+  color: #dde2b1;
   font-size: 15px;
   margin: 10px;
 }
 .popup_card .info .price {
-  color: #FEF5AC;
+  color: #dde2b1;
   font-size: 30px;
   font-weight: 200;
   margin: 10px;
@@ -134,21 +134,21 @@
     cursor: pointer;
   }
   .popup_card .info h2 {
-    color: #FEF5AC;
+    color: #dde2b1;
     font-size: 25px;
     line-height: 20px;
     padding-top: 24px;
     margin: 0;
   }
   .popup_card .info h2 span {
-    color: #FEF5AC;
+    color: #dde2b1;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px;
   }
   .popup_card .info .price {
-    color: #FEF5AC;
+    color: #dde2b1;
     font-size: 30px;
     font-weight: 200;
     margin: 0;
@@ -174,21 +174,21 @@
     cursor: pointer;
   }
   .popup_card .info h2 {
-    color: #FEF5AC;
+    color: #dde2b1;
     font-size: 25px;
     line-height: 20px;
     padding-top: 24px;
     margin: 0;
   }
   .popup_card .info h2 span {
-    color: #FEF5AC;
+    color: #dde2b1;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px;
   }
   .popup_card .info .price {
-    color: #FEF5AC;
+    color: #dde2b1;
     font-size: 30px;
     font-weight: 200;
     margin: 0;

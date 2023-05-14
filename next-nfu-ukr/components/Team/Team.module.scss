@@ -5,9 +5,11 @@
   padding: 38px 0;
   margin: 0 auto;
 
-  p {
-    padding: 32px 12px;
-    font-size: 18px;
+  .team_manifest {
+    margin: 0 auto;
+    
+    padding: 52px 12px;
+    font-size: 28px;
     letter-spacing: 1px;
   }
 }
@@ -17,25 +19,28 @@
   box-shadow: $boxShadow1;
   width: 14%;
   display: inline-block;
-  margin: 25px;
+  margin: 32px;
   transition: 0.3s;
   border-radius: 15px;
-
+  
   img {
     // filter: grayscale(100%);
     width: 100%;
+    border-bottom: 2px solid #0d0c5f;
     border-radius: 10px 10px 0 0;
   }
 
-  h4 {
-    font-weight: 400;
-    padding-top: 12px;
-  }
+  .team_card_text {
+    min-height: max-content;
+    
+    h3 {
+      text-align: center;
+      padding: 12px;
+    }
 
-  p {
-    padding: 12px 6px;
-    font-weight: 300;
-    font-size: 14px;
+    p {
+      padding: 18px;
+    }
   }
 }
 
@@ -69,17 +74,5 @@
     display: inline-block;
     width: 65%;
     margin: 18px 0;
-
-    h4 {
-      padding: 8px;
-      font-weight: 200;
-      font-size: 16px;
-    }
-
-    p {
-      font-weight: 100;
-      font-size: 14px;
-      padding: 8px;
-    }
   }
 }
