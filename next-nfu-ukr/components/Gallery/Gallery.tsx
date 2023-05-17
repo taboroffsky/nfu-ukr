@@ -17,14 +17,11 @@ const Gallery = (): JSX.Element => {
   const { t: tTokens } = useTranslation('tokens');
   const { t: tCommon } = useTranslation('common');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
   const [tokens, setTokens] = useState<Token[]>([]);
-  const [isPopupVisible, setIsPopupVisible] = useState<boolean>(false);
   const [activeToken, setActiveToken] = useState<Token>(null);
 
   const fetchTokens = (): void => {
     setIsLoading(true);
-    setIsImageLoading(true);
     loadGalleryItems().then(
       (loadedTokens: Token[]) => {
         setTokens(loadedTokens);
@@ -32,7 +29,6 @@ const Gallery = (): JSX.Element => {
     ).finally(
       () => {
         setIsLoading(false);
-        setIsImageLoading(false);
       }
     );
   }
