@@ -28,5 +28,15 @@
         "name": "shestopalova",
         "role": "art",
         "image": "avatars/shestopalova.jpg"
+    },
+    {
+        "name": "andrechenko",
+        "role": "smm",
+        "image": "avatars/andrechenko.jpg"
+    },
+    {
+        "name": "matuzko",
+        "role": "art",
+        "image": "avatars/matuzko.png"
     }
 ]

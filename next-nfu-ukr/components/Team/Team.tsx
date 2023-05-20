@@ -10,7 +10,7 @@ const Team = () => {
   return (
     <section className={`${TeamStyle.team} container`} id="team">
       <h1>{tCommon("ourTeam")}</h1>
-      <p>{tCommon("ourTeamManifest")}</p>
+      <p className={TeamStyle.team_manifest}>{tCommon("ourTeamManifest")}</p>
       <div className={`${TeamStyle.team_members}`}>
         {
           teamMembers.map((teamMember) =>
