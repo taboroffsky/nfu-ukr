@@ -16,8 +16,14 @@ export interface ContractAddress {
 export interface ContractAbi {
     [contractName: string]: any;
 }
+
 export interface TeamMember {
     name: string;
     role: string;
     image: string;
+}
+
+export interface CollectionStats {
+    balance: number;
+    tokensMinted: number;
 }

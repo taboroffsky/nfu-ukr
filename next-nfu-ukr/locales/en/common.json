@@ -5,6 +5,8 @@
     "contacts": "Contacts",
     "contactUs": "Contact us:",
     "aboutProject": "About project",
+    "title": "NFU UA",
+    "withdraw": "Withdraw",
     "failure": "Failure",
     "success": "Success",
     "successfulTransaction": "Transaction is successful, make sure to receive confirmation from you wallet as well.",

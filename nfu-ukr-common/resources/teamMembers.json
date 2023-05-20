@@ -10,6 +10,16 @@
         "image": "avatars/ishchuk_640x640.jpg"
     },
     {
+        "name": "zakharchuk",
+        "role": "webdev",
+        "image": "avatars/zakharchuk.jpg"
+    },
+    {
+        "name": "taborovskyi",
+        "role": "blockchainDev",
+        "image": "avatars/taborovskyi.jpg"
+    },
+    {
         "name": "butinskaiia",
         "role": "art/smm",
         "image": "avatars/butinskaiia_640x640.jpg"
