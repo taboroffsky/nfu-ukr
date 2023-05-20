@@ -15,10 +15,10 @@ const deploy: DeployFunction = async function ({ getNamedAccounts, deployments, 
 
     const tokenUris: string[] = getTokenUrisFromStorage("../" + StorageFilePath);
 
-    const args = [tokenUris, currentNetwork.mintFee];
+    const args = [tokenUris, currentNetwork.mintFee, currentNetwork.tokensPerUri];
     const nonFungibleUkraine = await deploy(NonFungibleUkraineName, {
         from: deployer,
-        args: [tokenUris, currentNetwork.mintFee, currentNetwork.tokensPerUri],
+        args,
         log: true,
         waitConfirmations: currentNetwork.verificationBlockConfirmation,
     });

@@ -56,10 +56,6 @@ contract NonFungibleUkraine is
         _setTokenURI(tokenId, tokenUri);
     }
 
-    function kill() public onlyOwner {
-        selfdestruct(payable(msg.sender));
-    }
-
     receive() external payable {}
 
     function getTokenCounter() public view returns (uint) {

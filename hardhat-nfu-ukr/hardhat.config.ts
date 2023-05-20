@@ -8,6 +8,7 @@ import "solidity-coverage";
 import "hardhat-deploy";
 
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
+const ETHERNET_RPC_URL = process.env.ETHERNET_RPC_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
@@ -22,6 +23,12 @@ module.exports = {
             chainId: 5,
             blockConfirmations: 6,
             url: GOERLI_RPC_URL,
+            accounts: [PRIVATE_KEY],
+        },
+        mainnet: {
+            chainId: 1,
+            blockConfirmations: 6,
+            url: ETHERNET_RPC_URL,
             accounts: [PRIVATE_KEY],
         },
     },
