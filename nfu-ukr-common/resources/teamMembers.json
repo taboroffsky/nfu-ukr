@@ -2,12 +2,12 @@
     {
         "name": "kostin",
         "role": "founder",
-        "image": "avatars/kostin_640x640.jpg"
+        "image": "avatars/kostin.jpg"
     },
     {
         "name": "ishchuk",
         "role": "webdev",
-        "image": "avatars/ishchuk_640x640.jpg"
+        "image": "avatars/ishchuk.jpg"
     },
     {
         "name": "zakharchuk",
@@ -22,21 +22,21 @@
     {
         "name": "butinskaiia",
         "role": "art/smm",
-        "image": "avatars/butinskaiia_640x640.jpg"
+        "image": "avatars/butinskaiia.jpg"
     },
     {
         "name": "shestopalova",
         "role": "art",
-        "image": "avatars/shestopalova_640x640.jpg"
+        "image": "avatars/shestopalova.jpg"
     },
     {
         "name": "andrechenko",
         "role": "smm",
-        "image": "avatars/andrechenko_640x640.jpg"
+        "image": "avatars/andrechenko.jpg"
     },
     {
         "name": "matuzko",
         "role": "art",
-        "image": "avatars/matuzko_640x640.png"
+        "image": "avatars/matuzko.png"
     }
 ]
