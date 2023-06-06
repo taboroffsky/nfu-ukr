@@ -28,13 +28,13 @@ const Footer = () => {
         </div>
         <hr />
         <div className={FooterStyle.footer_media}>
-          <a href="https://www.instagram.com/" title="Instagram" target="_blank"><img src="icons/instagram_logo.png"
+          <a href="https://www.instagram.com/_nfukraine_/" title="Instagram" target="_blank"><img src="icons/instagram.png"
             className={FooterStyle.icon_img} alt="instagram-logo" /></a>
-          <a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="icons/facebook_logo.png"
+          <a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="icons/facebook.png"
             className={FooterStyle.icon_img} alt="facebook-logo" /></a>
-          <a href="https://www.linkedin.com/" title="LinkedIn" target="_blank"><img src="icons/linkedin_logo.png"
-            className={FooterStyle.icon_img} alt="linkedin-logo" /></a>
-          <a href="https://twitter.com/" title="Twitter" target="_blank"><img src="icons/twitter_logo.png"
+          <a href="https://www.youtube.com/channel/UCAmIbP5BUGPNomN29wEQuIg" title="YouTube" target="_blank"><img src="icons/youtube.png"
+            className={FooterStyle.icon_img} alt="youtube-logo" /></a>
+          <a href="https://twitter.com/NFU_Ukraine?t=d-iE8SC7gRKDVHK4DfzGWA&s=09" title="Twitter" target="_blank"><img src="icons/twitter.png"
             className={FooterStyle.icon_img} alt="twitter-logo" /></a>
         </div>
 
