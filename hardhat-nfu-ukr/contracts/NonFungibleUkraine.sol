@@ -16,11 +16,11 @@ contract NonFungibleUkraine is
 
     uint256 public immutable mintFee;
     uint256 public immutable totalSupply;
-    uint256 private tokenCounter;
-    mapping(string => uint256) private tokensAvailability;
+    uint256 public tokenCounter;
+    mapping(bytes4 => uint256) public tokensAvailability;
 
     constructor(
-        string[] memory tokenUris,
+        bytes4[] memory tokenUris,
         uint256 _mintFee,
         uint256 _tokensPerUri
     ) ERC721("NonFungibleUkraine", "NFU") {
@@ -46,11 +46,13 @@ contract NonFungibleUkraine is
             revert NonFungibleUkraine__NotEnoughEth();
         }
 
-        if (tokensAvailability[tokenUri] == 0) {
+        bytes4 tokenSelector = getTokenUriSelector(tokenUri);
+
+        if (tokensAvailability[tokenSelector] == 0) {
             revert NonFungibleUkraine__TokenUnavailable();
         }
 
-        tokensAvailability[tokenUri]--;
+        tokensAvailability[tokenSelector]--;
         uint256 tokenId = ++tokenCounter;
         _safeMint(msg.sender, tokenId);
         _setTokenURI(tokenId, tokenUri);
@@ -58,14 +60,10 @@ contract NonFungibleUkraine is
 
     receive() external payable {}
 
-    function getTokenCounter() public view returns (uint) {
-        return tokenCounter;
-    }
-
-    function getTokenUriAvailability(
-        string memory tokenURI
-    ) public view returns (uint256) {
-        return tokensAvailability[tokenURI];
+    function getTokenUriSelector(
+        string calldata tokenUri
+    ) private pure returns (bytes4 result) {
+        result = bytes4(keccak256(abi.encodePacked(tokenUri)));
     }
 
     // Default Operator Filter overrides:
