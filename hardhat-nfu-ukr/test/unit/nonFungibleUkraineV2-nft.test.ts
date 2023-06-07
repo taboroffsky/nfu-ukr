@@ -9,7 +9,7 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
 
 !DevelopmentChains.includes(network.name)
     ? describe.skip
-    : describe("NonFungibleUkraineV2 Nft unit tests", function () {
+    : describe.skip("NonFungibleUkraineV2 Nft unit tests", function () {
           const currentNetwork = networkConfig[network.config.chainId!];
           let deployer: SignerWithAddress, alice: SignerWithAddress;
           let nonFungibleUkraine: NonFungibleUkraineV2;

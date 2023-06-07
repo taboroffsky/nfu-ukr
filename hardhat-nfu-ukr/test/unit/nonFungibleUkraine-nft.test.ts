@@ -6,6 +6,7 @@ import { DevelopmentChains, networkConfig } from "../../helper-hardhat-config";
 import { NonFungibleUkraine } from "../../typechain-types";
 import { StorageFilePath, NonFungibleUkraineName } from "../../../nfu-ukr-common/constants";
 import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
+import getTokenUriSelector from "../../utils/getTokenUriSelector";
 
 !DevelopmentChains.includes(network.name)
     ? describe.skip
@@ -34,19 +35,19 @@ import getTokenUrisFromStorage from "../../utils/getTokenUrisFromStorage";
 
           it("Should update counters on mint", async function () {
               for (const index in tokenUris) {
-                  let availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
+                  let availability = await nonFungibleUkraine.tokensAvailability(getTokenUriSelector(tokenUris[index]));
                   assert.equal(availability.toNumber(), tokensPerUri);
 
                   await mintNft(aliceNonFungibleUkraine, tokenUris[index]);
 
-                  availability = await nonFungibleUkraine.getTokenUriAvailability(tokenUris[index]);
+                  availability = await nonFungibleUkraine.tokensAvailability(getTokenUriSelector(tokenUris[index]));
                   assert.equal(availability.toNumber(), tokensPerUri - 1);
 
                   const balance = await nonFungibleUkraine.balanceOf(alice.address);
                   assert.equal(balance.toNumber(), Number.parseInt(index) + 1);
               }
 
-              const tokenCounter = await nonFungibleUkraine.getTokenCounter();
+              const tokenCounter = await nonFungibleUkraine.tokenCounter();
               assert.equal(tokenCounter.toNumber(), tokenUris.length);
           });
 
