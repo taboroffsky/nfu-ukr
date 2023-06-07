@@ -5,23 +5,38 @@
         "image": "avatars/kostin.jpg"
     },
     {
-        "name": "lukianiuk",
-        "role": "art_2D",
-        "image": "avatars/lukianiuk.jpg"
-    },
-    {
         "name": "ishchuk",
         "role": "webdev",
         "image": "avatars/ishchuk.jpg"
     },
     {
-        "name": "orsagosh",
+        "name": "zakharchuk",
+        "role": "webdev",
+        "image": "avatars/zakharchuk.jpg"
+    },
+    {
+        "name": "taborovskyi",
+        "role": "blockchainDev",
+        "image": "avatars/taborovskyi.jpg"
+    },
+    {
+        "name": "butinskaiia",
+        "role": "art/smm",
+        "image": "avatars/butinskaiia.jpg"
+    },
+    {
+        "name": "shestopalova",
         "role": "art",
-        "image": "avatars/orsahosh.jpg"
+        "image": "avatars/shestopalova.jpg"
     },
     {
         "name": "andrechenko",
         "role": "smm",
         "image": "avatars/andrechenko.jpg"
+    },
+    {
+        "name": "matuzko",
+        "role": "art",
+        "image": "avatars/matuzko.png"
     }
 ]

@@ -5,6 +5,7 @@ import { StorageFilePath, NonFungibleUkraineName } from "../../nfu-ukr-common/co
 import verify from "../utils/verify";
 import getTokenUrisFromStorage from "../utils/getTokenUrisFromStorage";
 import saveDeployOutput from "../utils/saveDeployOutput";
+import getTokenUriSelector from "../utils/getTokenUriSelector";
 
 const deploy: DeployFunction = async function ({ getNamedAccounts, deployments, network }: HardhatRuntimeEnvironment) {
     const { deploy } = deployments;
@@ -13,12 +14,13 @@ const deploy: DeployFunction = async function ({ getNamedAccounts, deployments, 
     const currentNetwork = networkConfig[chainId];
     const isDevemopmentChain = DevelopmentChains.includes(network.name);
 
-    const tokenUris: string[] = getTokenUrisFromStorage("../" + StorageFilePath);
+    let tokenUris: string[] = getTokenUrisFromStorage("../" + StorageFilePath);
+    tokenUris = tokenUris.map(tokenUri => getTokenUriSelector(tokenUri));
 
-    const args = [tokenUris, currentNetwork.mintFee];
+    const args = [tokenUris, currentNetwork.mintFee, currentNetwork.tokensPerUri];
     const nonFungibleUkraine = await deploy(NonFungibleUkraineName, {
         from: deployer,
-        args: [tokenUris, currentNetwork.mintFee, currentNetwork.tokensPerUri],
+        args,
         log: true,
         waitConfirmations: currentNetwork.verificationBlockConfirmation,
     });

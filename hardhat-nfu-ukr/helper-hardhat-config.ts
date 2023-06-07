@@ -18,7 +18,13 @@ export const networkConfig: networkConfigInfo = {
     },
     5: {
         name: "goerli",
-        mintFee: "100000000000000", // 0.0001 ETH
+        mintFee: "100000000000000000", // 0.1 ETH
+        tokensPerUri: 4,
+        verificationBlockConfirmation: 6,
+    },
+    1: {
+        name: "mainnet",
+        mintFee: "100000000000000000", // 0.1 ETH
         tokensPerUri: 4,
         verificationBlockConfirmation: 6,
     },
