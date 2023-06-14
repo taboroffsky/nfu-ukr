@@ -14,7 +14,7 @@ const Footer = () => {
         <FontAwesomeIcon icon={faEnvelope} size="6x" />
         <p><em><b>{t("contactUs")}</b></em></p>
         <address>
-          <a href="mailto:someone@example.com"><em>someone@example.com</em></a>
+          <a href="mailto:andruberkost@gmail.com"><em>andruberkost@gmail.com</em></a>
         </address>
       </section>
       <section className={`${FooterStyle.footer} container`}>
