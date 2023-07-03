@@ -30,7 +30,7 @@ const Footer = () => {
         <div className={FooterStyle.footer_media}>
           <a href="https://www.instagram.com/_nfukraine_/" title="Instagram" target="_blank"><img src="icons/instagram.png"
             className={FooterStyle.icon_img} alt="instagram-logo" /></a>
-          <a href="https://www.facebook.com/" title="Facebook" target="_blank"><img src="icons/facebook.png"
+          <a href="https://www.facebook.com/profile.php?id=100094024792853&sk=about" title="Facebook" target="_blank"><img src="icons/facebook.png"
             className={FooterStyle.icon_img} alt="facebook-logo" /></a>
           <a href="https://www.youtube.com/channel/UCAmIbP5BUGPNomN29wEQuIg" title="YouTube" target="_blank"><img src="icons/youtube.png"
             className={FooterStyle.icon_img} alt="youtube-logo" /></a>
