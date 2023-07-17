@@ -46,16 +46,14 @@ const Gallery = (): JSX.Element => {
             ? null
             : (
               tokens.map((token) =>
-                <div className={GalleryStyle.product} key={token.tokenUri}>
-                  <div className={GalleryStyle.product_card}>
-                    <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
-                    <span className={GalleryStyle.price}>
-                      <FontAwesomeIcon className={GalleryStyle.ethereumIcon} icon={faEthereum} />
-                      {process.env.NEXT_PUBLIC_TOKEN_PRICE}
-                    </span>
-                    <a className={GalleryStyle.popup_btn} onClick={() => setActiveToken(token)}>{tCommon("tokenDetails")}</a>
-                    <img src={`tokens/${token.name}.png`} className={GalleryStyle.product_img} alt="image" />
-                  </div>
+                <div className={GalleryStyle.product_card} key={token.tokenUri}>
+                  <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
+                  <span className={GalleryStyle.price}>
+                    <FontAwesomeIcon className={GalleryStyle.ethereumIcon} icon={faEthereum} />
+                    {process.env.NEXT_PUBLIC_TOKEN_PRICE}
+                  </span>
+                  <a className={GalleryStyle.popup_btn} onClick={() => setActiveToken(token)}>{tCommon("tokenDetails")}</a>
+                  <img src={`tokens/${token.name}.png`} className={GalleryStyle.product_img} alt="image" />
                 </div>
               )
             )
