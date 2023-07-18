@@ -38,5 +38,10 @@
         "name": "matuzko",
         "role": "art",
         "image": "avatars/matuzko.png"
+    },
+    {
+        "name": "trofimova",
+        "role": "art",
+        "image": "avatars/trofimova.jpg"
     }
 ]
