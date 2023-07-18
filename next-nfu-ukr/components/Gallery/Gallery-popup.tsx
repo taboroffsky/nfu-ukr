@@ -29,6 +29,7 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
     const insufficientFundsErrorPattern = "insufficient funds";
     const executionRevertedErrorPattern = "execution reverted";
     const executionCancelledErrorPattern = "User denied transaction";
+    const walletNotConnectedErrorPattern = "Missing web3 instance";
 
     const { runContractFunction: mintNftFunction } = useWeb3Contract({
         abi: contractAbi,
@@ -45,8 +46,6 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
     const mint = async function () {
         await mintNftFunction({
             onError: (error) => {
-                console.log("failure");
-
                 if (error.message.includes(insufficientFundsErrorPattern)) {
                     raiseNotification({
                         type: "error",
@@ -68,6 +67,14 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
                         type: "error",
                         title: tCommon("failure"),
                         message: tCommon("transactionCancelled"),
+                        position: "bottomR",
+                    })
+                }
+                else if (error.message.includes(walletNotConnectedErrorPattern)) {
+                    raiseNotification({
+                        type: "error",
+                        title: tCommon("failure"),
+                        message: tCommon("walletNotConnected"),
                         position: "bottomR",
                     })
                 }
