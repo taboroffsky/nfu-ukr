@@ -13,6 +13,7 @@
     "insufficientFunds": "Insufficient funds for completing the transaction.",
     "transactionReverted": "Transaction has got reverted, please try again.",
     "transactionCancelled": "Transaction has been cancelled by the user.",
+    "walletNotConnected": "Wallet is not found. Make sure to connect you crypto wallet on main page.",
     "unknownError": "Transaction failed due to unexpected reasons, please try again.",
     "revenueUsage": "How do we use the revenue?",
     "halfOfRevenue": "50% of the proceeds from the campaign will be donated to the Armed Forces of Ukraine.",
