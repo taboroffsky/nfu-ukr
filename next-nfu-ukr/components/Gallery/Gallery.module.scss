@@ -17,7 +17,7 @@
   background: $backgroundColor1;
   position: relative;
   width: 300px;
-  height: 400px;
+  height: 300px;
   margin: 40px auto;
   border-radius: 10px;
 
@@ -25,7 +25,7 @@
     text-transform: uppercase;
     padding: 12px 0;
   }
-    
+
   .product_img {
     padding: 5px;
     object-position: 0 10%;
@@ -40,11 +40,11 @@
   .name {
     z-index: 2;
     color: white;
-    text-shadow: 1px  1px 2px black,
-    1px -1px 2px black,
-   -1px  1px 2px black,
-   -1px -1px 2px black;
-    
+    text-shadow: 1px 1px 2px black,
+      1px -1px 2px black,
+      -1px 1px 2px black,
+      -1px -1px 2px black;
+
     position: absolute;
     width: 100%;
     text-align: center;

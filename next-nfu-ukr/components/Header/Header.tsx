@@ -35,19 +35,19 @@ const Header = (): JSX.Element => {
         <div className={HeaderStyle.logo}>
           <img src="logo/NFU_yellow.svg" alt="Logo Image" />
         </div>
-        <div onClick={() => setIsNavagitaionMenuActive(!isNavagitaionMenuActive)} 
-        className={isNavagitaionMenuActive ? [HeaderStyle.nav_links, HeaderStyle.active].join(' ') : HeaderStyle.nav_links }>
+        <div onClick={() => setIsNavagitaionMenuActive(!isNavagitaionMenuActive)}
+          className={isNavagitaionMenuActive ? [HeaderStyle.nav_links, HeaderStyle.active].join(' ') : HeaderStyle.nav_links}>
           <a href="#home">{t('main')}</a>
           <a href="#gallery">{t('gallery')}</a>
           <a href="#about">{t("aboutProject")}</a>
           <a href="#team">{t("ourTeam")}</a>
           <a href="#contacts">{t("contacts")}</a>
         </div>
-          <ConnectButton moralisAuth={false} />
-          <div onClick={() => setIsNavagitaionMenuActive(!isNavagitaionMenuActive)} className={HeaderStyle.mobile_menu_btn}>
-            {isNavagitaionMenuActive ? <FontAwesomeIcon icon={faTimes} size="2x" color={"#FFD600"}/>
-            : <FontAwesomeIcon icon={faBars} size="3x" color={"#FFD600"}/> }            
-          </div>
+        <ConnectButton moralisAuth={false} />
+        <div onClick={() => setIsNavagitaionMenuActive(!isNavagitaionMenuActive)} className={HeaderStyle.mobile_menu_btn}>
+          {isNavagitaionMenuActive ? <FontAwesomeIcon icon={faTimes} size="2x" color={"#FFD600"} />
+            : <FontAwesomeIcon icon={faBars} size="3x" color={"#FFD600"} />}
+        </div>
 
         <div className={HeaderStyle.nav_language}>
           <img src="language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img" onClick={() => setLanguage('ua')} />
@@ -62,10 +62,10 @@ const Header = (): JSX.Element => {
           <img className={HeaderStyle.logo_header_image} src="/logo/NFU-logo-300x300/NFU_yellow.svg" alt="logo header image" />
           <div className={HeaderStyle.description_item}>{t("motto")}</div>
         </div>
-        <div className={HeaderStyle.emblem_wrapper}>
+        <div className={HeaderStyle.emblem_mirrored}>
           <img className={HeaderStyle.emblem} src="/icons/flowers_corner.svg" alt="emblem icon right" />
         </div>
-      </div>     
+      </div>
     </div>
   )
 }
