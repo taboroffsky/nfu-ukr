@@ -24,25 +24,20 @@
 }
 
 .team_members {
-  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .team_card {
   background: $backgroundColor1;
   box-shadow: $boxShadow1;
-  width: 14%;
-  display: inline-block;
-  margin: 30px;
-  transition: 0.3s;
+  max-width: 17%;
+  margin: 18px;
   border-radius: 15px;
-  flex: 0 0 25%;
 
   img {
-    // filter: grayscale(100%);
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
@@ -65,39 +60,35 @@
   }
 
   .team_card {
-    display: inline-block;
-    width: 30%;
-    margin: 25px 52px;
+    max-width: 24%;
+    margin: 18px 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .team_card {
-    display: inline-block;
-    position: relative;
-    width: 33%;
-    margin: 18px 38px;
+    max-width: 36%;
+    margin: 18px 8px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .team>p {
-    padding: 20px;
+    padding: 10px;
   }
 
   .team_card {
-    display: inline-block;
-    width: 65%;
-    margin: 18px 0;
+    max-width: 60%;
+    margin: 18px auto;
 
     h4 {
       padding: 8px;
-      font-weight: 200;
+      font-weight: 300;
       font-size: 16px;
     }
 
     p {
-      font-weight: 100;
+      font-weight: 200;
       font-size: 14px;
       padding: 8px;
     }
