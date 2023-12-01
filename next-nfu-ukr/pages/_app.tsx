@@ -7,7 +7,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <NotificationProvider>
       <MoralisProvider initializeOnMount={false}>
-        <Component {...pageProps} />
+        <>
+          <Component {...pageProps} />
+        </>
       </MoralisProvider>
     </NotificationProvider>
   )
