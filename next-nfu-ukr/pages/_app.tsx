@@ -5,12 +5,10 @@ import { NotificationProvider } from 'web3uikit'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <NotificationProvider>
-        <MoralisProvider initializeOnMount={false}>
-          <Component {...pageProps} />
-        </MoralisProvider>
-      </NotificationProvider>
-    </>
+    <NotificationProvider>
+      <MoralisProvider initializeOnMount={false}>
+        <Component {...pageProps} />
+      </MoralisProvider>
+    </NotificationProvider>
   )
 }
