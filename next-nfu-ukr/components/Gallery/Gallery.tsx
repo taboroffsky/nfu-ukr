@@ -9,7 +9,7 @@ import GalleryPopup from "./Gallery-popup";
 import GalleryStyle from "./Gallery.module.scss";
 
 const loadGalleryItems = async (): Promise<Token[]> => {
-  const items: Promise<Token[]> = (await fetch("http://localhost:3000/api/tokens")).json();
+  const items: Promise<Token[]> = (await fetch("/api/tokens")).json();
   return items;
 }
 
@@ -17,14 +17,11 @@ const Gallery = (): JSX.Element => {
   const { t: tTokens } = useTranslation('tokens');
   const { t: tCommon } = useTranslation('common');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isImageLoading, setIsImageLoading] = useState<boolean>(false);
   const [tokens, setTokens] = useState<Token[]>([]);
-  const [isPopupVisible, setIsPopupVisible] = useState<boolean>(false);
   const [activeToken, setActiveToken] = useState<Token>(null);
 
   const fetchTokens = (): void => {
     setIsLoading(true);
-    setIsImageLoading(true);
     loadGalleryItems().then(
       (loadedTokens: Token[]) => {
         setTokens(loadedTokens);
@@ -32,7 +29,6 @@ const Gallery = (): JSX.Element => {
     ).finally(
       () => {
         setIsLoading(false);
-        setIsImageLoading(false);
       }
     );
   }
@@ -50,16 +46,14 @@ const Gallery = (): JSX.Element => {
             ? null
             : (
               tokens.map((token) =>
-                <div className={GalleryStyle.product}>
-                  <div className={GalleryStyle.product_card}>
-                    <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
-                    <span className={GalleryStyle.price}>
-                      <FontAwesomeIcon className={GalleryStyle.ethereumIcon} icon={faEthereum} />
-                      {process.env.NEXT_PUBLIC_TOKEN_PRICE}
-                    </span>
-                    <a className={GalleryStyle.popup_btn} onClick={() => setActiveToken(token)}>{tCommon("tokenDetails")}</a>
-                    <img src={`tokens/${token.name}.png`} className={GalleryStyle.product_img} alt="image" />
-                  </div>
+                <div className={GalleryStyle.product_card} key={token.tokenUri}>
+                  <h2 className={GalleryStyle.name}>{tTokens(token.name + NameSuffix)}</h2>
+                  <span className={GalleryStyle.price}>
+                    <FontAwesomeIcon className={GalleryStyle.ethereumIcon} icon={faEthereum} />
+                    {process.env.NEXT_PUBLIC_TOKEN_PRICE}
+                  </span>
+                  <a className={GalleryStyle.popup_btn} onClick={() => setActiveToken(token)}>{tCommon("tokenDetails")}</a>
+                  <img src={`tokens/${token.name}.png`} className={GalleryStyle.product_img} alt="image" />
                 </div>
               )
             )

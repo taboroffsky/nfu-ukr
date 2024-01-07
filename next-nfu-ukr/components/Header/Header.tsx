@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage'
 import { ConnectButton } from 'web3uikit';
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import HeaderStyle from "./Header.module.scss";
 
@@ -25,39 +27,44 @@ import HeaderStyle from "./Header.module.scss";
 
 const Header = (): JSX.Element => {
   const { t } = useTranslation('common');
+  const [isNavagitaionMenuActive, setIsNavagitaionMenuActive] = useState<boolean>(false);
 
   return (
     <div className={HeaderStyle.header} id="home">
-      <nav>
+      <div className={HeaderStyle.header_container}>
         <div className={HeaderStyle.logo}>
           <img src="logo/NFU_yellow.svg" alt="Logo Image" />
         </div>
-        <div className={HeaderStyle.hamburger}>
-          <div className={HeaderStyle.line1}></div>
-          <div className={HeaderStyle.line2}></div>
-          <div className={HeaderStyle.line3}></div>
+        <div onClick={() => setIsNavagitaionMenuActive(!isNavagitaionMenuActive)}
+          className={isNavagitaionMenuActive ? [HeaderStyle.nav_links, HeaderStyle.active].join(' ') : HeaderStyle.nav_links}>
+          <a href="#home">{t('main')}</a>
+          <a href="#gallery">{t('gallery')}</a>
+          <a href="#about">{t("aboutProject")}</a>
+          <a href="#team">{t("ourTeam")}</a>
+          <a href="#contacts">{t("contacts")}</a>
         </div>
-        <ul className={HeaderStyle.nav_links}>
-          <li><a href="#home">{t('main')}</a></li>
-          <li><a href="#gallery">{t('gallery')}</a></li>
-          <li><a href="#about">{t("aboutProject")}</a></li>
-          <li><a href="#team">{t("ourTeam")}</a></li>
-          <li><a href="#contacts">{t("contacts")}</a></li>
-          <li><ConnectButton moralisAuth={false} /></li>
-        </ul>
+        <ConnectButton moralisAuth={false} />
+        <div onClick={() => setIsNavagitaionMenuActive(!isNavagitaionMenuActive)} className={HeaderStyle.mobile_menu_btn}>
+          {isNavagitaionMenuActive ? <FontAwesomeIcon icon={faTimes} size="2x" color={"#FFD600"} />
+            : <FontAwesomeIcon icon={faBars} size="3x" color={"#FFD600"} />}
+        </div>
 
         <div className={HeaderStyle.nav_language}>
           <img src="language/Flag_of_Ukraine.svg" alt="uk" data-google-lang="uk" className="language__img" onClick={() => setLanguage('ua')} />
           <img src="language/Flag_of_the_United_Kingdom.svg" alt="en" data-google-lang="en" className="language__img" onClick={() => setLanguage('en')} />
         </div>
-      </nav>
-      <div>
-        <img className={`${HeaderStyle.emblem} ${HeaderStyle.left}`} src="/icons/flowers_corner.svg" alt="emblem icon left" />
-        <img className={`${HeaderStyle.emblem} ${HeaderStyle.right}`} src="/icons/flowers_corner.svg" alt="emblem icon right" />
       </div>
-      <div className={HeaderStyle.header_container}>
-        <img className={HeaderStyle.logo_header_image} src="/logo/NFU-logo-300x300/NFU_yellow.svg" alt="logo header image" />
-        <div className={HeaderStyle.description_item}>{t("motto")}</div>
+      <div className={HeaderStyle.emblem_container}>
+        <div>
+          <img className={HeaderStyle.emblem} src="/icons/flowers_corner.svg" alt="emblem icon left" />
+        </div>
+        <div className={HeaderStyle.logo_container}>
+          <img className={HeaderStyle.logo_header_image} src="/logo/NFU-logo-300x300/NFU_yellow.svg" alt="logo header image" />
+          <div className={HeaderStyle.description_item}>{t("motto")}</div>
+        </div>
+        <div className={HeaderStyle.emblem_mirrored}>
+          <img className={HeaderStyle.emblem} src="/icons/flowers_corner.svg" alt="emblem icon right" />
+        </div>
       </div>
     </div>
   )

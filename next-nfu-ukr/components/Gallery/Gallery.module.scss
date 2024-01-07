@@ -1,11 +1,14 @@
-@import "../../../styles/_mixins";
-@import "../../../styles/variables";
+@import "../../styles/_mixins";
+@import "../../styles/variables";
 
 .products {
   width: 80%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
 }
 
 .product_card {
@@ -14,7 +17,7 @@
   background: $backgroundColor1;
   position: relative;
   width: 300px;
-  height: 400px;
+  height: 300px;
   margin: 40px auto;
   border-radius: 10px;
 
@@ -24,22 +27,24 @@
   }
 
   .product_img {
-    z-index: 1;
-    object-fit: contain;
+    padding: 5px;
     object-position: 0 10%;
-    position: absolute;
     border-radius: 10px;
     max-width: 300px;
-    width: 100%;
+    min-width: 100%;
     height: inherit;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -30%);
   }
 
   .name {
     z-index: 2;
-    color: $tertiaryColor;
+    color: white;
+    text-shadow: 1px 1px 2px black,
+      1px -1px 2px black,
+      -1px 1px 2px black,
+      -1px -1px 2px black;
+
     position: absolute;
     width: 100%;
     text-align: center;
@@ -57,10 +62,12 @@
     text-align: center;
     border-radius: 0 10px 10px 0;
     border: 1px solid $borderColor2;
+    border-left: none;
     bottom: 85px;
     padding: 8px;
     font-size: 20px;
     font-weight: 300;
+    left: 5px;
 
     .ethereumIcon {
       margin-right: 5px;
@@ -82,11 +89,6 @@
 @media screen and (max-width: 1024px) {
   .gallery {
     padding-bottom: 40px;
-  }
-
-  .products {
-    display: grid;
-    grid-template-columns: auto auto;
   }
 
   .product_card {
@@ -111,12 +113,6 @@
     padding-top: 50px;
   }
 
-  .products {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 35px;
-  }
-
   .product_card {
     margin: 14px auto;
   }
@@ -125,11 +121,6 @@
 }
 
 @media screen and (max-width: 425px) {
-  .products {
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-  }
 
   .product_card {
     width: 310px;

@@ -1,86 +1,96 @@
-@import "../../../styles/variables";
+@import "../../styles/variables";
 
 .team {
-    width: 80%;
-    padding: 38px 0;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .team_manifest {
     margin: 0 auto;
 
-    p {
-        padding: 32px 12px;
-        font-size: 18px;
-        letter-spacing: 1px;
+    padding: 52px 12px;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    padding: 32px 12px;
+    font-size: 18px;
+    letter-spacing: 1px;
   }
 }
 
-.team_card {
-    background: $backgroundColor1;
-    box-shadow: $boxShadow1;
-    width: 14%;
-    display: inline-block;
-    margin: 25px;
-    transition: 0.3s;
-    border-radius: 15px;
+.team_members {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-     img {
-        filter: grayscale(100%);
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        &:hover {
-            filter: none;
-            color: $mainColor;
-        }
-    }
-    h4 {
-        font-weight: 400;
-        padding-top: 12px;
-    }
-    p {
-        padding: 12px 6px;
-        font-weight: 300;
-        font-size: 14px;
-    }
+.team_card {
+  background: $backgroundColor1;
+  box-shadow: $boxShadow1;
+  max-width: 17%;
+  margin: 18px;
+  border-radius: 15px;
+
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  h4 {
+    font-weight: 400;
+    padding-top: 12px;
+  }
+
+  p {
+    padding: 12px 6px;
+    font-weight: 300;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    .team {
-        padding-bottom: 48px;
-      }
-    
-    .team_card {
-        display: inline-block;
-        width: 30%;
-        margin: 25px 52px;
-    }
+  .team {
+    padding-bottom: 48px;
+  }
+
+  .team_card {
+    max-width: 24%;
+    margin: 18px 12px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .team_card {
-        display: inline-block;
-        position: relative;
-        width: 33%;
-        margin: 18px 38px;
-    }
+  .team_card {
+    max-width: 36%;
+    margin: 18px 8px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .team>p {
-        padding: 20px;
-      }
-    
-    .team_card {
-        display: inline-block;
-        width: 65%;
-        margin: 18px 0;
+  .team>p {
+    padding: 10px;
+  }
 
-        h4 {
-            padding: 8px;
-            font-weight: 200;
-            font-size: 16px;
-          }
-        p {
-            font-weight: 100;
-            font-size: 14px;
-            padding: 8px;
-          }
-      }
+  .team_card {
+    max-width: 60%;
+    margin: 18px auto;
+
+    h4 {
+      padding: 8px;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
 }

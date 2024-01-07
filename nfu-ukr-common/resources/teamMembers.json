@@ -1,27 +1,47 @@
 [
     {
-        "name": "Андрій Костін",
-        "role": "Засновник проекту",
-        "image": "images/avatars/kostin.jpg"
+        "name": "kostin",
+        "role": "founder",
+        "image": "avatars/kostin.jpg"
     },
     {
-        "name": "Олександр Лук'янюк",
-        "role": "2D художник",
-        "image": "images/avatars/lukianiuk.jpg"
+        "name": "ishchuk",
+        "role": "webdev",
+        "image": "avatars/ishchuk.jpg"
     },
     {
-        "name": "Тарас Іщук",
-        "role": "Веб розробник",
-        "image": "images/avatars/ishchuk.jpg"
+        "name": "zakharchuk",
+        "role": "webdev",
+        "image": "avatars/zakharchuk.jpg"
     },
     {
-        "name": "Влад Орсагош",
-        "role": "Художник",
-        "image": "images/avatars/orsahosh.jpg"
+        "name": "taborovskyi",
+        "role": "blockchainDev",
+        "image": "avatars/taborovskyi.jpg"
     },
     {
-        "name": "Марія Андреченко",
-        "role": "Маркетолог",
-        "image": "images/avatars/andrechenko.jpg"
+        "name": "butinskaiia",
+        "role": "art/smm",
+        "image": "avatars/butinskaiia.jpg"
+    },
+    {
+        "name": "shestopalova",
+        "role": "art",
+        "image": "avatars/shestopalova.jpg"
+    },
+    {
+        "name": "andrechenko",
+        "role": "smm",
+        "image": "avatars/andrechenko.jpg"
+    },
+    {
+        "name": "matuzko",
+        "role": "art",
+        "image": "avatars/volodymyr_m.png"
+    },
+    {
+        "name": "trofimova",
+        "role": "art",
+        "image": "avatars/trofimova.jpg"
     }
 ]

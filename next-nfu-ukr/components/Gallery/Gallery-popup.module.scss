@@ -1,11 +1,11 @@
 /*Styles for popup view*/
 
-@import "../../../styles/_mixins";
-@import "../../../styles/variables";
+@import "../../styles/_mixins";
+@import "../../styles/variables";
 
 .popup_view {
     z-index: 1;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(15px) brightness(0.25) grayscale(100%) saturate(85%);
     position: fixed;
     top: 0;
     right: 0;
@@ -38,12 +38,14 @@
         width: 45%;
         height: 100%;
         transform: translateY(25px);
+        box-shadow: -30px 0px 55px -4px rgb(255, 214, 0);
         border-radius: 10px 0 10px 10px;
 
         img {
             z-index: 2;
             position: relative;
-            width: 80%;
+            max-width: 80%;
+            max-height: 80%;
             border-radius: 10px;
             object-fit: fill;
         }
@@ -58,12 +60,12 @@
         height: 100%;
         box-sizing: border-box;
         padding: 40px;
+        box-shadow: 30px 0px 55px -4px rgb(255, 214, 0);
         border-radius: 10px 10px 10px 0;
 
         h2 {
             color: $tertiaryColor;
-            font-size: 40px;
-            line-height: 20px;
+            font-size: 36px;
             margin: 10px;
 
             span {
@@ -79,6 +81,16 @@
             color: $tertiaryColor;
             font-size: 15px;
             margin: 10px;
+            overflow: auto;
+            /* This hides scroll bar for IE and Edge */
+            -ms-overflow-style: none;
+            /* This hides scroll bar for Firefox */
+            scrollbar-width: none;
+        }
+
+        /* This hides scroll bar for Chrome, Opera, Safari */
+        p::-webkit-scrollbar {
+            display: none;
         }
 
         .price {
@@ -247,7 +259,6 @@
                 font-size: 16px;
                 text-align: justify;
                 letter-spacing: 1px;
-                overflow: scroll;
             }
 
             .price {

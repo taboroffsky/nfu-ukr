@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import GalleryPopupStyle from "./Gallery-popup.module.scss"
 import { faClose } from "@fortawesome/free-solid-svg-icons"
 import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useTranslation from 'next-translate/useTranslation';
 import { useMoralis, useWeb3Contract } from 'react-moralis';
+import { useNotification } from "web3uikit"
 
 import contractAbis from '../../../nfu-ukr-common/resources/contractAbi.json';
 import contractAddresses from '../../../nfu-ukr-common/resources/contractAddress.json';
@@ -25,6 +26,11 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
     const contractAbi = JSON.parse(contractAbis["NonFungibleUkraine"]);
     const tokenPrice = Moralis.Units.ETH(process.env.NEXT_PUBLIC_TOKEN_PRICE)
 
+    const insufficientFundsErrorPattern = "insufficient funds";
+    const executionRevertedErrorPattern = "execution reverted";
+    const executionCancelledErrorPattern = "User denied transaction";
+    const walletNotConnectedErrorPattern = "Missing web3 instance";
+
     const { runContractFunction: mintNftFunction } = useWeb3Contract({
         abi: contractAbi,
         contractAddress: contractAddress,
@@ -35,11 +41,61 @@ const GalleryPopup = (props: PopupProps): JSX.Element => {
         msgValue: tokenPrice
     })
 
+    const raiseNotification = useNotification();
+
     const mint = async function () {
-        const result = await mintNftFunction({
-            onError: (error) => { console.log(error) },
-            onSuccess: async (tx) => {
-                console.log(tx);
+        await mintNftFunction({
+            onError: (error) => {
+                if (error.message.includes(insufficientFundsErrorPattern)) {
+                    raiseNotification({
+                        type: "error",
+                        title: tCommon("failure"),
+                        message: tCommon("insufficientFunds"),
+                        position: "bottomR",
+                    })
+                }
+                else if (error.message.includes(executionRevertedErrorPattern)) {
+                    raiseNotification({
+                        type: "error",
+                        title: tCommon("failure"),
+                        message: tCommon("transactionReverted"),
+                        position: "bottomR",
+                    })
+                }
+                else if (error.message.includes(executionCancelledErrorPattern)) {
+                    raiseNotification({
+                        type: "error",
+                        title: tCommon("failure"),
+                        message: tCommon("transactionCancelled"),
+                        position: "bottomR",
+                    })
+                }
+                else if (error.message.includes(walletNotConnectedErrorPattern)) {
+                    raiseNotification({
+                        type: "error",
+                        title: tCommon("failure"),
+                        message: tCommon("walletNotConnected"),
+                        position: "bottomR",
+                    })
+                }
+                else {
+                    raiseNotification({
+                        type: "error",
+                        title: tCommon("failure"),
+                        message: tCommon("unknownError"),
+                        position: "bottomR",
+                    })
+                }
+
+                console.log(error);
+            },
+            onSuccess: (tx) => {
+                raiseNotification({
+                    type: "success",
+                    title: tCommon("success"),
+                    message: tCommon("successfulTransaction"),
+                    position: "bottomR"
+                });
                 props.Close();
             }
         });
